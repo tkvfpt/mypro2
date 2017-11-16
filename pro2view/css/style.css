@@ -1,0 +1,7 @@
+.user-profile {
+    font: red;
+}
+#header-user:hover .box {
+    display: block;
+    background-color: black;
+}
