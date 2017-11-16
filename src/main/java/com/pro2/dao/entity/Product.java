@@ -6,62 +6,64 @@ import java.util.UUID;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
-import org.hibernate.annotations.GenericGenerator;
+import com.pro2.constants.ECommerceGlobalConstant;
 
+/**
+ * 
+ * @author khon.vt
+ *
+ */
 @Entity
 @Table(name = "product")
 public class Product {
 
 	@Id
-	@GeneratedValue(generator = "uuid2")
-	@GenericGenerator(name = "uuid2", strategy = "uuid2")
-	@Column(name = "ID", columnDefinition = "BINARY(16)")
-	UUID id;
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name = ECommerceGlobalConstant.OBJECT_ID)
+	int id;
 
-	@Column(name = "Code")
-	String code;
-
-	@Column(name = "Name")
+	@Column(name = ECommerceGlobalConstant.OBJECT_NAME)
 	String name;
-
-	@Column(name = "Price")
+	
+	@Column(name = "price")
 	float price;
 
-	@Column(name = "Quantity")
+	@Column(name = "quantity")
 	int quantity;
 
-	@Column(name = "Image")
+	@Column(name = "image")
 	String imagePath;
 
-	@Column(name = "ThumbImage")
+	@Column(name = "thumbnail")
 	String thumbnail;
 
-	@Column(name = "Description")
+	@Column(name = "description")
 	String description;
 
 	@Column(name = "Created")
+	@Temporal(TemporalType.TIMESTAMP)
 	Date created;
 
-	@Column(name = "Updated")
-	Date updated;
-
 	@ManyToOne
-	@JoinColumn(name = "ProdTypeID")
-	ProductType productType;
+	@JoinColumn(name = "categoryId")
+	Category category;
 
 	public Product() {
 	}
 
-	public UUID getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(UUID id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
@@ -71,22 +73,6 @@ public class Product {
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public String getProductName() {
-		return name;
-	}
-
-	public void setProductName(String productName) {
-		this.name = productName;
-	}
-
-	public String getCode() {
-		return code;
-	}
-
-	public void setCode(String code) {
-		this.code = code;
 	}
 
 	public float getPrice() {
@@ -136,13 +122,4 @@ public class Product {
 	public void setCreated(Date created) {
 		this.created = created;
 	}
-
-	public Date getUpdated() {
-		return updated;
-	}
-
-	public void setUpdated(Date updated) {
-		this.updated = updated;
-	}
-
 }

@@ -1,4 +1,4 @@
-package com.pro2.dao.common;
+package com.pro2.common;
 
 import java.util.HashMap;
 import java.util.Map;

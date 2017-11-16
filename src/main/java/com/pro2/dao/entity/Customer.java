@@ -8,21 +8,23 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.GenericGenerator;
 
+import com.pro2.constants.ECommerceGlobalConstant;
+
 @Entity
 @Table(name="customer")
 public class Customer {
 
 	@Id
-	@GeneratedValue(generator = "uuid2")
-	@GenericGenerator(name="uuid2", strategy="uuid2")
-	@Column(name = "ID", columnDefinition = "BINARY(16)")
-	UUID id;
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name = ECommerceGlobalConstant.OBJECT_ID)
+	int id;
 	
 	@Column(name="Email")
 	String email;
@@ -52,15 +54,7 @@ public class Customer {
 	String image;
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "customer")
-	List<Order> listOrder;
-
-	public UUID getId() {
-		return id;
-	}
-
-	public void setId(UUID id) {
-		this.id = id;
-	}
+	List<Invoice> listOrder;
 
 	public String getEmail() {
 		return email;
