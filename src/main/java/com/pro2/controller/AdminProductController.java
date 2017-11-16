@@ -19,8 +19,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.pro2.constants.ECommerceGlobalConstant;
 import com.pro2.dao.common.QueryManager;
-import com.pro2.dao.constants.ECommerceGlobalConstant;
 import com.pro2.dao.entity.Product;
 import com.pro2.dao.generic.IGenericDAO;
 import com.pro2.dao.utils.CommonUtils;

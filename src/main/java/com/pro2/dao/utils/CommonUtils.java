@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.mail.MailSender;
 import org.springframework.mail.SimpleMailMessage;
 
-import com.pro2.dao.constants.ECommerceGlobalConstant;
+import com.pro2.constants.ECommerceGlobalConstant;
 
 public class CommonUtils {
 

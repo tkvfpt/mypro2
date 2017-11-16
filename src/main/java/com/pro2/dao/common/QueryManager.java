@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
-import com.pro2.dao.constants.ECommerceGlobalConstant;
+import com.pro2.constants.ECommerceGlobalConstant;
 
 public class QueryManager {
 

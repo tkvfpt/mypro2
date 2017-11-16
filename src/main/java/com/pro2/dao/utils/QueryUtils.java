@@ -1,7 +1,7 @@
 package com.pro2.dao.utils;
 
+import com.pro2.constants.ECommerceGlobalConstant;
 import com.pro2.dao.common.QueryManager;
-import com.pro2.dao.constants.ECommerceGlobalConstant;
 
 public class QueryUtils {
 

@@ -7,7 +7,7 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.pro2.dao.constants.ECommerceGlobalConstant;
+import com.pro2.constants.ECommerceGlobalConstant;
 
 @Transactional
 public class GenericDAO<T> implements IGenericDAO<T>{

@@ -5,7 +5,7 @@ import org.springframework.mail.MailSender;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.pro2.dao.constants.ECommerceGlobalConstant;
+import com.pro2.constants.ECommerceGlobalConstant;
 import com.pro2.dao.utils.CommonUtils;
 
 @Controller
