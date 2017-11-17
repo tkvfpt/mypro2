@@ -15,8 +15,4 @@ public class ShopInfoDAO extends GenericDAO<ShopInfo>{
 		setClassType(ShopInfo.class);
 		return super.getAll();
 	}
-
-	
-
-	
 }

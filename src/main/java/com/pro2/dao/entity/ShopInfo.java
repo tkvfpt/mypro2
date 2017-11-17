@@ -1,36 +1,47 @@
 package com.pro2.dao.entity;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Objects;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="shop_info")
 public class ShopInfo{
 	
-	@Column
-	String logo;
-	
-	@Column
+	@Id
+	@Column(name="name")
 	String name;
 	
-	@Column
+	@Column(name="logo")
+	String logo;
+	
+	@Column(name="phone")
 	String phone;
 	
-	@Column
+	@Column(name="messenger")
 	String messenger;
 	
-	@Column
-	String fanpage_url;
+	@Column(name="fanpage_url")
+	String fanpageUrl;
 	
-	@Column
+	@Column(name="mail")
 	String mail;
 	
-	@Column
+	@Column(name="address")
 	String address;
 	
-	@Column
+	@Column(name="twitter")
 	String twitter;
+	
+	@OneToMany(mappedBy="shop")
+	List<User> user;
 	
 	public ShopInfo() {}
 
@@ -66,12 +77,12 @@ public class ShopInfo{
 		this.messenger = messenger;
 	}
 
-	public String getFanpage_url() {
-		return fanpage_url;
+	public String getFanpageUrl() {
+		return fanpageUrl;
 	}
 
-	public void setFanpage_url(String fanpage_url) {
-		this.fanpage_url = fanpage_url;
+	public void setFanpageUrl(String fanpageUrl) {
+		this.fanpageUrl = fanpageUrl;
 	}
 
 	public String getMail() {
@@ -96,6 +107,17 @@ public class ShopInfo{
 
 	public void setTwitter(String twitter) {
 		this.twitter = twitter;
+	}
+
+	public List<User> getUser() {
+		if(Objects.isNull(user)) {
+			return Collections.emptyList();
+		}
+		return user;
+	}
+
+	public void setUser(List<User> user) {
+		this.user = user;
 	}
 	
 	

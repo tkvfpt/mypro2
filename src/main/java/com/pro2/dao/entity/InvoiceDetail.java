@@ -1,62 +1,51 @@
 package com.pro2.dao.entity;
 
-import java.util.UUID;
+import java.util.Objects;
 
+import javax.persistence.AssociationOverride;
+import javax.persistence.AssociationOverrides;
 import javax.persistence.Column;
+import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.Table;
-
-import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 @Table(name = "orderitem")
+
+@AssociationOverrides(value = {
+		@AssociationOverride(joinColumns= {@JoinColumn(name="invoice_detail_pk.product")},name="productId"),
+		@AssociationOverride(joinColumns= {@JoinColumn(name="invoice_detail_pk.invoice")},name="invoiceId")
+})
 public class InvoiceDetail {
 
-	@Id
-	@GeneratedValue(generator = "uuid2")
-	@GenericGenerator(name = "uuid2", strategy = "uuid2")
-	@Column(name = "ID", columnDefinition = "BINARY(16)")
-	UUID orderItemId;
-
-	@Column(name = "Price")
-	float price;
-	@Column(name="OrderId")
-	int orderId;
+	@EmbeddedId
+	InvoiceDetailPK invoice_detail_pk;
 	
-	@Column(name="ProductID")	
-	int productId;
-	
-	
-	
-	@Column(name="Quantity")
+	@Column(name="quantity")
 	int quantity;
-	
 
-
-	public UUID getOrderItemId() {
-		return orderItemId;
-	}
-
-	public void setOrderItemId(UUID orderItemId) {
-		this.orderItemId = orderItemId;
+	public InvoiceDetailPK getInvoice_detail_pk() {
+		if(Objects.isNull(invoice_detail_pk)) {
+			return new InvoiceDetailPK();
+		}
+		return invoice_detail_pk;
 	}
 	
-	public int getOrderId() {
-		return orderId;
+	public Product getProduct() {
+		return getInvoice_detail_pk().product;
 	}
 
-	public void setOrderId(int orderId) {
-		this.orderId = orderId;
+	public void setProduct(Product product) {
+		this.getInvoice_detail_pk().product = product;
 	}
 
-	public int getProductId() {
-		return productId;
+	public Invoice getInvoice() {
+		return getInvoice_detail_pk().invoice;
 	}
 
-	public void setProductId(int productId) {
-		this.productId = productId;
+	public void setInvoice(Invoice invoice) {
+		this.getInvoice_detail_pk().invoice = invoice;
 	}
 
 	public int getQuantity() {
@@ -66,12 +55,6 @@ public class InvoiceDetail {
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
-
-	public float getPrice() {
-		return price;
-	}
-
-	public void setPrice(float price) {
-		this.price = price;
-	}
+	
+	
 }
