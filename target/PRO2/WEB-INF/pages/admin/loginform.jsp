@@ -8,8 +8,8 @@
 </head>
 <body>
 <form action="${pageContext.request.contextPath}/admin/product/all">
-	<input type="text" name="Email" />
-	<input type="text" name="Password" />
+	<input type="text" name="username" />
+	<input type="text" name="password" />
 	<input type="submit" value="submit"/>
 </form>
 </body>

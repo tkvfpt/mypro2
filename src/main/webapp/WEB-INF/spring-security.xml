@@ -8,7 +8,7 @@
 	<security:authentication-manager>
 	  <security:authentication-provider>
 		<security:user-service>
-			<security:user name="admin" authorities="ADMIN"/>
+			<security:user name="admin" password="admin" authorities="ADMIN"/>
 		</security:user-service>
 		<security:jdbc-user-service data-source-ref="dataSource" users-by-username-query="select Email, Password from user where Email=?" authorities-by-username-query="select Email, Role from user where Email=?"/>
 	  </security:authentication-provider>
@@ -26,7 +26,7 @@
 		<security:intercept-url pattern="/admin/**" access="isAuthenticated()" />
 		<security:intercept-url pattern="/****" access="denyAll" />
 		<security:form-login login-page="/loginform" />
-		<security:csrf disabled="true" />
+		
 	</security:http>
 	
 </beans>
