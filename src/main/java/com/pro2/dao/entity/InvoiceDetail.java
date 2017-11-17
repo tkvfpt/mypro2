@@ -14,8 +14,8 @@ import javax.persistence.Table;
 @Table(name = "orderitem")
 
 @AssociationOverrides(value = {
-		@AssociationOverride(joinColumns= {@JoinColumn(name="invoice_detail_pk.product")},name="productId"),
-		@AssociationOverride(joinColumns= {@JoinColumn(name="invoice_detail_pk.invoice")},name="invoiceId")
+		@AssociationOverride(joinColumns= {@JoinColumn(name="productId")},name="invoice_detail_pk.product"),
+		@AssociationOverride(joinColumns= {@JoinColumn(name="invoiceId")},name="invoice_detail_pk.invoice")
 })
 public class InvoiceDetail {
 
