@@ -34,6 +34,8 @@ public class ECommerceGlobalConstant {
 	public static final String SUCCESS_PAGE = "";
 	
 	/* Admin Page Name */
+	public static final String LOGIN_PAGE = "admin/loginform";
+	
 	public static final String SHOW_ALL_CUSTOMER_PAGE = "admin/customer/list";
 	public static final String ADD_NEW_CUSTOMER_PAGE = "admin/customer/insert";
 	public static final String EDIT_CUSTOMER_PAGE = "admin/customer/update";

@@ -151,7 +151,7 @@ public class AdminProductController {
 	 * @return
 	 */
 	private List<Product> editSession(Product product, List<Product> listProduct){
-		for(int i=0;i<listProduct.size();i++){
+		/*for(int i=0;i<listProduct.size();i++){
 			if(listProduct.get(i).getId()==product.getId()){
 				float dongia = listProduct.get(i).getPrice()/listProduct.get(i).getQuantity();
 				listProduct.get(i).setQuantity(listProduct.get(i).getQuantity()+1);
@@ -161,6 +161,7 @@ public class AdminProductController {
 		}
 		product.setQuantity(1);
 		listProduct.add(product);
-		return listProduct;
+		return listProduct;*/
+		return null;
 	}
 }

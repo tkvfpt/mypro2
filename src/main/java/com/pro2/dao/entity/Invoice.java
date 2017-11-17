@@ -53,7 +53,7 @@ public class Invoice {
 	@Column(name="customer")
 	String customer;
 	
-	@OneToMany(mappedBy="invoice_detail_pk")
+	@OneToMany(mappedBy="invoice_detail_pk.invoice")
 	List<InvoiceDetail> invoiceDetail;
 
 	public int getId() {

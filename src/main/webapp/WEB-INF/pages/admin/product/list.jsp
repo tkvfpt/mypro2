@@ -236,8 +236,14 @@
                                     </div>
                                     <div class="form-group">
                                         <div class="col-sm-12">
-                                            <button class="btn btn-success">Update Profile</button>
+                                            <button class="btn btn-success" onclick="submit()">Update Profile</button>
+                                            <input type="submit" style="display:none" value="submit" id="submitBtn"/>
                                         </div>
+                                        <script>
+                                        	function submit(){
+                                        		document.getElementById('submitBtn').click();
+                                        	}
+                                        </script>
                                     </div>
                                 </form>
                             </div>

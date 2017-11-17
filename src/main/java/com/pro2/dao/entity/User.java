@@ -15,7 +15,7 @@ public class User {
 	@Column(name="username")
 	String username;
 	
-	@Column(name="pwd")
+	@Column(name="password")
 	String password;
 	
 	@Column(name="role")
