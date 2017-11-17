@@ -27,6 +27,6 @@ public class CommonController {
 	
 	@RequestMapping(value= {"/admin/loginform","/loginform"})
 	public String redirectLogin() {
-		return "admin/loginform";
+		return ECommerceGlobalConstant.SHOW_ALL_PRODUCT_PAGE;
 	}
 }

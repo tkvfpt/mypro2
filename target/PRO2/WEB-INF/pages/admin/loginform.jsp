@@ -7,10 +7,11 @@
 <title>Login Form</title>
 </head>
 <body>
-<form action="${pageContext.request.contextPath}/admin/product/all">
+<form action="${pageContext.request.contextPath}/admin/product/all" method="POST">
 	<input type="text" name="username" />
 	<input type="text" name="password" />
 	<input type="submit" value="submit"/>
 </form>
+csrfToken: ${sessionScope.csrfToken}
 </body>
 </html>
