@@ -10,8 +10,13 @@ import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.Table;
 
+/**
+ * 
+ * @author khon.vt
+ *
+ */
 @Entity
-@Table(name = "orderitem")
+@Table(name = "invoice_detail")
 
 @AssociationOverrides(value = {
 		@AssociationOverride(joinColumns= {@JoinColumn(name="productId")},name="invoice_detail_pk.product"),

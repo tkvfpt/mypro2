@@ -1,6 +1,5 @@
 package com.pro2.dao.entity;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;

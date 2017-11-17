@@ -30,15 +30,18 @@ public class Product {
 	@Column(name = ECommerceGlobalConstant.OBJECT_ID)
 	int id;
 
-	@Column(name = ECommerceGlobalConstant.OBJECT_NAME)
-	String name;
+	@Column(name = "username")
+	String username;
 	
 	@Column(name = "price")
 	float price;
 
-	@Column(name = "quantity")
-	int quantity;
+	@Column(name = "weight")
+	float weight;
 
+	@Column(name=ECommerceGlobalConstant.OBJECT_NAME)
+	String name;
+	
 	@Column(name = "image")
 	String imagePath;
 
@@ -83,14 +86,6 @@ public class Product {
 		this.price = price;
 	}
 
-	public int getQuantity() {
-		return quantity;
-	}
-
-	public void setQuantity(int quantity) {
-		this.quantity = quantity;
-	}
-
 	public String getImagePath() {
 		return imagePath;
 	}
@@ -122,4 +117,29 @@ public class Product {
 	public void setCreated(Date created) {
 		this.created = created;
 	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public float getWeight() {
+		return weight;
+	}
+
+	public void setWeight(float weight) {
+		this.weight = weight;
+	}
+
+	public Category getCategory() {
+		return category;
+	}
+
+	public void setCategory(Category category) {
+		this.category = category;
+	}
+	
 }

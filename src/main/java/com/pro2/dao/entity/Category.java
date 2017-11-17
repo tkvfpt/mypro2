@@ -1,6 +1,7 @@
 package com.pro2.dao.entity;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
@@ -28,10 +29,8 @@ public class Category {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name = ECommerceGlobalConstant.OBJECT_ID)
 	int id;
-
 	
-
-	@Column(name = "Name")
+	@Column(name = ECommerceGlobalConstant.OBJECT_NAME)
 	String name;
 	
 	@OneToMany(mappedBy = "category",fetch=FetchType.LAZY)	
@@ -57,7 +56,7 @@ public class Category {
 
 	public List<Product> getProductList() {
 		if(Objects.isNull(productList)){
-			return new ArrayList<Product>();
+			return Collections.emptyList();
 		}
 		return productList;
 	}
