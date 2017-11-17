@@ -68,6 +68,11 @@ public class GenericDAO<T> implements IGenericDAO<T>{
 	public List<T> executeQuery(String query){
 		return getSession().createQuery(query).list();
 	}
+
+	@Override
+	public void saveOrUpdateObject(T obj) {
+		getSession().saveOrUpdate(obj);
+	}
 	
 	
 }

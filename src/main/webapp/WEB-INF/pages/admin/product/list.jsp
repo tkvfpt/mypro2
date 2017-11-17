@@ -188,7 +188,7 @@
                     <div class="col-lg-8 col-xlg-9 col-md-7">
                         <div class="card">
                             <div class="card-block">
-                                <form class="form-horizontal form-material">
+                                <form class="form-horizontal form-material" action="${pageContext.request.contextPath}/admin/shop" method="POST">
                                 <div class="form-group">
                                 <i class="mdi mdi-information-outline"></i>
                                 </div>

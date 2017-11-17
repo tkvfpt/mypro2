@@ -13,6 +13,8 @@ public interface IGenericDAO<T> {
 	 
 	 void saveObject(T obj);
 	 
+	 void saveOrUpdateObject(T obj);
+	 
 	 void updateObject(T obj);
 	 
 	 void deleteObject(T obj);
