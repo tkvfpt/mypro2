@@ -14,7 +14,7 @@ import com.pro2.constants.ECommerceGlobalConstant;
 
 public class CommonUtils {
 
-	static Logger logger = Logger.getLogger("commonUtils");
+	private static final Logger LOG = Logger.getLogger("commonUtils");
 
 	private CommonUtils() {
 		throw new IllegalStateException("Utility class");
@@ -46,7 +46,7 @@ Map<String, String[]> requestParams = request.getParameterMap();
 				}
 				
 			} catch (IllegalArgumentException | IllegalAccessException e) {
-				logger.info(e.getMessage());
+				LOG.info(e.getMessage());
 			}
 		}
 		return obj;

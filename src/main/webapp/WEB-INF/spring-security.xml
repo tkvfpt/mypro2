@@ -6,10 +6,7 @@
 		http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-4.1.xsd">
 
 	<security:authentication-manager>
-	  <security:authentication-provider>
-		<security:user-service>
-			<security:user name="admin" password="admin" authorities="ADMIN"/>
-		</security:user-service>
+	  <security:authentication-provider user-service-ref="userDAO">
 	  </security:authentication-provider>
 	</security:authentication-manager>
 

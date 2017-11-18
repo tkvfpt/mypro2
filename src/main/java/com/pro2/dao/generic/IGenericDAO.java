@@ -21,6 +21,8 @@ public interface IGenericDAO<T> {
 	 
 	 T getObj(int a);
 	 
+	 T getObj(String a);
+	 
 	 List<T> getAll();
 		 
 	List<T> executeQuery(String query);

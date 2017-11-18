@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -11,7 +12,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="${pageContext.request.contextPath}/resource/admin/assets/images/favicon.png">
-    <title>Product List</title>
+    <title>User All</title>
     <!-- Bootstrap Core CSS -->
     <link href="${pageContext.request.contextPath}/resource/admin/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- chartist CSS -->
@@ -44,6 +45,7 @@
     <!-- ============================================================== -->
     <div id="main-wrapper">
         <!-- ============================================================== -->
+        <!-- ============================================================== -->
         <!-- Topbar header - style you can find in pages.scss -->
         <!-- ============================================================== -->
         <header class="topbar">
@@ -57,13 +59,13 @@
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                             
                             <!-- Light Logo icon -->
-                            <img src="resource/admin/assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />
+                            <img src="${requestScope.shop.logo }" alt="DashBoard" class="light-logo" height="34px" width="33px" />
                         </b>
-                        <!--End Logo icon -->
-                        <!-- Logo text --><span>
-                         
+                                 <!-- Logo text --><span>
+                         ${requestScope.shop.name}
                          <!-- Light Logo text -->    
-                         <img src="resource/admin/assets/images/logo-light-text.png" class="light-logo" alt="homepage" /></span> </a>
+                         </span>
+                         </a>
                 </div>
                 <!-- ============================================================== -->
                 <!-- End Logo -->
@@ -91,7 +93,7 @@
                         <!-- Profile -->
                         <!-- ============================================================== -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../assets/images/users/1.jpg" alt="user" class="profile-pic m-r-10" />Markarn Doe</a>
+                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../assets/images/users/1.jpg" alt="user" class="profile-pic m-r-10" />${user.username}</a>
                         </li>
                     </ul>
                 </div>
@@ -111,17 +113,17 @@
                     <ul id="sidebarnav">
                         <li> <a class="waves-effect waves-dark" href="index.html" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Dashboard</span></a>
                         </li>
-                        <li> <a class="waves-effect waves-dark" href="pages-profile.html" aria-expanded="false"><i class="mdi mdi-account-check"></i><span class="hide-menu">Profile</span></a>
+                        <li> <a class="waves-effect waves-dark" href="${pageContext.request.contextPath }/admin/product/all" aria-expanded="false"><i class="mdi-checkbox-blank-outline"></i><span class="hide-menu">Product</span></a>
                         </li>
-                        <li> <a class="waves-effect waves-dark" href="table-basic.html" aria-expanded="false"><i class="mdi mdi-table"></i><span class="hide-menu">Basic Table</span></a>
+                        <li> <a class="waves-effect waves-dark" href="${pageContext.request.contextPath }/admin/category/all" aria-expanded="false"><i class="mdi mdi-tag-heart"></i><span class="hide-menu">Category</span></a>
                         </li>
-                        <li> <a class="waves-effect waves-dark" href="icon-material.html" aria-expanded="false"><i class="mdi mdi-emoticon"></i><span class="hide-menu">Icons</span></a>
+                        <li> <a class="waves-effect waves-dark" href="${pageContext.request.contextPath }/admin/customer/all" aria-expanded="false"><i class="mdi mdi-account-check"></i><span class="hide-menu">Customer</span></a>
                         </li>
-                        <li> <a class="waves-effect waves-dark" href="map-google.html" aria-expanded="false"><i class="mdi mdi-earth"></i><span class="hide-menu">Google Map</span></a>
+                        <li> <a class="waves-effect waves-dark" href="${pageContext.request.contextPath }/admin/user/all" aria-expanded="false"><i class="mdi mdi-account-key"></i><span class="hide-menu">User</span></a>
                         </li>
-                        <li> <a class="waves-effect waves-dark" href="pages-blank.html" aria-expanded="false"><i class="mdi mdi-book-open-variant"></i><span class="hide-menu">Blank Page</span></a>
+                        <li> <a class="waves-effect waves-dark" href="${pageContext.request.contextPath }/admin/question/all" aria-expanded="false"><i class="mdi mdi-comment-question-outline"></i><span class="hide-menu">Question</span></a>
                         </li>
-                        <li> <a class="waves-effect waves-dark" href="pages-error-404.html" aria-expanded="false"><i class="mdi mdi-help-circle"></i><span class="hide-menu">Error 404</span></a>
+                        <li> <a class="waves-effect waves-dark" href="${pageContext.request.contextPath }/admin/invoice/all" aria-expanded="false"><i class="mdi mdi-library"></i><span class="hide-menu">Invoice</span></a>
                         </li>
                     </ul>
                     <div class="text-center m-t-30">
@@ -154,10 +156,10 @@
                 <!-- ============================================================== -->
                 <div class="row page-titles">
                     <div class="col-md-5 col-8 align-self-center">
-                        <h3 class="text-themecolor">Dashboard</h3>
+                        <h3 class="text-themecolor m-b-0 m-t-0">User</h3>
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                            <li class="breadcrumb-item active">Dashboard</li>
+                            <li class="breadcrumb-item"><a href="${pageContext.request.contextPath }/admin">Dashboard</a></li>
+                            <li class="breadcrumb-item active"><a href="${pageContext.request.contextPath }/admin/user/all">User</a></li>
                         </ol>
                     </div>
                     <div class="col-md-7 col-4 align-self-center">
@@ -170,89 +172,36 @@
                 <!-- ============================================================== -->
                 <!-- Start Page Content -->
                 <!-- ============================================================== -->
-                <!-- Row -->
                 <div class="row">
-                    <!-- Column -->
-                    <div class="col-lg-4 col-xlg-3 col-md-5">
-                        <div class="card">
-                            <div class="card-block">
-                                <center class="m-t-30"> <img src="../assets/images/users/5.jpg" class="img-circle" width="150">
-                                    <h4 class="card-title m-t-10">{shop Logo}</h4>
-                                    <h6 class="card-subtitle">{button}</h6>
-                                </center>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Column -->
-                    <!-- Column -->
-                    <div class="col-lg-8 col-xlg-9 col-md-7">
-                        <div class="card">
-                            <div class="card-block">
-                                <form class="form-horizontal form-material" action="${pageContext.request.contextPath}/admin/shop" method="POST">
-                                <div class="form-group">
-                                <i class="mdi mdi-information-outline"></i>
+                    <div class="col-12">
+                        <div class="card-block">
+                                <h4 class="card-title">Users</h4>
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Username</th>
+                                                <th>Password</th>
+                                                <th>Role</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        <c:forEach var="obj" items="${requestScope.list}">
+                                            <tr>
+                                                <td><a href="${pageContext.request.contextPath }/admin/user/edit?id=${obj.username}">${requestScope.list.indexOf(obj)+1}</a></td>
+                                                <td><a href="${pageContext.request.contextPath }/admin/user/edit?id=${obj.username}">${obj.username }</a></td>
+                                                <td><a href="${pageContext.request.contextPath }/admin/user/edit?id=${obj.username}">${obj.password }</a></td>
+                                                <td><a href="${pageContext.request.contextPath }/admin/user/edit?id=${obj.username}">${obj.role }</a></td>
+                                            </tr>
+                                         </c:forEach>
+                                        </tbody>
+                                    </table>
                                 </div>
-                                    <div class="form-group">
-                                        <label class="col-md-12">Shop Name</label>
-                                        <div class="col-md-12">
-                                            <input type="text" name="name" placeholder="Shop Name" class="form-control form-control-line">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="example-email" class="col-md-12">Phone Number</label>
-                                        <div class="col-md-12">
-                                            <input type="text" name="phone" placeholder="01215878387" class="form-control form-control-line" name="example-email" id="example-email">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-md-12">Messenger Link</label>
-                                        <div class="col-md-12">
-                                            <input type="text" name="messenger" placeholder="messenger" class="form-control form-control-line">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-md-12">Facebook Fanpage URL</label>
-                                        <div class="col-md-12">
-                                            <input type="text" name="fanpage" class="form-control form-control-line">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-md-12">Mail</label>
-                                        <div class="col-md-12">
-                                            <input type="email" name="mail" placeholder="example@example.com" class="form-control form-control-line"/>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-12">Twitter</label>
-                                        <div class="col-md-12">
-                                            <input type="text" name="twitter" placeholder="" class="form-control form-control-line"/>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-12">Address</label>
-                                        <div class="col-md-12">
-                                            <input type="text" name="address" placeholder="" class="form-control form-control-line"/>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="col-sm-12">
-                                            <button class="btn btn-success" onclick="submit()">Update Profile</button>
-                                            <input type="submit" style="display:none" value="submit" id="submitBtn"/>
-                                        </div>
-                                        <script>
-                                        	function submit(){
-                                        		document.getElementById('submitBtn').click();
-                                        	}
-                                        </script>
-                                    </div>
-                                </form>
                             </div>
-                        </div>
+
                     </div>
-                    <!-- Column -->
                 </div>
-                <!-- Row -->
-               
                 <!-- ============================================================== -->
                 <!-- End PAge Content -->
                 <!-- ============================================================== -->
@@ -263,7 +212,9 @@
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
-            <footer class="footer"> © 2017 Material Pro Admin by wrappixel.com </footer>
+            <footer class="footer">
+                © 2017 Material Pro Admin by wrappixel.com
+            </footer>
             <!-- ============================================================== -->
             <!-- End footer -->
             <!-- ============================================================== -->
@@ -278,30 +229,20 @@
     <!-- ============================================================== -->
     <!-- All Jquery -->
     <!-- ============================================================== -->
-    <script src="${pageContext.request.contextPath}/resource/admin/assets/plugins/jquery/jquery.min.js"></script>
+    <script src="${pageContext.request.contextPath }/resource/admin/assets/plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap tether Core JavaScript -->
-    <script src="${pageContext.request.contextPath}/resource/admin/assets/plugins/bootstrap/js/tether.min.js"></script>
-    <script src="${pageContext.request.contextPath}/resource/admin/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="${pageContext.request.contextPath }/resource/admin/assets/plugins/bootstrap/js/tether.min.js"></script>
+    <script src="${pageContext.request.contextPath }/resource/admin/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
     <!-- slimscrollbar scrollbar JavaScript -->
-    <script src="${pageContext.request.contextPath}/resource/admin/js/jquery.slimscroll.js"></script>
+    <script src="${pageContext.request.contextPath }/resource/admin/js/jquery.slimscroll.js"></script>
     <!--Wave Effects -->
-    <script src="${pageContext.request.contextPath}/resource/admin/js/waves.js"></script>
+    <script src="${pageContext.request.contextPath }/resource/admin/js/waves.js"></script>
     <!--Menu sidebar -->
-    <script src="${pageContext.request.contextPath}/resource/admin/js/sidebarmenu.js"></script>
+    <script src="${pageContext.request.contextPath }/resource/admin/js/sidebarmenu.js"></script>
     <!--stickey kit -->
-    <script src="${pageContext.request.contextPath}/resource/admin/assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
+    <script src="${pageContext.request.contextPath }/resource/admin/assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
     <!--Custom JavaScript -->
-    <script src="${pageContext.request.contextPath}/resource/admin/js/custom.min.js"></script>
-    <!-- ============================================================== -->
-    <!-- This page plugins -->
-    <!-- ============================================================== -->
-    <!-- chartist chart -->
-    <script src="${pageContext.request.contextPath}/resource/admin/assets/plugins/chartist-js/dist/chartist.min.js"></script>
-    <script src="${pageContext.request.contextPath}/resource/admin/assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js"></script>
-    <!--c3 JavaScript -->
-    <script src="${pageContext.request.contextPath}/resource/admin/assets/plugins/d3/d3.min.js"></script>
-    <script src="${pageContext.request.contextPath}/resource/admin/assets/plugins/c3-master/c3.min.js"></script>
-    <!-- Chart JS -->
-    <script src="${pageContext.request.contextPath}/resource/admin/js/dashboard1.js"></script>
+    <script src="${pageContext.request.contextPath }/resource/admin/js/custom.min.js"></script>
 </body>
+
 </html>

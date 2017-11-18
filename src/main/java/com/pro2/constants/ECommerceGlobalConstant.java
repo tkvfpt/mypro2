@@ -13,7 +13,8 @@ public class ECommerceGlobalConstant {
 	/* Common Constant */
 	public static final String SPACE = " " ;	
 	public static final String UNDERSCORE = "_";
-	public static final String REDIRECT = "redirect:/";
+	public static final String REDIRECT = "redirect:";
+	public static final String RESOURCE_REAL_PATH="/WEB-INF/resource";
 	
 	/* Common Object Name */
 	public static final String CART = "listCart";
@@ -54,9 +55,11 @@ public class ECommerceGlobalConstant {
 	public static final String EDIT_ORDER_PAGE = "admin/order/update";
 	public static final String ADD_NEW_ORDER_PAGE = "admin/order/insert";
 	
-	public static final String SHOW_ALL_ADS_PAGE = "admin/advertisements/list";
-	public static final String EDIT_ADS_PAGE = "admin/advertisements/update";
-	public static final String ADD_NEW_ADS_PAGE = "admin/advertisements/insert";
+	public static final String SHOW_ALL_USER_PAGE = "admin/user/list";
+	public static final String EDIT_USER_PAGE = "admin/user/update";
+	public static final String ADD_NEW_USER_PAGE = "admin/user/insert";
 	/* Page URL */
-	
+	public static final String ADMIN_DASH_BOARD_URL = "/admin";
+	public static final String ALL_USER_URL = "/user/all";
+	public static final String EDIT_USER_URL = "/user/edit";
 }

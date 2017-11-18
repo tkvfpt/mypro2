@@ -3,147 +3,272 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<!-- BOOTSTRAP STYLES-->
-    <link href="${pageContext.request.contextPath}/resource/admin/css/bootstrap.css" rel="stylesheet" />
-     <!-- FONTAWESOME STYLES-->
-    <link href="${pageContext.request.contextPath}/resource/admin/css/font-awesome.css" rel="stylesheet" />
-        <!-- CUSTOM STYLES-->
-    <link href="${pageContext.request.contextPath}/resource/admin/css/custom.css" rel="stylesheet" />
-     <!-- GOOGLE FONTS-->
-   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
-	<title>Insert Product</title>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="${pageContext.request.contextPath}/resource/admin/assets/images/favicon.png">
+    <title>New User</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="${pageContext.request.contextPath}/resource/admin/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- chartist CSS -->
+    <link href="${pageContext.request.contextPath}/resource/admin/assets/plugins/chartist-js/dist/chartist.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/resource/admin/assets/plugins/chartist-js/dist/chartist-init.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/resource/admin/assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" rel="stylesheet">
+    <!--This page css - Morris CSS -->
+    <link href="${pageContext.request.contextPath}/resource/admin/assets/plugins/c3-master/c3.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="${pageContext.request.contextPath}/resource/admin/css/style.css" rel="stylesheet">
+    <!-- You can change the theme colors from here -->
+    <link href="${pageContext.request.contextPath}/resource/admin/css/colors/blue.css" id="theme" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
 </head>
-<body>
-    
-           
-          
-    <div id="wrapper">
-         <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="adjust-nav">
+<body class="fix-header fix-sidebar card-no-border">
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" /> </svg>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar">
+            <nav class="navbar top-navbar navbar-toggleable-sm navbar-light">
+                <!-- ============================================================== -->
+                <!-- Logo -->
+                <!-- ============================================================== -->
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">
-                        <img src="assets/img/logo.png" />
-                    </a>
+                    <a class="navbar-brand" href="index.html">
+                        <!-- Logo icon --><b>
+                            <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                            
+                            <!-- Light Logo icon -->
+                            <img src="${requestScope.shop.logo }" alt="DashBoard" class="light-logo" height="34px" width="33px" />
+                        </b>
+                                 <!-- Logo text --><span>
+                         ${requestScope.shop.name}
+                         <!-- Light Logo text -->    
+                         </span>
+                         </a>
                 </div>
-              
-                 <span class="logout-spn" >
-                  <a href="#" style="color:#fff;">LOGOUT</a>  
-
-                </span>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-collapse">
+                    <!-- ============================================================== -->
+                    <!-- toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav mr-auto mt-md-0">
+                        <!-- This is  -->
+                        <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up text-muted waves-effect waves-dark" href="javascript:void(0)"><i class="mdi mdi-menu"></i></a> </li>
+                        <!-- ============================================================== -->
+                        <!-- Search -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item hidden-sm-down search-box"> <a class="nav-link hidden-sm-down text-muted waves-effect waves-dark" href="javascript:void(0)"><i class="ti-search"></i></a>
+                            <form class="app-search">
+                                <input type="text" class="form-control" placeholder="Search & enter"> <a class="srh-btn"><i class="ti-close"></i></a> </form>
+                        </li>
+                    </ul>
+                    <!-- ============================================================== -->
+                    <!-- User profile and search -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav my-lg-0">
+                        <!-- ============================================================== -->
+                        <!-- Profile -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../assets/images/users/1.jpg" alt="user" class="profile-pic m-r-10" />${user.username }</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li> <a class="waves-effect waves-dark" href="index.html" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Dashboard</span></a>
+                        </li>
+                        <li> <a class="waves-effect waves-dark" href="${pageContext.request.contextPath }/admin/product/all" aria-expanded="false"><i class="mdi-checkbox-blank-outline"></i><span class="hide-menu">Product</span></a>
+                        </li>
+                        <li> <a class="waves-effect waves-dark" href="${pageContext.request.contextPath }/admin/category/all" aria-expanded="false"><i class="mdi mdi-tag-heart"></i><span class="hide-menu">Category</span></a>
+                        </li>
+                        <li> <a class="waves-effect waves-dark" href="${pageContext.request.contextPath }/admin/customer/all" aria-expanded="false"><i class="mdi mdi-account-check"></i><span class="hide-menu">Customer</span></a>
+                        </li>
+                        <li> <a class="waves-effect waves-dark" href="${pageContext.request.contextPath }/admin/user/all" aria-expanded="false"><i class="mdi mdi-account-key"></i><span class="hide-menu">User</span></a>
+                        </li>
+                        <li> <a class="waves-effect waves-dark" href="${pageContext.request.contextPath }/admin/question/all" aria-expanded="false"><i class="mdi mdi-comment-question-outline"></i><span class="hide-menu">Question</span></a>
+                        </li>
+                        <li> <a class="waves-effect waves-dark" href="${pageContext.request.contextPath }/admin/invoice/all" aria-expanded="false"><i class="mdi mdi-library"></i><span class="hide-menu">Invoice</span></a>
+                        </li>
+                    </ul>
+                    <div class="text-center m-t-30">
+                        <a href="https://wrappixel.com/templates/materialpro/" class="btn waves-effect waves-light btn-warning hidden-md-down"> Upgrade to Pro</a>
+                    </div>
+                </nav>
+                <!-- End Sidebar navigation -->
             </div>
-        </div>
-        <!-- /. NAV TOP  -->
-        <nav class="navbar-default navbar-side" role="navigation">
-            <div class="sidebar-collapse">
-                <ul class="nav" id="main-menu">
-                 
-
-
-                     <li> 
-                        <a href="index.html" ><i class="fa fa-desktop "></i>Dashboard <span class="badge">Included</span></a>
-                    </li>
-                   
-
-                    <li class="active-link">
-                        <a href="ui.html"><i class="fa fa-table "></i>UI Elements  <span class="badge">Included</span></a>
-                    </li>
-                    <li>
-                        <a href="blank.html"><i class="fa fa-edit "></i>Blank Page  <span class="badge">Included</span></a>
-                    </li>
-
-
- <li>
-                        <a href="#"><i class="fa fa-qrcode "></i>My Link One</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-bar-chart-o"></i>My Link Two</a>
-                    </li>
-
-                    <li>
-                        <a href="#"><i class="fa fa-edit "></i>My Link Three </a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-table "></i>My Link Four</a>
-                    </li>
-                     <li>
-                        <a href="#"><i class="fa fa-edit "></i>My Link Five </a>
-                    </li>
-                </ul>
+            <!-- End Sidebar scroll-->
+            <!-- Bottom points-->
+            <div class="sidebar-footer">
+                <!-- item--><a href="" class="link" data-toggle="tooltip" title="Settings"><i class="ti-settings"></i></a>
+                <!-- item--><a href="" class="link" data-toggle="tooltip" title="Email"><i class="mdi mdi-gmail"></i></a>
+                <!-- item--><a href="" class="link" data-toggle="tooltip" title="Logout"><i class="mdi mdi-power"></i></a> </div>
+            <!-- End Bottom points-->
+        </aside>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <div class="row page-titles">
+                    <div class="col-md-5 col-8 align-self-center">
+                        <h3 class="text-themecolor m-b-0 m-t-0">New User</h3>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="${pageContext.request.contextPath }/admin">Dashboard</a></li>
+                            <li class="breadcrumb-item"><a href="${pageContext.request.contextPath }/admin/user/all">User</a></li>
+                            <li class="breadcrumb-item active">New</li>
+                        </ol>
+                    </div>
+                    <div class="col-md-7 col-4 align-self-center">
+                        <a href="https://wrappixel.com/templates/materialpro/" class="btn waves-effect waves-light btn-danger pull-right hidden-sm-down"> Upgrade to Pro</a>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Start Page Content -->
+                <!-- ============================================================== -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card-block">
+                                <form class="form-horizontal form-material" action="${pageContext.request.contextPath }/admin/user/add" method="post">
+                                    <div class="form-group">
+                                        <label class="col-md-12">Name</label>
+                                        <div class="col-md-12">
+                                            <input type="text" placeholder="Product Name" name="name" class="form-control form-control-line">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pwd" class="col-md-12">Price</label>
+                                        <div class="col-md-12">
+                                            <input type="text" placeholder="price" class="form-control form-control-line" name="price">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pwd" class="col-md-12">Price</label>
+                                        <div class="col-md-12">
+                                            <input type="text" placeholder="price" class="form-control form-control-line" name="price">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pwd" class="col-md-12">Price</label>
+                                        <div class="col-md-12">
+                                            <input type="text" placeholder="price" class="form-control form-control-line" name="price">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pwd" class="col-md-12">Price</label>
+                                        <div class="col-md-12">
+                                            <input type="text" placeholder="price" class="form-control form-control-line" name="price">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pwd" class="col-md-12">Price</label>
+                                        <div class="col-md-12">
+                                            <input type="text" placeholder="price" class="form-control form-control-line" name="price">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pwd" class="col-md-12">Price</label>
+                                        <div class="col-md-12">
+                                            <input type="text" placeholder="price" class="form-control form-control-line" name="price">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-12">
+                                            <button class="btn btn-success">Update Profile</button>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
 
-        </nav>
-        <!-- /. NAV SIDE  -->
-        <div id="page-wrapper" >
-          <div id="page-inner">
-          <form action="add" method="post" enctype="multipart/form-data">
-               <div class="form-group">
-                            <label>Product name</label>
-                            <input name="name" class="form-control" />
-                            <p class="help-block">Product name.</p>
+                    </div>
                 </div>
-                <div class="form-group">
-                            <label>Product Code</label>
-                            <input name="code" class="form-control" />
-                            <p class="help-block">Product code.</p>
-                </div>
-                <div class="form-group">
-                            <label>Product Price</label>
-                            <input name="price" class="form-control" />
-                            <p class="help-block">Product price.</p>
-                </div>
-                <div class="form-group">
-                            <label>Product Quantity</label>
-                            <input name="quantity" class="form-control" />
-                            <p class="help-block">Product quantity.</p>
-                </div>
-                <div class="form-group">
-                            <label>Product Image</label><br/>
-                            <a class="btn btn-primary" onclick="document.getElementById('fileBtn').click()">Upload</a>
-                            <input type="file" name="image" style="display:none" id="fileBtn" />
-                            <img src="" id="imgPreview"/>
-                            <p class="help-block">Product Image.</p>
-                </div>
-                <div class="form-group">
-                            <label>Product Thumbnail</label><br/>
-                            <a class="btn btn-primary" onclick="document.getElementById('fileBtn').click()">Upload</a>
-                            <input type="file" name="thumbnail" style="display:none" id="fileBtn" />
-                            <img src="" id="imgPreview"/>
-                            <p class="help-block">Product Image.</p>
-                </div>
-                <div class="form-group">
-                            <label>Product Description</label><br/>
-                            <input name="desc" class="form-control" />
-                            <p class="help-block">Product Description.</p>
-                </div>
-                <a href="#" class="btn btn-success" onclick="document.getElementById('submitBtn').click()">Insert</a>
-                <input type="submit" id="submitBtn" style="display:none"/>
-            </form>
-            
+                <!-- ============================================================== -->
+                <!-- End PAge Content -->
+                <!-- ============================================================== -->
             </div>
-            </div>
-         <!-- /. PAGE WRAPPER  -->
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+            <footer class="footer">
+                © 2017 Material Pro Admin by wrappixel.com
+            </footer>
+            <!-- ============================================================== -->
+            <!-- End footer -->
+            <!-- ============================================================== -->
         </div>
-    <div class="footer">
-      
-    
-             <div class="row">
-                <div class="col-lg-12" >
-                    &copy;  2014 yourdomain.com | Design by: <a href="http://binarytheme.com" style="color:#fff;"  target="_blank">www.binarytheme.com</a>
-                </div>
-        </div>
-        </div>
-    <script src="${pageContext.request.contextPath}/resource/admin/js/jquery-1.10.2.js"></script>
-      <!-- BOOTSTRAP SCRIPTS -->
-    <script src="${pageContext.request.contextPath}/resource/admin/js/bootstrap.min.js"></script>
-      <!-- CUSTOM SCRIPTS -->
-    <script src="${pageContext.request.contextPath}/resource/admin/js/custom.js"></script>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="${pageContext.request.contextPath }/resource/admin/assets/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="${pageContext.request.contextPath }/resource/admin/assets/plugins/bootstrap/js/tether.min.js"></script>
+    <script src="${pageContext.request.contextPath }/resource/admin/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="${pageContext.request.contextPath }/resource/admin/js/jquery.slimscroll.js"></script>
+    <!--Wave Effects -->
+    <script src="${pageContext.request.contextPath }/resource/admin/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="${pageContext.request.contextPath }/resource/admin/js/sidebarmenu.js"></script>
+    <!--stickey kit -->
+    <script src="${pageContext.request.contextPath }/resource/admin/assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
+    <!--Custom JavaScript -->
+    <script src="${pageContext.request.contextPath }/resource/admin/js/custom.min.js"></script>
 </body>
+
 </html>

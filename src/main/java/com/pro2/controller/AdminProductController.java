@@ -81,8 +81,8 @@ public class AdminProductController {
 		String imgName = CommonUtils.getValidImageName(request.getParameter(ECommerceGlobalConstant.OBJECT_NAME))+".jpg";
 		String thumb = imgName + "thumbnail";
 		try {
-			image.transferTo(new File(context.getRealPath("/WEB-INF/resource")+imgName));
-			thumbnail.transferTo(new File(context.getRealPath("/WEB-INF/resource")));
+			image.transferTo(new File(context.getRealPath(ECommerceGlobalConstant.RESOURCE_REAL_PATH)+imgName));
+			thumbnail.transferTo(new File(context.getRealPath(ECommerceGlobalConstant.RESOURCE_REAL_PATH)));
 		} catch (IllegalStateException | IOException e) {
 			Logger.getLogger(this.getClass()).info(e.getMessage());
 		}

@@ -41,6 +41,9 @@
 	 	<!-- maxUploadSize=20MB -->
 	 	<property name="maxUploadSize" value="20971520"/>
 	</bean>
+	<bean id="daoAuthenticationProvider" class="org.springframework.security.authentication.dao.DaoAuthenticationProvider">
+  		<property name="userDetailsService" ref="userDAO" />
+	</bean>
 	<mvc:resources location="/WEB-INF/resource/" mapping="resource/**"></mvc:resources>
 	<mvc:annotation-driven></mvc:annotation-driven>
 	
