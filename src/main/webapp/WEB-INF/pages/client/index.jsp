@@ -3,1422 +3,2931 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
-    
-    <title>Mua Hàng Trực Tuyến</title>
-        
-    <meta http-equiv="x-ua-compatible" content="ie=edge"><script type="text/javascript" src="resource/client/js/5e70a0d5a3"></script>
-    <style type="text/css"></style>
-    <script id="facebook-jssdk" src="resource/client/js/sdk.js.download"></script>
-    <script src="resource/client/js/nr-1059.min.js.download"></script>
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <title>AllStore - MultiConcept eCommerce Template</title>
 
-    <meta name="description" content="Thỏa sức mua sắm qua mạng hàng ngàn mặt hàng sách, điện tử, đồ gia dụng, quà tặng, thời trang, làm đẹp &amp; sức khỏe">
-    <meta name="keywords" content="lorem.vn"> 
-    <meta name="robots" content="INDEX,FOLLOW">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700ii%7CRoboto:300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic" rel="stylesheet">
 
-    <meta name="viewport" content="width=1270">
-    
-    <meta name="msvalidate.01" content="7B5244978F593330CE453390BC14A845">
-    <link rel="manifest" href="https://tiki.vn/manifest.json">
-    <link rel="icon" type="image/png" href="https://tiki.vn/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="https://tiki.vn/favicon-16x16.png" sizes="16x16">
-    <link rel="shortcut icon" href="https://tiki.vn/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resource/client/css/font-awesome.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resource/client/css/bootstrap.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resource/client/css/ion.rangeSlider.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resource/client/css/ion.rangeSlider.skinFlat.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resource/client/css/jquery.bxslider.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resource/client/css/jquery.fancybox.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resource/client/css/flexslider.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resource/client/css/swiper.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resource/client/css/swiper.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resource/client/css/style.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resource/client/css/media.css">
+    </head>
+    <body>
+<!-- Header - start -->
+<header class="header">
 
-    <link rel="alternate" href="https://tiki.vn/" hreflang="vi-vn">
-    
-    <link rel="stylesheet" type="text/css" href="resource/client/css/home.css">
-    <link rel="stylesheet" type="text/css" href="resource/client/css/home_ext.css">
-    <link rel="stylesheet" type="text/css" href="resource/client/css/style.css">
-    <link rel="canonical" href="https://tiki.vn/">
-        
-    <link rel="apple-touch-icon" href="http://a5.mzstatic.com/us/r30/Purple69/v4/06/0e/6d/060e6d1e-a5f3-7b31-1e53-2493eb0d8d92/icon175x175.jpeg">
-        
-    <script>
-        var dataLayer = dataLayer ? dataLayer : [];
-    </script>
-    <style type="text/css">
-        iframe#_hjRemoteVarsFrame
-        {
-            display: none !important;
-            width: 1px !important;
-            height: 1px !important;
-            opacity: 0 !important;
-            pointer-events: none !important;
-        }
-    </style>
-    <!-- END: GTM DATA LAYER -->
-    
-    <!-- Export Id of GTM -->
-    <script>
-        window.tiki = window.tiki || {};
-        if (typeof Object.defineProperty === 'function') {
-            Object.defineProperty(window.tiki, 'gtmId', {
-                writable: false,
-                configurable: false,
-                value: 'GTM-KR9FQH'
-            });
-        } else {
-            window.tiki.gtmId = 'GTM-KR9FQH';
-        }
-    </script>
-    
-    <script>
-        var isLoggedIn = false;
-        var customerId = 0;
-    </script>       
-    
-    <script type="text/javascript">
-    
-    </script>
-    
-    <script type="text/javascript">
-        //ga('send', 'pageview');
-    </script>
-    
-    <!--  BEGIN GOOGLE TAGMANAGER FOR TEST-->
-    <!--  END GOOGLE TAGMANAGER FOR TEST-->
-    <link href="../css" rel="stylesheet"><link id="spStyleCss" rel="stylesheet" href="resource/client/css/sp-style.css" type="text/css" media="screen">
-    
-    <script src="resource/client/js/saved_resource"></script>
-    <script type="text/javascript" src="resource/client/js/jquery-min.js"></script>
-    <script type="text/javascript" src="resource/client/js/squery.min.js.download"></script>
-    <script type="text/javascript" src="resource/client/js/ematic.min.js"></script>
-    <style class="keyframe-style" id="boost-keyframe" type="text/css"> .boostKeyframe{transform:scale3d(1,1,1);}</style>
-    <style type="text/css">.fancybox-margin{margin-right:17px;}</style>
-    <style type="text/css"></style>
-    <link rel="stylesheet" href="resource/client/css/font-awesome.min.css">
-    <!-- css and script for swiper slider BEGIN -->
-    <link rel="stylesheet" href="resource/client/css/swiper.css">
-    <script src="resource/client/js/swiper.js"></script>
-    <!-- css and script for swiper slider END -->
-    
-    <script type="text/javascript" src="resource/client/js/squery.min.js"></script>
-    
-    <style type="text/css">.fancybox-margin{margin-right:17px;}</style>
-</head>
-<body class="tiki-home chrome" cz-shortcut-listen="true">
-    <div class="header-overlay" style="display: none"></div>
-    
-    <!-- Google Tag Manager -->
-    <noscript>&amp;amp;amp;amp;amp;lt;iframe src="//www.googletagmanager.com/ns.html?id=GTM-KR9FQH" height="0" width="0" style="display:none;visibility:hidden"&amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;lt;/iframe&amp;amp;amp;amp;amp;gt;
-
-    </noscript>
-
-    <!-- header BEGIN -->
-    <header id="header">
-        <div class="top-promo">
-            <div class="container">
-                <div class="left">
-                    <a class="top-label" href="https://tiki.vn/app" target="_blank">
-                        <!-- <i class="ico ico-cellphone"></i> -->
-                        <img src="../image/ic_cellphone.png">
-                        Lorem ipsum - dolor si amet
-                    </a>
-                </div>
-                <div class="right">
-                    <a class="top-label" target="_blank" href="https://tiki.vn/hot&amp;src=header_label" title="Deal SỐC giảm giá mỗi ngày" onclick="ga('send','event','tiki-hot','click','header-label');">
-                            <i class="ico ico-fire"></i>Khuyến Mãi HOT
-                        </a>
-                        <a class="top-label" target="_blank" href="https://tiki.vn/lp/tra-gop&amp;src=header_label" title="Trả góp lãi suất 0% bằng thẻ tín dụng">
-                            consectetur adipiscing elit
-                        </a>
-                        <a class="top-label" target="_blank" href="https://tiki.vn/lp/mua-tra-gop&amp;src=header_label" title="Trả góp tiêu dùng bằng tiền mặt">
-                            sed do eiusmod
-                        </a>
-    
-                    <div class="sell-with-tiki top-label">
-                            <a target="_blank" href="https://tiki.vn/ban-hang-cung-tiki?ref=header-dropdown" title="Kinh doanh cùng Tiki" onclick="ga('send','event','tiki-sell-with-tiki','click','header-label');">
-                                <img src="../image/money_bag.png" height="19">
-                                Lorem ipsum<i class="ico ico-arrow-down "></i>
-                            </a>
-                            <div class="collapse">
-                                <div class="title">Bán hàng hiệu quả</div>
-                                <ul>
-                                    <li>
-                                        Hơn <b>13 triệu lượt truy cập</b> hàng tháng với hơn <b>40% là khách hàng trung thành</b>
-                                    </li>
-                                    <li>
-                                        Trung bình <b>giao hàng dưới 2 ngày</b>, nhận tiền nhanh hơn, không làm đọng vốn
-                                    </li>
-                                    <li>
-                                        Tỉ lệ <b>huỷ đơn hàng dưới 3%</b>, thấp nhất trên thị trường 
-                                    </li>
-                                    <li>
-                                        Kiểm soát chất lượng hàng hoá. Đảm bảo <b>cạnh tranh lành mạnh, không hàng giả, hàng nhái</b>
-                                    </li>
-                                </ul>
-                                <a target="_blank" href="https://tiki.vn/ban-hang-cung-tiki?ref=header-dropdown" title="Kinh doanh cùng Tiki" class="register" onclick="ga('send','event','tiki-sell-with-tiki','click','header-label');">ĐĂNG KÝ NGAY</a>
-                            </div>
-                        </div>
-                </div>
-            </div>
-        </div>
-        <div class="header-form-container">
-            <div class="container">
-                <a href="https://tiki.vn/" class="logo">
-                    <i class="ico ico-logo"></i>
-                </a>
-                <div class="form-search">
-                    <form id="search_form" action="https://tiki.vn/search" method="get">
-                        <div class="search-wrap">
-                            <div class="input">
-                                <div class="flex">
-                                    <input type="text" name="q" autocomplete="off" value="" placeholder="Tìm sản phẩm, danh mục hay thương hiệu mong muốn ...">
-                                </div>
-                            </div>
-                            <button type="submit"><span>Tìm kiếm</span></button> 
-                        </div>
-                    </form>
-                    <div id="search-suggestion" style="display: none">
-                        <div data-reactroot="" class="search-suggestion" style="display: none;"><!-- react-text: 2 --><!-- /react-text --><!-- react-text: 3 --><!-- /react-text --></div></div>
-                        <div id="search-autocomplete" style="display: none">
-                        <div data-reactroot="" class="keyword-remember" style="display: none;"></div>
-                        </div>
-                </div>
-                <div class="header-link">
-                    <a rel="nofollow" href="https://tiki.vn/kiem-tra-don-hang" title="Kiểm tra trạng thái Đơn hàng của bạn" class="tracking-order item">
-                        <i class="ico ico-order-tracking"></i>
-                        Theo dõi<br>đơn hàng
-                    </a>
-                    <div class="noti-item tracking-noti item" id="header-noti"><div data-reactroot="">
-                        <div><i class="ico ico-ic-notifications"></i><!-- react-text: 4 -->Thông báo<!-- /react-text --><br><!-- react-text: 6 -->của tôi<!-- /react-text --></div><div class="box-noti"></div></div></div> 
-                    <div class="user-profile item" id="header-user">
-                        <div data-reactroot="">
-                            <div>
-                                <i class="ico ico-user"></i><b>Đăng nhập</b><br><small>Tài khoản</small>
-                            </div>
-                            <div class="box" style="display: none;">
-                                <ul class="user-ajax-guest">
-                                    <li id="login_link">
-                                        <a href="#" title="Đăng Nhập" class="user-name-login">
-                                            <span class="text">Đăng nhập</span>
-                                        </a>
-                                    </li>
-                                    <li class="user-name-register">
-                                        <a href="#" title="Tạo tài khoản mới"><span class="text">Tạo tài khoản</span></a>
-                                    </li>
-                                    <li id="login_fb_link">
-                                        <a class="user-name-loginfb" title="Đăng nhập bằng Facebook" href="javascript: void(0)" data-url="https://tiki.vn/customer/account/loginFacebook"><span class="icon"><i class="ico ico-facebook"></i></span><span class="text">Đăng nhập bằng Facebook</span></a></li><li id="login_google_link"><a class="user-name-login-google" title="Đăng nhập bằng Google" href="javascript: void(0)" data-url="https://tiki.vn/customer/account/login_google"><span class="icon"><i class="ico ico-google"></i></span><span class="text">Đăng nhập bằng Google</span></a></li><li id="login_zalo_link"><a class="user-name-login-zalo" title="Đăng nhập bằng Zalo" href="javascript: void(0)" data-url="https:///customer/account/loginZalo"><img src="https:///desktop/img/svg/zaloicon.svg"><span class="text">Đăng nhập bằng Zalo</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="header-cart"><a data-reactroot="" rel="nofollow" href="/checkout/cart" class="header-cart item"><i class="ico ico-cart"></i><!-- react-text: 3 -->Giỏ hàng<!-- /react-text --><span class="cart-count">0</span><div class="add-to-cart-success"><span class="close"><img src="/assets/img/cancel.png"></span><p class="text"><img src="/assets/img/icon-svg/icon-tick.svg" alt="" width="18"><!-- react-text: 10 -->Thêm vào giỏ hàng thành công!<!-- /react-text --></p><button class="btn">Xem giỏ hàng và thanh toán</button></div></a></div>
-                    <!-- Tooltip Link social -->
-                    <div class="box-social"> 
-                    <div class="popup-social">
-                        <span>
-                            Kết nối tài khoản mạng xã hội để đăng nhập nhanh chóng, dễ dàng hơn.
-                        </span>
-                        <img src="../image/icon-face.png">
-                        <img src="../image/icon-gg.png">
-                        <img src="../image/icon-zalo.png">
-                        <a class="btn-link-now" href="https://tiki.vn/customer/account/edit" title="Liên kết ngay">Liên kết ngay</a>
-                        <a class="close" href="https://tiki.vn/" title="Đóng"></a>
-                    </div> 
-                    </div>
-                
-                </div>
-            </div>
-        </div>
-        <div class="main-nav">
-            <div class="container">
-                <!-- nav BEGIN -->
-                <nav class="main-nav-wrap">
-                    <a href="javascript:" class="main-nav-toggle">
-                        <img src="../image/ic-burger-menu.png">
-                        <span class="long">DANH MỤC SẢN PHẨM</span>
-                        <span class="short">DANH MỤC</span>
-                    </a>
-                    <ul>
-                        <li>
-                            <a href="https://tiki.vn/nha-sach-tiki?src=mega-menu" class="">
-                                <i class="ico ico-book"></i>
-                                <span>lorem ipsum</span>
-                            </a>
-                            <!-- menu hover BEGIN -->
-                            <div class="nav-sub" style="display: none;">
-                                <ul>
-                                    <li>
-                                    <div class="nav-sub-list-box">
-                                                                                                                                                                                                                                                                <a class="bold " href="https://tiki.vn/sach-truyen-tieng-viet?src=mega-menu">
-                                            Sách Tiếng Việt</a>
-                                                                                                                                                                                                                                                                                                                                                    <a class="" href="https://tiki.vn/bestsellers/sach-truyen-tieng-viet/c316?src=mega-menu">
-                                            Sách Bán Chạy</a>
-                                                                                                                                                                                                                                                                                                                                                    <a class="" href="https://tiki.vn/sach-truyen-tieng-viet/c316?order=newest&amp;src=mega-menu">
-                                            Sách Mới Phát Hành<i class="icon-new"></i></a>
-                                                                                                                                                                                                                                                                                                                                                    <a class="" href="https://tiki.vn/sach-truyen-tieng-viet/c316?order=discount_percent,desc&amp;src=mega-menu">
-                                            Kiến Thức Tổng Hợp</a>
-                                                                                                                                                                                                                                                                                                                                                    <a class="all " href="https://tiki.vn/sach-truyen-tieng-viet?src=mega-menu">
-                                            Xem tất cả</a>
-                                                                                                                                                                                                                                                                                                                                                    <a class="bold " href="https://tiki.vn/ebook/c5290?order=newest&amp;src=mega-menu">
-                                            Ebook</a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                    <div class="nav-sub-list-box">
-                                                                                                                                                                                                                                                                <a class="bold " href="https://tiki.vn/sach-tieng-anh/c320?src=mega-menu">
-                                            Sách Tiếng Anh                                                </a>
-                                                                                                                                                                                                                                                                                                                                                    <a class="" href="https://tiki.vn/bestsellers/sach-tieng-anh/c320?src=mega-menu">
-                                            Best Seller                                                </a>
-                                                                                                                                                                                                                                                                                                                                                    <a class="" href="https://tiki.vn/sach-tieng-anh-moi/c1405?order=newest&amp;src=mega-menu">
-                                            New Arrivals                                                </a>
-                                                                                                                                                                                                                                                                                                                                                    <a class="" href="https://tiki.vn/children-books/c7?order=newest&amp;src=mega-menu">
-                                            Children's Books                                                </a>
-                                                                                                                                                                                                                                                                                                                                                    <a class="" href="https://tiki.vn/fiction-literature/c9?order=newest&amp;src=mega-menu">
-                                            Fiction - Literature                                                </a>
-                                                                                                                                                                                                                                                                                                                                                    <a class="" href="https://tiki.vn/business-economics/c4?order=newest&amp;src=mega-menu">
-                                            Business &amp; Economics                                                </a>
-                                                                                                                                                                                                                                                                                                                                                    <a class="" href="https://tiki.vn/self-help/c614?order=newest&amp;src=mega-menu">
-                                            Self Help                                                </a>
-                                                                                                                                                                                                                                                                                                                                                    <a class="" href="https://tiki.vn/education-teaching/c5308?order=newest&amp;src=mega-menu">
-                                            Education - Teaching                                                </a>
-                                                                                                                                                                                                                                                                                                                                                    <a class="" href="https://tiki.vn/dictionary/c282?order=newest&amp;src=mega-menu">
-                                            Dictionary                                                </a>
-                                                                                                                                                                                                                                                                                                                                                    <a class="bold " href="https://tiki.vn/van-phong-pham-qua-luu-niem/c7741?order=top_seller&amp;src=mega-menu">
-                                            Văn Phòng Phẩm - Quà Lưu Niệm                                                </a>
-                                                                                                                                                                                                                                                                                                                                                    <a class="" href="https://tiki.vn/van-phong-pham-qua-luu-niem/c7741?order=top_seller&amp;src=mega-menu">
-                                            Bán Chạy                                                </a>
-                                                                                                                                                                                                                                                                                                                                                    <a class="" href="https://tiki.vn/van-phong-pham-qua-luu-niem/c7741?order=newest&amp;src=mega-menu">
-                                            Sản Phẩm Mới                                                </a>
-                                                                                                                                                                                                                                                                                                                                                    <a class="" href="https://tiki.vn/van-phong-pham-qua-luu-niem/c7741?order=discount_percent%2Cdesc&amp;src=mega-menu">
-                                            Khuyến Mãi Hot<i class="icon-flame"></i>                                                </a>
-                                                                                                                                                                                                                                                                                                                                                    <a class="" href="https://tiki.vn/dung-cu-hoc-sinh/c2365?src=mega-menu">
-                                            Dụng Cụ Học Sinh                                                </a>
-                                                                                                                                                                                                                                                                                                                                                    <a class="" href="https://tiki.vn/thiet-bi-van-phong/c1862?src=mega-menu">
-                                            Dụng Cụ Văn Phòng                                                </a>
-                                                                                                                                                                                                                                                                                                                                                    <a class="" href="https://tiki.vn/flashcard-hoc/c1910?src=mega-menu">
-                                            Flashcard                                                </a>
-                                                                                                                                                                                                                                                                                                                                                    <a class="" href="https://tiki.vn/vpp-but-viet/c1858?src=tree&amp;order=newest&amp;src=mega-menu">
-                                            Bút Viết                                                </a>
-                                                                                                                                                                                                                                                                                                                                                    <a class="" href="https://tiki.vn/may-tinh-dien-tu/c2452?order=top_seller&amp;src=mega-menu">
-                                            Máy Tính                                                </a>
-                                                                                                                                                                                                                                                                                                                                                    <a class="" href="https://tiki.vn/qua-tang-tong-hop/c6199?order=top_seller&amp;src=mega-menu">
-                                            Quà Tặng Tổng Hợp                                                </a>
-                                                                                                                                                                                                                                                                                                                                                    <a class="all " href="https://tiki.vn/van-phong-pham-qua-luu-niem/c7741?order=top_seller&amp;src=mega-menu">
-                                            Xem tất cả                                                </a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                    <div class="nav-sub-list-box">
-                                                                                                                                                                                                                                                                <span class="bold ">
-                                            Công ty phát hành                                                </span>    
-                                                                                                                                                                                                                                                                                                                                                    <a class="" href="https://tiki.vn/cty-sach/tre.html?src=mega-menu">
-                                            NXB Trẻ                                                </a>
-                                                                                                                                                                                                                                                                                                                                                    <a class="" href="https://tiki.vn/cty-sach/nha-nam.html?src=mega-menu">
-                                            Nhã Nam                                                </a>
-                                                                                                                                                                                                                                                                                                                                                    <a class="" href="https://tiki.vn/cty-sach/alphabooks.html?src=mega-menu">
-                                            Alphabooks                                                </a>
-                                                                                                                                                                                                                                                                                                                                                    <a class="" href="https://tiki.vn/cty-sach/kim-dong.html?src=mega-menu">
-                                            NXB Kim Đồng                                                </a>
-                                                                                                                                                                                                                                                                                                                                                    <a class="" href="https://tiki.vn/az-vietnam/c7054?order=newest&amp;src=mega-menu">
-                                            AZ Việt Nam                                                </a>
-                                                                                                                                                                                                                                                                                                                                                    <a class="" href="https://tiki.vn/cty-sach/first-news.html?src=mega-menu">
-                                            First News                                                </a>
-                                                                                                                                                                                                                                                                                                                                                    <a class="" href="https://tiki.vn/cty-sach/dinh-ti.html?src=mega-menu">
-                                            Đinh Tị                                                </a>
-                                                                                                                                                                                                                                                                                                                                                    <a class="" href="https://tiki.vn/cty-sach/mc-books.html?src=mega-menu">
-                                            MC Books                                                </a>
-                                                                                                                                                                                                                                                                                                                                                    <a class="" href="https://tiki.vn/cty-sach/sach-dong-a.html?src=mega-menu">
-                                            Đông A                                                </a>
-                                                                                                                                                                                                                                                                                                                                                    <a class="" href="https://tiki.vn/cty-sach/bach-viet.html?src=mega-menu">
-                                            Bách Việt                                                </a>
-                                                                                                                                                                                                                                                                                                                                                    <a class="" href="https://tiki.vn/cty-sach/phuong-nam.html?src=mega-menu">
-                                            Phương Nam                                                </a>
-                                                                                                                                                                                                                                                                                                                                                    <a class="" href="https://tiki.vn/cty-sach/ipm.html?src=mega-menu">
-                                            IPM                                                </a>
-                                                                                                                                                                                                                                                                                                                                                    <a class="" href="https://tiki.vn/cty-sach/minh-long.html?src=mega-menu">
-                                            Minh Long                                                </a>
-                                                                                                                                                                                                                                                                                                                                                    <a class="" href="https://tiki.vn/cty-sach/thai-ha.html?src=mega-menu">
-                                            Thái Hà                                                </a>
-                                                                                                                                                                                                                                                                                                                                                    <a class="" href="https://tiki.vn/cty-sach/quang-van.html?src=mega-menu">
-                                            Quảng Văn                                                </a>
-                                                                                                                                                                                                                                                                                                                                                    <a class="" href="https://tiki.vn/cty-sach/oxford-university-press.html?src=mega-menu">
-                                            Oxford University Press                                                </a>
-                                                                                                                                                                                                                                                                                                                                                    <a class="" href="https://tiki.vn/cty-sach/hachette-book-group.html?src=mega-menu">
-                                            Hachette Book Group                                                </a>
-                                                                                                                                                                                                                                                                                                                                                    <a class="" href="https://tiki.vn/cty-sach/macmillan-publishers.html?order=top_seller&amp;src=mega-menu">
-                                            Macmillan                                                </a>
-                                                                                                                                                                                                                                                                                                                                                    <a class="all " href="https://tiki.vn/cty-sach.html?src=mega-menu">
-                                            Xem tất cả                                                </a>
-                                        </div>
-                                    </li>
-                                    <!-- sub quang cao BEGIN -->
-                                    <li>
-                                        <div class="nav-sub-list-box">
-                                            <div class="text-right">
-                                                <a class="impress-banner" data-banner-title="Freeship toàn quốc ĐH 99k" data-banner-id="14980" data-banner-group-code="Home3_menu_sach" rel="nofollow" href="https://tiki.vn/lp/mua-sach-da-re-nay-con-de-hon?src=Home3_menu_sach" title="Freeship toàn quốc ĐH 99k" target="_blank">
-                                                    <img src="https://vcdn.tikicdn.com/ts/banner/93/7c/97/46b10c74ec73bec67b4abfa0d24da85e.jpg" alt="Freeship toàn quốc ĐH 99k" class="lazy" style="display: inline;">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <!-- sub quang cao END -->
-                                </ul>
-                            </div>
-                            <!-- menu hover END -->
-                        </li>                                   
-                    </ul>
-                </nav>
-                <!-- nav END -->
-                <!-- link san pham da xem -->
-                <a class="feature recently" href="javascript:">
-                    <i class="ico ico-arrow-down"></i>
-                    Sản phẩm bạn đã xem
-                </a>
-                <a href="https://tiki.vn/top/giao-hang-tiki" target="_blank" class="feature delivery-2h">
-                    <span class="icon">
-                    </span>
-                    Lorem ipsum<br>
-                </a>
-                <div class="feature exclusive">
-                    <span class="icon"></span>
-                        Tất cả sản phẩm<br>
-                        100% chính hãng
-                </div>
-                <a href="https://tiki.vn/doi-tra-de-dang" target="_blank" class="feature return">
-                    <span class="icon">
-                    </span>
-                    Exchange Policy
-                </a>
-            </div>
-        </div>
-        <div id="main-ajax-recentlyviewed" data-impress-list-title="Header | Sản phẩm bạn đã xem">
-            <div data-reactroot="" class="product-recently-content swiper-carousel-wrapper"></div>
-        </div>
-    </header>
-    <!-- header END -->
-    
-    <!-- Popup Banner Thieu Nhi -->
-    <div class="modal fade children-modal in" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <i class="tiki-icons tiki-icons-close"></i>
-            </button>
-                <div class="modal-body" style="line-height: 1.6;">
-                <a href="https://tiki.vn/lp/den-tiki-vui-tet-thieu-nhi-1-6" target="_blank"><img src="../image/Card_childrenday-1.jpg"></a>
-                </div> 
-            </div>
-        </div>
-    </div> 
-    
-    <!-- login box -->
-    <div class="modal" id="login-form" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content"> 
-                
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <i class="tiki-icons tiki-icons-close"></i>
-                    </button>
-                <div class="modal-body">
-                                    <div class="content-left">
-                        <h2>Đăng nhập</h2>
-                        <p>Đăng nhập để theo dõi đơn hàng, lưu <br>danh sách sản phẩm yêu thích, nhận<br> nhiều ưu đãi hấp dẫn.</p>
-                        <img src="../image/graphic-map.png">
-                    </div>
-                    <div class="content-right">
-                            <div class="tab">
-                                <a class="tab-item active"> 
-                                    Đăng nhập
-                                </a>
-                                <a class="tab-item" id="create-account" href="https://tiki.vn/#" data-dismiss="modal" data-toggle="modal" data-target="#register-form">
-                                    Tạo tài khoản
-                                </a>
-                            </div>
-                            <form class="content bv-form" method="POST" action="https://tiki.vn/customer/account/ajaxLogin?ref=aHR0cHM6Ly90aWtpLnZuLz9USUtJX0NBQ0hFX0NMRUFS" id="login_popup_form" novalidate="novalidate"><button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button><button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
-                            <div class="form-group popup_email has-feedback" id="popup_login">
-                                <label class="control-label">Email / SĐT</label>
-                                <input id="popup-login-email" type="text" class="form-control login" name="email" placeholder="Nhập Email hoặc Số điện thoại" data-bv-field="email"><i class="form-control-feedback" data-bv-icon-for="email" style="display: none;"></i>
-                                <span class="help-block ajax-message"></span>
-                            <small class="help-block" data-bv-validator="notEmpty" data-bv-for="email" data-bv-result="NOT_VALIDATED" style="display: none;">Vui lòng nhập Email hoặc Số điện thoại</small><small class="help-block" data-bv-validator="regexp" data-bv-for="email" data-bv-result="NOT_VALIDATED" style="display: none;">Email hoặc Số điện thoại không hợp lệ</small></div>
-    
-                            <div class="form-group popup_password has-feedback" id="popup_password">
-                                <label class="control-label">Mật khẩu</label>
-                                <input type="password" id="login_password" class="form-control login" name="password" placeholder="Mật khẩu từ 6 đến 32 ký tự" autocomplete="off" data-bv-field="password"><i class="form-control-feedback" data-bv-icon-for="password" style="display: none;"></i>
-                                <span class="help-block ajax-message"></span>
-                            <small class="help-block" data-bv-validator="stringLength" data-bv-for="password" data-bv-result="NOT_VALIDATED" style="display: none;">Mật khẩu phải dài từ 6 đến 32 ký tự</small></div>
-    
-                            
-                            <div class="login-ajax-captcha" style="display:none">
-                                <div id="login-popup-recaptcha"></div>
-                            </div>
-                            <div class="form-group" id="error_captcha" style="margin-bottom: 15px">
-                                <span class="help-block ajax-message"></span>
-                            </div>
-                            <div class="form-group">
-                                <p class="reset">Quên mật khẩu? Nhấn vào <a data-toggle="modal" data-target="#reset-password-form" href="https://tiki.vn/#">đây</a></p>
-                            </div>
-    
-                            <div class="form-group">
-                                <button type="submit" id="login_popup_submit" class="btn btn-info btn-block">Đăng nhập</button>
-                            </div>
-                            <div class="form-group">
-                                <a class="btn btn-block btn-social btn-facebook user-name-loginfb" title="Đăng nhập bằng Facebook" href="javascript: void(0)" data-url="https://tiki.vn/customer/account/loginFacebook">
-                                    <i class="fa fa-facebook"></i>
-                                    <span>Đăng nhập bằng Facebook</span>
-                                </a>
-                            </div>
-                            <div class="form-group">
-                                <a class="btn btn-block btn-social btn-google user-name-login-google" title="Đăng nhập bằng Google" href="javascript: void(0)" data-url="https://tiki.vn/customer/account/login_google">
-                                    <i class="ico ico-google"></i>
-                                    <span>Đăng nhập bằng Google</span>
-                                </a>
-                            </div>
-    
-                            <!-- <div class="form-group last">
-                                <a class="btn btn-block btn-social btn-zalo user-name-login-zalo" title="Đăng nhập bằng Zalo" href="javascript: void(0)" data-url="https://tiki.vn/customer/account/loginZalo">
-                                    <img src="../image/zaloicon(1).svg">
-                                    <span>Đăng nhập bằng Zalo</span>
-                                </a>
-                            </div>  -->
-                        </form>
-    
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- end login box -->
-    
-    <!-- reset password -->
-    <div class="modal" id="reset-password-form" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <i class="tiki-icons tiki-icons-close"></i>
-                    </button>
-                    <div class="head">
-                        <h2>Quên mật khẩu?</h2>
-                        <p>
-                            <span>Vui lòng gửi email. Chúng tôi sẽ gửi link khởi tạo mật khẩu mới qua email của bạn.</span>
-                        </p>
-                    </div>
-                </div>
-                <div class="modal-body">
-                    <form method="POST" action="https://tiki.vn/customer/account/ajaxForgotPassword" class="content" id="reset_popup_form">
-                        <div id="forgot_successful">
-                            <span></span>
-                        </div>
-                        <div class="form-group" id="forgot_pass">
-                            <input type="text" name="email" id="email" class="form-control" value="" required="required" placeholder="Nhập email">
-                            <span class="help-block"></span>
-                        </div>
-                        <div class="form-group last">
-                            <button type="button" id="reset_form_submit" class="btn btn-info">Gửi</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- end reset password -->
-    
-    <!-- registration box -->
-    <div class="modal" id="register-form" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content"> 
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <i class="tiki-icons tiki-icons-close"></i>
-                    </button>  
-                <div class="modal-body">
-                    <div class="content-left">
-                        <h2>Tạo tài khoản</h2>
-                        <p>Tạo tài khoản để theo dõi đơn hàng, lưu<br> danh sách sản phẩm yêu thích, nhận <br>nhiều ưu đãi hấp dẫn.</p>
-                        <img src="../image/graphic-map.png">
-                    </div>
-                    <div class="content-right">
-                            <div class="tab">
-                                <a class="tab-item" data-toggle="modal" data-target="#login-form"> 
-                                    Đăng nhập
-                                </a>
-                                <a class="tab-item active" id="create-account" href="https://tiki.vn/#" data-dismiss="modal" data-toggle="modal" data-target="#register-form">
-                                    Tạo tài khoản
-                                </a>
-                            </div>
-                            <form class="content bv-form" method="POST" action="https://tiki.vn/customer/account/ajaxCreate" id="register_popup_form" novalidate="novalidate"><button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button><button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
-                            <div class="left-col">
-                                <div form-group="" id="general_error">
-                                    <span></span>
-                                </div>
-                                <div class="form-group" id="register_name">
-                                    <label class="control-label" for="pasword">Họ tên:</label>
-                                    <div class="input-wrap has-feedback">
-                                        <input type="text" class="form-control register" name="full_name" id="name" placeholder="Nhập họ tên" data-bv-field="full_name"><i class="form-control-feedback bv-no-label" data-bv-icon-for="full_name" style="display: none;"></i>
-                                        <span class="help-block ajax-message"></span>
-                                    <small class="help-block" data-bv-validator="notEmpty" data-bv-for="full_name" data-bv-result="NOT_VALIDATED" style="display: none;">Vui lòng nhập họ tên</small></div>
-                                </div>
-                                <div class="form-group" id="register_email">
-                                    <label class="control-label" for="email">Email / SĐT:</label>
-                                    <div class="input-wrap has-feedback">
-                                        <input type="text" class="form-control register register-email-input" name="email" id="email" placeholder="Nhập Email hoặc Số điện thoại" data-bv-field="email"><i class="form-control-feedback bv-no-label" data-bv-icon-for="email" style="display: none;"></i>
-                                        <span class="help-block ajax-message"></span>
-                                    <small class="help-block" data-bv-validator="notEmpty" data-bv-for="email" data-bv-result="NOT_VALIDATED" style="display: none;">Vui lòng nhập Email Hoặc Số điện thoại</small><small class="help-block" data-bv-validator="remote" data-bv-for="email" data-bv-result="NOT_VALIDATED" style="display: none;">Email hoặc Số điện thoại đã tồn tại</small></div>
-                                </div>
-                                <div class="form-group" id="register_password">
-                                    <label class="control-label" for="pasword">Mật khẩu:</label>
-                                    <div class="input-wrap has-feedback">
-                                        <input type="password" class="form-control register" name="password" id="password" placeholder="Mật khẩu từ 6 đến 32 ký tự" autocomplete="off" data-bv-field="password"><i class="form-control-feedback bv-no-label" data-bv-icon-for="password" style="display: none;"></i>
-                                        <span class="help-block ajax-message"></span>
-                                    <small class="help-block" data-bv-validator="notEmpty" data-bv-for="password" data-bv-result="NOT_VALIDATED" style="display: none;">Vui lòng nhập mật khẩu</small><small class="help-block" data-bv-validator="stringLength" data-bv-for="password" data-bv-result="NOT_VALIDATED" style="display: none;">Mật khẩu phải dài từ 6 đến 32 ký tự</small></div>
-                                </div> 
-                                <div class="form-group gender-select-wrap" id="register_name">
-                                    <label class="control-label" for="pasword">Giới tính:</label>
-                                    <div class="input-wrap has-feedback">
-                                        <div class="row">
-                                            <div class="col-xs-4">
-                                                <label for="male" class="icheck-wrap gender-select">
-                                                    <div class="iradio_square-blue" style="position: relative;"><div class="iradio_square-blue" style="position: relative;"><input type="radio" name="gender" value="on" id="male" class="gender" data-bv-field="gender" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
-                                                    Nam
-                                                </label>
-                                            </div>
-                                            <div class="col-xs-4">
-                                                <label for="female" class="icheck-wrap gender-select">
-                                                    <div class="iradio_square-blue" style="position: relative;"><div class="iradio_square-blue" style="position: relative;"><input type="radio" name="gender" value="off" id="female" class="gender" data-bv-field="gender" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div><i class="form-control-feedback" data-bv-icon-for="gender" style="display: none;"></i><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
-                                                    Nữ
-                                                </label>
-                                            <small class="help-block" data-bv-validator="notEmpty" data-bv-for="gender" data-bv-result="NOT_VALIDATED" style="display: none;">Vui lòng chọn giới tính</small></div>
-                                        </div>
-                                        <span class="help-block">Vui lòng chọn giới tính</span>
-    
-                                    </div>
-                                </div>
-                                <div class="form-group" id="register_birthday">
-                                    <label class="control-label no-lh" for="birthdate">
-                                        Ngày Sinh:
-                                    </label>
-                                    <div class="input-wrap">
-                                        <div id="birthday-picker-popup"></div>
-                                        <span class="help-block ajax-message" id="span-birthday"></span>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="input-wrap">
-                                        <label for="subcribe" class="icheck-wrap is-small">
-                                            <div class="icheckbox_square-blue checked"><div class="icheckbox_square-blue checked"><input type="checkbox" name="newsletter" class="icheck" checked="" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
-                                            Nhận các thông tin và chương trình khuyến mãi của Tiki qua email.
-                                        </label>
-                                        <div class="input-wrap">
-                                            <p class="policy">Khi bạn nhấn Đăng ký, bạn  đã đồng ý thực hiện mọi giao dịch mua bán theo <a target="_blank" href="http://hotro.tiki.vn/hc/vi/articles/201971214">điều kiện sử dụng và chính sách của Tiki</a>.</p>
-                                        </div>
-                                    </div>
-                                </div> 
-                                <div class="form-group last">
-                                    <div class="input-wrap">
-                                        <button type="submit" id="register_popup_submit" class="btn btn-info btn-block btn-register-submit">Tạo tài khoản</button>
-                                    </div>
-                                </div>
-                            </div>
-                                
-                        </form>
-                    </div> 
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- end registration box -->
-    
-    <!-- div wrap BEGIN -->
-    <div class="wrap">
+    <!-- Topbar - start -->
+    <div class="header_top">
         <div class="container">
-            <div id="home-banner">
-                <div class="left">
-                    <div class="slider-wrap">
-                            <a class="impress-banner" href="https://tiki.vn/lp/lau-dai-deals-phep-thuat?src=home_v4_main_banner" data-banner-title="halloween" data-banner-id="15075" data-banner-group-code="home_v4_main_banner" target="_blank">
-                                <img src="../image/22eeb2aa14581e240134c783d61ab3a5.jpg" alt="">
-                            </a>
-                        </div>
-                    <div class="sub-banner-wrap">
-                            <div class="sub-item">
-                            <a class="impress-banner" data-banner-title="mb" data-banner-id="14618" data-banner-group-code="home_v4_sub_banner" rel="nofollow" href="https://tiki.vn/lp/sieu-thi-ta-bim?src=home_v4_sub_banner" title="mb" target="_blank">
-                                <img src="../image/1541c0e528b36557a842378f23e68c4e.jpg" alt="mb">
-                            </a>
-                            </div>
-                            <div class="sub-item">
-                                <a class="impress-banner" data-banner-title="fmcg" data-banner-id="14556" data-banner-group-code="home_v4_sub_banner" rel="nofollow" href="https://tiki.vn/lp/an-nam-finefood?src=home_v4_sub_banner" title="fmcg" target="_blank">
-                                    <img src="../image/b1fabf5bf2ef84405ea715b2b870de8b.jpg" alt="fmcg">
-                                </a>
-                            </div>
-                        </div>
-                </div>
-                <div class="right">
-                    <div class="mini-banner-wrap">
-                            <div class="mini-item">
-                                <a class="impress-banner" data-banner-title="Laptop" data-banner-id="14367" data-banner-group-code="home_v4_mini_banner" rel="nofollow" href="https://tiki.vn/top/mua-laptop-gi-len-tiki-di?src=home_v4_mini_banner" title="Laptop" target="_blank">
-                                    <img src="../image/b3e764ae7c2c3fbbad3269ca5ba44e82.jpg" alt="Laptop">
-                                </a>
-                            </div>
-                            <div class="mini-item">
-                                <a class="impress-banner" data-banner-title="đại tiệc" data-banner-id="14641" data-banner-group-code="home_v4_mini_banner" rel="nofollow" href="https://tiki.vn/lp/lam-dep-mua-le-hoi?src=home_v4_mini_banner" title="đại tiệc" target="_blank">
-                                    <img src="../image/44d495b513191e05fe04c9b25e2c94f2.jpg" alt="đại tiệc">
-                                </a>
-                            </div>
-                            <div class="mini-item">
-                                <a class="impress-banner" data-banner-title="tablet" data-banner-id="14521" data-banner-group-code="home_v4_mini_banner" rel="nofollow" href="https://tiki.vn/ipad-wifi-32gb-new-2017-hang-chinh-hang-p694884.html?src=home_v4_mini_banner" title="tablet" target="_blank">
-                                    <img src="../image/7b618b57197544bdb4bd2ac3b4bff5b2.jpg" alt="tablet">
-                                </a>
-                            </div>
-                            <div class="mini-item">
-                                <a class="impress-banner" data-banner-title="hso" data-banner-id="14615" data-banner-group-code="home_v4_mini_banner" rel="nofollow" href="https://tiki.vn/cty-sach/phu-nu.html?order=top_seller&amp;src=home_v4_mini_banner" title="hso" target="_blank">
-                                    <img src="../image/ebc410a1fadd5ed8f24b54c56f7665e2.jpg" alt="hso">
-                                </a>
-                            </div>
-                            <div class="mini-item">
-                                <a class="impress-banner" data-banner-title="siêu thị gia dụng" data-banner-id="14529" data-banner-group-code="home_v4_mini_banner" rel="nofollow" href="https://tiki.vn/lp/sieu-thi-gia-dung?src=home_v4_mini_banner" title="siêu thị gia dụng" target="_blank">
-                                    <img src="../image/7e2a4d27e134330dfd2c0e4f13be5829.jpg" alt="siêu thị gia dụng">
-                                </a>
-                            </div>
-                            <div class="mini-item">
-                                <a class="impress-banner" data-banner-title="CƠN LỐC DEAL SỐC" data-banner-id="14562" data-banner-group-code="home_v4_mini_banner" rel="nofollow" href="https://tiki.vn/top/con-loc-deal-soc?src=home_v4_mini_banner" title="CƠN LỐC DEAL SỐC" target="_blank">
-                                    <img src="../image/5885913d286cef47c86338be0ae1e45d.jpg" alt="CƠN LỐC DEAL SỐC">
-                                </a>
-                            </div>
-                        </div>
-                        <!-- mini-item END -->
-                </div>
-                <!-- banner-right END -->
-            </div>
-        </div>
+            <ul class="contactinfo nav nav-pills">
+                <li>
+                    <i class='fa fa-phone'></i> +7 777 123 1575
+                </li>
+                <li>
+                    <i class="fa fa-envelope"></i> admin@real-web.pro
+                </li>
+            </ul>
+            <!-- Social links -->
+            <ul class="social-icons nav navbar-nav">
+                <li>
+                    <a href="http://facebook.com" rel="nofollow" target="_blank">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://google.com" rel="nofollow" target="_blank">
+                        <i class="fa fa-google-plus"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://twitter.com" rel="nofollow" target="_blank">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://vk.com" rel="nofollow" target="_blank">
+                        <i class="fa fa-vk"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://instagram.com" rel="nofollow" target="_blank">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                </li>
+            </ul>		</div>
     </div>
-    <!-- div wrap END -->
-    
-    <!-- recentlyview BEGIN -->
-    <div class="box-recentlyviewed-product" id="box-recentlyviewed-product" data-impress-list-title="Home | Sản phẩm bạn đã xem">
+    <!-- Topbar - end -->
 
-    </div>
-    <!-- recentlyview END -->
-               
-    <!-- recommend BEGIN -->
-    <div class="box-recommendation-related-product" style="display: block;">
-        <div data-reactroot="" class="product-author-box" style="display: none;">
-            <div class="product-author-title">
-                <h4>Gợi ý dành riêng cho bạn</h4>
-            </div>
-            <div class="product-author-content swiper-carousel-wrapper">
-                <div class="swiper-container js-list-product">
-                    <div class="swiper-wrapper"></div>
-                </div>
-                <div class="swiper-button-next swiper-button-black"></div>
-                <div class="swiper-button-prev swiper-button-black"></div>
-            </div>
-        </div>
-    </div>
-    <!-- recommend END -->
-
-    <!-- row 1 BEGIN -->
-    <div class="row">
-        <div class="col-xs-12">
-            <div class="home-header-wrap">
-                <div class="home-header">
-                    <h2>
-                        <a href="https://tiki.vn/dien-thoai-may-tinh-bang"><i class="ico ico-cellphone"></i>Điện Thoại - Máy Tính Bảng</a>
-                    </h2>
-                    <ul class="visible-lg-block visible-md-block">
-                        <li>
-                            <a href="https://tiki.vn/may-tinh-bang/c1794" title="Máy Tính Bảng">
-                                Máy Tính Bảng</a>
-                        </li>
-                        <li>
-                            <a href="https://tiki.vn/dien-thoai-smartphone/c1795" title="Điện Thoại Smartphone">
-                                Điện Thoại Smartphone</a>
-                        </li>
-                        <li>
-                            <a href="https://tiki.vn/dien-thoai-pho-thong/c1796" title="Điện Thoại Phổ Thông">
-                                Điện Thoại Phổ Thông</a>
-                        </li>
-                        <li class="last">
-                            <a href="https://tiki.vn/dien-thoai-may-tinh-bang">
-                                <strong>Tất cả Điện Thoại - Máy Tính Bảng</strong>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <!-- home wrap BEGIN -->
-        <div class="home-block-wrap">
-            <!-- row - left BEGIN -->
-            <div class="home-left">
-                <!-- slider BEGIN -->
-                <div class="swiper-container banner-swiper-wrapper home-banner swiper-container-horizontal">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide swiper-slide-active" style="width: 950px; margin-right: 10px;">
-                            <a data-banner-id="15095" data-banner-group-code="home_top1_dienthoai" data-banner-title="oppo r7s" rel="nofollow" href="https://tiki.vn/oppo-r7s-p184128.html" target="_blank">
-                                <img class="lazy img-responsive" src="https://vcdn.tikicdn.com/ts/banner/c5/8d/06/b6e131d60083ad5a5199346574c0b5b0.jpg" height="260" width="870" alt="" style="display: block; background-image: none;">
-                            </a>
-                        </div>
-                        <div class="swiper-slide swiper-slide-next" style="width: 950px; margin-right: 10px;">
-                            <a data-banner-id="14170" data-banner-group-code="home_top1_dienthoai" data-banner-title="Xiaomi Tại Tiki" rel="nofollow" href="https://tiki.vn/top/chuyen-trang-xiaomi" target="_blank">
-                                <img class="lazy img-responsive" src="https://vcdn.tikicdn.com/ts/banner/be/6a/65/0ab9218694a9261da11d5626e140d3be.jpg" height="260" width="870" alt="" style="display: block; background-image: none;">
-                            </a>
-                        </div>
-                        <div class="swiper-slide" style="width: 950px; margin-right: 10px;">
-                            <a data-banner-id="14478" data-banner-group-code="home_top1_dienthoai" data-banner-title="Điện thoại Nokia 2017" rel="nofollow" href="https://tiki.vn/dien-thoai-may-tinh-bang/c1789/nokia" target="_blank">
-                                <img class="lazy img-responsive" src="./index_files/empty-lazy.gif" data-src="https://vcdn.tikicdn.com/ts/banner/5b/4c/b0/c52b22f05a06ed80e7567dd7faedcf35.jpg" height="260" width="870" alt="">
-                            </a>
-                        </div>
-                        <div class="swiper-slide" style="width: 950px; margin-right: 10px;">
-                            <a data-banner-id="13822" data-banner-group-code="home_top1_dienthoai" data-banner-title="Chuyên trang Apple tại Tiki.vn" rel="nofollow" href="https://tiki.vn/lp/chuyen-trang-apple" target="_blank">
-                                <img class="lazy img-responsive" src="./index_files/empty-lazy.gif" data-src="https://vcdn.tikicdn.com/ts/banner/b0/41/d8/b041d8c461e2ac3580099fd1e8dddf35.jpg" height="260" width="870" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
-                        <span class="swiper-pagination-bullet swiper-pagination-bullet-active" data-original-title="" title=""></span>
-                        <span class="swiper-pagination-bullet" data-original-title="" title=""></span>
-                        <span class="swiper-pagination-bullet" data-original-title="" title=""></span>
-                        <span class="swiper-pagination-bullet" data-original-title="" title=""></span>
-                    </div>
-                    <div class="swiper-button-next swiper-button-black"></div>
-                    <!-- <div class="swiper-button-prev swiper-button-black swiper-button-disabled"></div> -->
-                    <div class="swiper-button-prev swiper-button-black"></div>
-                </div>
-                <!-- slider END -->
-    
-                <div class="home-tabs">
-                    <!-- tabs title BEGIN -->
-                    <ul class="nav nav-tabs" role="tablist">
-                        <li class="active">
-                            <a href="https://tiki.vn/#home-new-2" aria-controls="home-new" role="tab" data-toggle="tab">
-                                Mới &amp; nổi bật
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://tiki.vn/#home-bestseller-2" aria-controls="home-bestseller" role="tab" data-toggle="tab">
-                                Bán chạy
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://tiki.vn/#dien-thoai-samsung" aria-controls="dien-thoai-samsung" role="tab" data-toggle="tab">
-                                Samsung
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://tiki.vn/#dien-thoai-oppo" aria-controls="dien-thoai-oppo" role="tab" data-toggle="tab">
-                                Oppo
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://tiki.vn/#dien-thoai-apple" aria-controls="dien-thoai-apple" role="tab" data-toggle="tab">
-                                Apple
-                            </a>
-                        </li>
-                        <a href="https://tiki.vn/dien-thoai-tablet-moi-va-noi-bat/c2051" class="see-all-face">
-                            Xem tất cả Mới &amp; nổi bật
-                        </a>
-                    </ul>
-                    <!-- tabs title END -->
-                    <div class="tab-content">
-                        <!-- tab content - item active BEGIN -->
-                        <div class="tab-pane active" id="home-new-2" data-impress-list-title="Home | Điện Thoại - Máy Tính Bảng | MỚI &amp; NỔI BẬT">
-                            <!-- tab carousel BEGIN -->
-                            <div class="swiper-carousel-wrapper">
-                                <!-- swiper horizontal BEGIN -->
-                                <div class="swiper-container home-product swiper-container-horizontal">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide swiper-slide-active" style="width: 240px; height: 366px;">
-                                            <div data-seller-product-id="943210" data-title="Điện Thoại iPhone 8 Plus 64GB - Hàng Chính Hãng FPT" data-price="22490000" data-id="941958" data-brand="" data-category="Điện Thoại - Máy Tính Bảng/Điện Thoại Smartphone" tpl="" rel="" class="product-item" style="height: 100%;">
-                                                <a data-id="941958" href="https://tiki.vn/dien-thoai-iphone-8-plus-64gb-hang-chinh-hang-fpt-p941958.html?src=home_SmartphoneTablet_centerbanner" title="Điện Thoại iPhone 8 Plus 64GB - Hàng Chính Hãng FPT" class="">
-                                                    <span class="image">
-                                                        <img class="product-image img-responsive lazy" alt="" src="https://vcdn.tikicdn.com/cache/200x200/media/catalog/product/1/_/1.u4939.d20170921.t153352.506708.jpg" style="display: block; background-image: none;">
-                                                        <span class="img-tra-gop">
-                                                            <img src="../image/icon-tra-gop.png" alt="Trả góp 0%">
-                                                        </span>
-                                                        <span class="product-right-icon">
-                                                        </span>
-                                                    </span>
-
-                                                    <span class="title">
-                                                        Điện Thoại iPhone 8 Plus 64GB - Hàng Chính...
-                                                    </span>
-                                            
-                                                    <p class="price-sale">22.490.000&nbsp;₫                          
-                                                        <span class="sale-tag sale-tag-square">-2%</span>
-                                                    </p>
-                                                    <p class="review review-wrap" style="opacity: 0; visibility: hidden">Chưa có nhận xét</p>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide swiper-slide-next" style="width: 240px; height: 366px;">
-                                            <div data-seller-product-id="706348" data-title="Điện Thoại Nokia 6 - Hàng Chính Hãng" data-price="4860000" data-id="706237" data-brand="" data-category="" tpl="" rel="" class="product-item    " style="height: 100%;">
-                                                <a data-id="706237" href="https://tiki.vn/dien-thoai-nokia-6-hang-chinh-hang-p706237.html?src=home_SmartphoneTablet_centerbanner" title="Điện Thoại Nokia 6 - Hàng Chính Hãng" class="">
-                                                    <span class="image">
-                                                        <img class="product-image img-responsive lazy" alt="" src="https://vcdn.tikicdn.com/cache/200x200/media/catalog/product/1/_/1.u2769.d20170703.t170332.752653.jpg" style="display: block; background-image: none;">
-                                                        <span class="img-tra-gop">
-                                                            <img src="../image/icon-tra-gop.png" alt="Trả góp 0%">
-                                                        </span>
-                                                        <span class="product-right-icon">
-                                                            <img srcset="https://vcdn.tikicdn.com/desktop/img/2h-circle.png 1x, https://vcdn.tikicdn.com/desktop/img/2h-circle@2x.png 2x" class="img2h" width="24" height="24" alt="Hỗ trợ giao hàng trong 2h" title="Hỗ trợ giao hàng trong 2h">
-                                                        </span>
-                                                    </span>
-                                                    <span class="title">
-                                                        Điện Thoại Nokia 6 - Hàng Chính Hãng
-                                                    </span>
-                                                    <p class="price-sale">4.860.000&nbsp;₫
-                                                        <span class="price-regular">5.590.000&nbsp;₫</span>
-                                                        <span class="sale-tag sale-tag-square">-13%</span>
-                                                    </p>
-                                                    <div class="review-wrap">
-                                                        <p class="rating">
-                                                            <span class="rating-content">
-                                                                <i class="star"></i>
-                                                                <i class="star"></i>
-                                                                <i class="star"></i>
-                                                                <i class="star"></i>
-                                                                <i class="star"></i>
-                                                                <span style="width:88%">
-                                                                    <i class="star"></i>
-                                                                    <i class="star"></i>
-                                                                    <i class="star"></i>
-                                                                    <i class="star"></i>
-                                                                    <i class="star"></i>
-                                                                </span>
-                                                            </span>
-                                                        </p>
-                                                        <p class="review">(20 nhận xét)</p>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-            
-                                        <!-- item 2 BEGIN -->
-                                        <div class="swiper-slide" style="width: 240px; height: 366px;">
-                                            <div data-seller-product-id="688487" data-title="Điện Thoại Samsung Galaxy J7 Pro - Hàng Chính Hãng" data-price="6250000" data-id="655609" data-brand="" data-category="Điện Thoại - Máy Tính Bảng/Điện Thoại Smartphone" tpl="" rel="" class="product-item    " style="height: 100%;">
-                                                <a data-id="655609" href="https://tiki.vn/dien-thoai-samsung-galaxy-j7-pro-hang-chinh-hang-p655609.html?src=home_SmartphoneTablet_centerbanner" title="Điện Thoại Samsung Galaxy J7 Pro - Hàng Chính Hãng" class="">
-                                                    <span class="image">
-                                                        <img class="product-image img-responsive lazy" alt="" src="https://vcdn.tikicdn.com/cache/200x200/media/catalog/product/1/_/1.u2769.d20170618.t081410.590250.jpg" style="display: block; background-image: none;">
-                                                        <span class="img-tra-gop">
-                                                            <img src="../image/icon-tra-gop.png" alt="Trả góp 0%">
-                                                        </span>
-                                                        <span class="product-right-icon">
-                                                            <img srcset="https://vcdn.tikicdn.com/desktop/img/2h-circle.png 1x, https://vcdn.tikicdn.com/desktop/img/2h-circle@2x.png 2x" class="img2h" width="24" height="24" alt="Hỗ trợ giao hàng trong 2h" title="Hỗ trợ giao hàng trong 2h">
-                                                        </span>
-                                                    </span>
-                                                    <span class="title">
-                                                        Điện Thoại Samsung Galaxy J7 Pro - Hàng...            
-                                                    </span>
-                                                    <p class="price-sale">6.250.000&nbsp;₫
-                                                        <span class="price-regular">6.990.000&nbsp;₫</span>
-                                                        <span class="sale-tag sale-tag-square">-11%</span>
-                                                    </p>
-                                                    <div class="review-wrap">
-                                                        <p class="rating">
-                                                            <span class="rating-content">
-                                                                <i class="star"></i>
-                                                                <i class="star"></i>
-                                                                <i class="star"></i>
-                                                                <i class="star"></i>
-                                                                <i class="star"></i>
-                                                                <span style="width:93%">
-                                                                    <i class="star"></i>
-                                                                    <i class="star"></i>
-                                                                    <i class="star"></i>
-                                                                    <i class="star"></i>
-                                                                    <i class="star"></i>
-                                                                </span>
-                                                            </span>
-                                                        </p>
-                                                        <p class="review">(58 nhận xét)</p>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <!-- item 2 END -->
-                                        <!-- item 3 BEGIN -->
-                                        <div class="swiper-slide" style="width: 240px; height: 366px;">
-                                            <div data-seller-product-id="688487" data-title="Điện Thoại Samsung Galaxy J7 Pro - Hàng Chính Hãng" data-price="6250000" data-id="655609" data-brand="" data-category="Điện Thoại - Máy Tính Bảng/Điện Thoại Smartphone" tpl="" rel="" class="product-item    " style="height: 100%;">
-                                                <a data-id="655609" href="https://tiki.vn/dien-thoai-samsung-galaxy-j7-pro-hang-chinh-hang-p655609.html?src=home_SmartphoneTablet_centerbanner" title="Điện Thoại Samsung Galaxy J7 Pro - Hàng Chính Hãng" class="">
-                                                    <span class="image">
-                                                        <img class="product-image img-responsive lazy" alt="" src="https://vcdn.tikicdn.com/cache/200x200/media/catalog/product/1/_/1.u2769.d20170618.t081410.590250.jpg" style="display: block; background-image: none;">
-                                                        <span class="img-tra-gop">
-                                                            <img src="../image/icon-tra-gop.png" alt="Trả góp 0%">
-                                                        </span>
-                                                        <span class="product-right-icon">
-                                                            <img srcset="https://vcdn.tikicdn.com/desktop/img/2h-circle.png 1x, https://vcdn.tikicdn.com/desktop/img/2h-circle@2x.png 2x" class="img2h" width="24" height="24" alt="Hỗ trợ giao hàng trong 2h" title="Hỗ trợ giao hàng trong 2h">
-                                                        </span>
-                                                    </span>
-                                                    <span class="title">
-                                                        Điện Thoại Samsung Galaxy J7 Pro - Hàng...            
-                                                    </span>
-                                                    <p class="price-sale">6.250.000&nbsp;₫
-                                                        <span class="price-regular">6.990.000&nbsp;₫</span>
-                                                        <span class="sale-tag sale-tag-square">-11%</span>
-                                                    </p>
-                                                    <div class="review-wrap">
-                                                        <p class="rating">
-                                                            <span class="rating-content">
-                                                                <i class="star"></i>
-                                                                <i class="star"></i>
-                                                                <i class="star"></i>
-                                                                <i class="star"></i>
-                                                                <i class="star"></i>
-                                                                <span style="width:93%">
-                                                                    <i class="star"></i>
-                                                                    <i class="star"></i>
-                                                                    <i class="star"></i>
-                                                                    <i class="star"></i>
-                                                                    <i class="star"></i>
-                                                                </span>
-                                                            </span>
-                                                        </p>
-                                                        <p class="review">(58 nhận xét)</p>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <!-- item 3 END -->
-                                        <!-- item 4 BEGIN -->
-                                        <div class="swiper-slide" style="width: 240px; height: 366px;">
-                                                <div data-seller-product-id="688487" data-title="Điện Thoại Samsung Galaxy J7 Pro - Hàng Chính Hãng" data-price="6250000" data-id="655609" data-brand="" data-category="Điện Thoại - Máy Tính Bảng/Điện Thoại Smartphone" tpl="" rel="" class="product-item    " style="height: 100%;">
-                                                    <a data-id="655609" href="https://tiki.vn/dien-thoai-samsung-galaxy-j7-pro-hang-chinh-hang-p655609.html?src=home_SmartphoneTablet_centerbanner" title="Điện Thoại Samsung Galaxy J7 Pro - Hàng Chính Hãng" class="">
-                                                        <span class="image">
-                                                            <img class="product-image img-responsive lazy" alt="" src="https://vcdn.tikicdn.com/cache/200x200/media/catalog/product/1/_/1.u2769.d20170618.t081410.590250.jpg" style="display: block; background-image: none;">
-                                                            <span class="img-tra-gop">
-                                                                <img src="../image/icon-tra-gop.png" alt="Trả góp 0%">
-                                                            </span>
-                                                            <span class="product-right-icon">
-                                                                <img srcset="https://vcdn.tikicdn.com/desktop/img/2h-circle.png 1x, https://vcdn.tikicdn.com/desktop/img/2h-circle@2x.png 2x" class="img2h" width="24" height="24" alt="Hỗ trợ giao hàng trong 2h" title="Hỗ trợ giao hàng trong 2h">
-                                                            </span>
-                                                        </span>
-                                                        <span class="title">
-                                                            Điện Thoại Samsung Galaxy J7 Pro - Hàng...            
-                                                        </span>
-                                                        <p class="price-sale">6.250.000&nbsp;₫
-                                                            <span class="price-regular">6.990.000&nbsp;₫</span>
-                                                            <span class="sale-tag sale-tag-square">-11%</span>
-                                                        </p>
-                                                        <div class="review-wrap">
-                                                            <p class="rating">
-                                                                <span class="rating-content">
-                                                                    <i class="star"></i>
-                                                                    <i class="star"></i>
-                                                                    <i class="star"></i>
-                                                                    <i class="star"></i>
-                                                                    <i class="star"></i>
-                                                                    <span style="width:93%">
-                                                                        <i class="star"></i>
-                                                                        <i class="star"></i>
-                                                                        <i class="star"></i>
-                                                                        <i class="star"></i>
-                                                                        <i class="star"></i>
-                                                                    </span>
-                                                                </span>
-                                                            </p>
-                                                            <p class="review">(58 nhận xét)</p>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <!-- item 4 END -->
-                                    </div>
-                                </div>
-                                <div class="swiper-button-next swiper-button-black"></div>
-                                <div class="swiper-button-prev swiper-button-black"></div>
-                                <!-- swiper horizontal END -->
-                            </div>
-                            <!-- tab carousel END -->
-                            <a class="home-see-all" href="https://tiki.vn/dien-thoai-tablet-moi-va-noi-bat/c2051">
-                                Xem tất cả Mới &amp; Nổi bật<i class="fa fa-caret-right"></i>
-                            </a>
-                        </div>
-                        <!-- tab content - item active END -->
-                        <!-- tab content - item 2 BEGIN -->
-                        <div class="tab-pane" id="home-bestseller-2" data-impress-list-title="Home | Điện Thoại - Máy Tính Bảng | BÁN CHẠY">
-                            <!-- tab carousel wrapper BEGIN -->
-                            <div class="swiper-carousel-wrapper">
-                                <div class="swiper-container home-product">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide" style="height: 366px;">
-                                            <div data-seller-product-id="688487" data-title="Điện Thoại Samsung Galaxy J7 Pro - Hàng Chính Hãng" data-price="6250000" data-id="655609" data-brand="Samsung" data-category="Điện Thoại - Máy Tính Bảng/Điện Thoại Smartphone" tpl="" rel="" class="product-item    " style="height: 100%;">
-                                                <a data-id="655609" href="https://tiki.vn/dien-thoai-samsung-galaxy-j7-pro-hang-chinh-hang-p655609.html?src=home_SmartphoneTablet_centerbanner" title="Điện Thoại Samsung Galaxy J7 Pro - Hàng Chính Hãng" class="">
-                                                    <span class="image">
-                                                        <img class="product-image img-responsive lazy" data-src="https://vcdn.tikicdn.com/cache/200x200/media/catalog/product/1/_/1.u2769.d20170618.t081410.590250.jpg" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
-                                                        <span class="img-tra-gop">
-                                                            <img src="../image/icon-tra-gop.png" alt="Trả góp 0%">
-                                                        </span>
-                                                        <span class="product-right-icon">
-                                                            <img srcset="https://vcdn.tikicdn.com/desktop/img/2h-circle.png 1x, https://vcdn.tikicdn.com/desktop/img/2h-circle@2x.png 2x" class="img2h" width="24" height="24" alt="Hỗ trợ giao hàng trong 2h" title="Hỗ trợ giao hàng trong 2h">
-                                                        </span>
-                                                    </span>
-                                                    <span class="title">
-                                                        Điện Thoại Samsung Galaxy J7 Pro - Hàng...
-                                                    </span>
-                                                    <p class="price-sale">6.250.000&nbsp;₫                               
-                                                        <span class="price-regular">6.990.000&nbsp;₫</span>
-                                                        <span class="sale-tag sale-tag-square">-11%</span>
-                                                    </p>
-                                                    <div class="review-wrap">
-                                                        <p class="rating">
-                                                            <span class="rating-content">
-                                                                <i class="star"></i>
-                                                                <i class="star"></i>
-                                                                <i class="star"></i>
-                                                                <i class="star"></i>
-                                                                <i class="star"></i>
-                                                                <span style="width:93%">
-                                                                    <i class="star"></i>
-                                                                    <i class="star"></i>
-                                                                    <i class="star"></i>
-                                                                    <i class="star"></i>
-                                                                    <i class="star"></i>
-                                                                </span>
-                                                            </span>
-                                                        </p>
-                                                        <p class="review">(58 nhận xét)</p>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide" style="height: 366px;">
-                                            <div data-seller-product-id="706902" data-title="Điện Thoại Xiaomi Redmi Note 4 (64GB/4GB) - Hàng Chính Hãng DGW" data-price="4450000" data-id="706726" data-brand="Xiaomi" data-category="" tpl="" rel="" class="product-item    " style="height: 100%;">
-                                                <a data-id="706726" href="https://tiki.vn/dien-thoai-xiaomi-redmi-note-4-64gb-ram-4gb-hang-chinh-hang-p706726.html?src=home_SmartphoneTablet_centerbanner" title="Điện Thoại Xiaomi Redmi Note 4 (64GB/4GB) - Hàng Chính Hãng DGW" class="">
-                                                    <span class="image">
-                                                        <img class="product-image img-responsive lazy" data-src="https://vcdn.tikicdn.com/cache/200x200/media/catalog/product/1/_/1.u4064.d20170606.t155234.242277_1_1.jpg" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
-                                                        <span class="img-tra-gop">
-                                                            <img src="../image/icon-tra-gop.png" alt="Trả góp 0%">
-                                                        </span>
-                                                        <span class="product-right-icon">
-                                                            <img srcset="https://vcdn.tikicdn.com/desktop/img/2h-circle.png 1x, https://vcdn.tikicdn.com/desktop/img/2h-circle@2x.png 2x" class="img2h" width="24" height="24" alt="Hỗ trợ giao hàng trong 2h" title="Hỗ trợ giao hàng trong 2h">
-                                                        </span>
-                                                    </span>
-                                                    <span class="title">
-                                                        Điện Thoại Xiaomi Redmi Note 4 (64GB/4GB) -...
-                                                    </span>
-                                                    <p class="price-sale">4.450.000&nbsp;₫                                    <span class="price-regular">5.990.000&nbsp;₫</span>
-                                                        <span class="sale-tag sale-tag-square">-26%</span>
-                                                    </p>
-                                                    <div class="review-wrap">
-                                                        <p class="rating">
-                                                            <span class="rating-content">
-                                                                <i class="star"></i>
-                                                                <i class="star"></i>
-                                                                <i class="star"></i>
-                                                                <i class="star"></i>
-                                                                <i class="star"></i>
-                                                                <span style="width:95%">
-                                                                    <i class="star"></i>
-                                                                    <i class="star"></i>
-                                                                    <i class="star"></i>
-                                                                    <i class="star"></i>
-                                                                    <i class="star"></i>
-                                                                </span>
-                                                            </span>
-                                                        </p>
-                                                        <p class="review">(59 nhận xét)</p>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide" style="height: 366px;">
-                                            <div data-seller-product-id="736635" data-title="Điện Thoại Di Động GSM MAXX N1110 - Hàng Chính Hãng" data-price="159000" data-id="733069" data-brand="MAXX" data-category="Điện Thoại - Máy Tính Bảng/Điện Thoại Phổ Thông" tpl="" rel="" class="product-item    " style="height: 100%;">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-button-next swiper-button-black"></div>
-                                <div class="swiper-button-prev swiper-button-black"></div>
-                            </div>
-                            <!-- tab carousel wrapper END -->
-                            <a class="home-see-all" href="https://tiki.vn/bestsellers-month/dien-thoai-may-tinh-bang/c1789">
-                                Xem tất cả Bán chạy trong tháng
-                                <i class="fa fa-caret-right"></i>
-                            </a>
-                        </div>
-                        <!-- tab content - item 2 END -->
-                                            
-                    </div>
-                    <!-- tab content END -->
-                </div>
-            </div>
-            <!-- row - left END -->
-    
-            <!-- home right BEGIN -->
-            <div class="home-right">
-                <div class="panel panel-default home-bestseller">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Lựa chọn cho bạn</h3>
-                    </div>
-                    <div class="panel-body">
-                        <div class="bestseller-item">
-                            <p class="image">
-                                <a href="https://tiki.vn/dien-thoai-xiaomi-redmi-note-4-64gb-ram-4gb-hang-chinh-hang-p706726.html" title="Điện Thoại Xiaomi Redmi Note 4 (64GB/4GB) - Hàng Chính Hãng DGW">
-                                    <img class="lazy" src="https://vcdn.tikicdn.com/cache/140x196/media/catalog/product/1/_/1.u4064.d20170606.t155234.242277_1_1.jpg" width="70" style="display: inline; background-image: none;">
-                                </a>
-                            </p>
-                            <p class="name">
-                                <a href="https://tiki.vn/dien-thoai-xiaomi-redmi-note-4-64gb-ram-4gb-hang-chinh-hang-p706726.html" title="Điện Thoại Xiaomi Redmi Note 4 (64GB/4GB) - Hàng Chính Hãng DGW">
-                                Điện Thoại Xiaomi Redmi Note...                                                            </a>
-                            </p>
-                            <p class="price">4.450.000&nbsp;₫ </p>
-                            <p class="price2">5.990.000&nbsp;₫ </p>
-                        </div>
-                        <div class="bestseller-item">
-                            <p class="image">
-                                <a href="https://tiki.vn/dien-thoai-iphone-6-32gb-vang-dong-hang-chinh-hang-vn-a-p684632.html" title="Điện Thoại iPhone 6 32GB (Vàng Đồng) - Hàng Chính Hãng VN/A">
-                                    <img class="lazy" src="https://vcdn.tikicdn.com/cache/140x196/media/catalog/product/1/_/1.u2769.d20170609.t114956.258512.jpg" width="70" style="display: inline; background-image: none;">
-                                </a>
-                            </p>
-                            <p class="name">
-                                <a href="https://tiki.vn/dien-thoai-iphone-6-32gb-vang-dong-hang-chinh-hang-vn-a-p684632.html" title="Điện Thoại iPhone 6 32GB (Vàng Đồng) - Hàng Chính Hãng VN/A">
-                                Điện Thoại iPhone 6 32GB...                                                            </a>
-                            </p>
-                            <p class="price">8.300.000&nbsp;₫ </p>
-                            <p class="price2">8.990.000&nbsp;₫ </p>
-                        </div>
-                        
-                        <a target="_blank" href="https://tiki.vn/lua-chon-cho-ban/c5045" class="see-all">Xem thêm</a>
-                    </div>
-                </div>
-            </div>
-            <!-- home right END -->
-        </div>
-        <!-- home wrap END -->
-    </div>
-    <!-- row 1 END -->
-
-    <!-- footer BEGIN -->
-    <footer id="footer">
-        <!-- Begin MailChimp Signup Form -->
-        <!-- <div class="tiki-newsletter">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 clearfix">
-                        <div class="tiki-newsletter-title clearfix">
-                            <img src="../image/newsletter-icon.png" alt="">
-                            <h3>Đăng ký nhận bản tin Tiki</h3>
-                            <h5>Đừng bỏ lỡ hàng ngàn sản phẩm và chương trình siêu hấp dẫn</h5>
-                        </div>
-                        <div class="mc-field-group">
-                            <input type="email" placeholder="Địa chỉ email của bạn" class="tiki-home-email form-control" id="mce-EMAIL">
-                            <span class="tiki-newsletter-helper"></span>
-                        </div>
-                        <button class="button btn btn-home-newsletter" data-index="0">Đăng ký</button>
-                    </div>                
-                </div>
-            </div>
-        </div> -->
-        <!--End mc_embed_signup-->
-        <hr class="line-bg-body">
-        <div class="list-footer-nav">
-            <div class="container">
-                <div class="footer-nav">
-                    <h4>HỖ TRỢ KHÁCH HÀNG</h4>
-                    <p class="hotline-number">Hotline: 1900-6035</p>
-                    <div class="nav-list">
-                        <a rel="nofollow" href="tel:19006035" target="_blank">(1000đ/phút , 8-21h kể cả T7, CN)</a>
-                        <a rel="nofollow" href="http://hotro.tiki.vn/hc/vi" target="_blank">Các câu hỏi thường gặp</a>
-                        <a rel="nofollow" href="http://hotro.tiki.vn/hc/vi/requests/new" target="_blank">Gửi yêu cầu hỗ trợ</a>
-                        <a rel="nofollow" href="http://hotro.tiki.vn/hc/vi/categories/200126644" target="_blank">Hướng dẫn đặt hàng</a>
-                        <a rel="nofollow" href="http://hotro.tiki.vn/hc/vi/categories/200123960" target="_blank">Phương thức vận chuyển</a>
-                        <a rel="nofollow" href="https://tiki.vn/doi-tra-de-dang" target="_blank">Chính sách đổi trả</a>
-                        <a rel="nofollow" href="https://tiki.vn/lp/tra-gop" target="_blank">Hướng dẫn mua trả góp</a>
-                    </div>
-                </div>
-                <div class="footer-nav">
-                    <h4>VỀ TIKI</h4>
-                    <div class="nav-list">
-                        <a rel="nofollow" href="https://tiki.vn/gioi-thieu-ve-tiki" target="_blank">Giới thiệu Tiki.vn</a>
-                        <a rel="nofollow" href="http://tuyendung.tiki.vn/" target="_blank">Tuyển Dụng</a>
-                        <a rel="nofollow" href="http://hotro.tiki.vn/hc/vi/articles/202216110" target="_blank">Chính sách bảo mật</a>
-                        <a rel="nofollow" href="http://hotro.tiki.vn/hc/vi/articles/201971214" target="_blank">Điều khoản sử dụng</a>
-                        <a rel="nofollow" href="https://tiki.vn/hoi-sach-online" target="_blank">Hội Sách Online</a>
-                        <a rel="nofollow" href="http://hotro.tiki.vn/hc/vi/articles/204153170-C%C3%A1c-b%C6%B0%E1%BB%9Bc-s%E1%BB%AD-d%E1%BB%A5ng-Tiki-xu-v%C3%A0-M%C3%A3-gi%E1%BA%A3m-gi%C3%A1" target="_blank">Giới thiệu Tiki Xu</a>
-                        <a rel="nofollow" href="http://tiki.vn/tu-van" target="_blank">Tiki Tư Vấn</a>
-                        <a rel="nofollow" href="https://tiki.vn/sach-b2b" target="_blank">Ưu đãi doanh nghiệp</a>
-                    </div>
-                </div>
-                <div class="footer-nav">
-                    <h4>HỢP TÁC VÀ LIÊN KIẾT</h4>
-                    <div class="nav-list">
-                        <a rel="nofollow" href="https://tiki.vn/quy-che-hoat-dong-sgdtmdt" target="_blank">Quy chế hoạt động Sàn GDTMĐT</a>
-                        <!-- <a rel="nofollow" href="http://www.foody.vn" target="_blank">Foody.vn - Ăn gì ở đâu</a>
-                        <a rel="nofollow" href="http://www.ivivu.com" target="_blank">iVIVU.com - Đặt khách sạn giá rẻ</a> -->
-                        <a rel="nofollow" href="https://tiki.vn/ban-hang-cung-tiki" target="_blank">Bán hàng cùng Tiki</a>
-                    </div>
-                    <!-- <div class="nav-other partner">
-                        <a rel="nofollow" href="http://www.foody.vn" target="_blank">
-                            <img src="https://vcdn.tikicdn.com/assets/img/icon/logo-foody-vietnam@3x.png" />
-                        </a>
-                        <a rel="nofollow" href="http://www.ivivu.com" target="_blank">
-                            <img src="https://vcdn.tikicdn.com/assets/img/icon/logo-ivivu@3x.png" />
-                        </a>
-                    </div> -->
-                </div>
-                <div class="footer-nav">
-                    <h4>PHƯƠNG THỨC THANH TOÁN</h4>
-                    <div class="nav-other payment">
-                        <span>
-                            <img src="../image/ic-visa.svg">
-                        </span>
-                        <span>
-                            <img src="../image/ic-mastercard.svg">
-                        </span>
-                        <span>
-                            <img src="../image/ic-jcb.svg">
-                        </span>
-                        <span>
-                            <img src="../image/ic-cash.svg">
-                        </span>
-                        <span>
-                            <img src="../image/ic-internet-banking.svg">
-                        </span>
-                        <span>
-                            <img src="../image/ic-installment.svg">
-                        </span>
-                    </div>
-                </div>
-                <div class="footer-nav">
-                    <h4>KẾT NỐI VỚI CHÚNG TÔI</h4>
-                    <div class="nav-other social-conn">
-                        <a rel="nofollow" href="https://www.facebook.com/tiki.vn/" target="_blank" title="Facebook">
-                            <img src="../image/ic-fb.svg">
-                        </a>
-                        <a rel="nofollow" href="https://www.youtube.com/user/TikiVBlog" target="_blank" title="Youtube">
-                            <img src="../image/ic-youtube.svg">
-                        </a>
-                        <a rel="nofollow" href="http://zalo.me/589673439383195103" target="_blank" title="Zalo">
-                            <img src="../image/ic-zalo.png">
-                        </a>
-                        <!-- <a rel="nofollow" href="" target="_blank">
-                            <img src="https://vcdn.tikicdn.com/assets/img/svg/ic-instagram.svg" />
-                        </a>
-                        <a rel="nofollow" href="" target="_blank">
-                            <img src="https://vcdn.tikicdn.com/assets/img/svg/ic-linkedin.svg" />
-                        </a> -->
-                    </div>
-                    <h4 class="appstore-title">TẢI ỨNG DỤNG TRÊN ĐIỆN THOẠI</h4>
-                    <div class="nav-other app-store">
-                        <a rel="nofollow" href="https://itunes.apple.com/vn/app/id958100553" target="_blank">
-                            <img src="../image/Appstore@2x.png">
-                        </a>
-                        <a rel="nofollow" href="https://play.google.com/store/apps/details?id=vn.tiki.app.tikiandroid" target="_blank">
-                            <img src="../image/playstore@2x.png">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <hr class="line-bg-body">
-
-        <address class="footer-address">
-            <div class="container">
-                <div class="address-office">
-                    <img src="../image/ic-location.svg">
-                    <div class="info-address">
-                        <p class="add-real">
-                            <b>Lorem ipsum:</b>
-                            Ut enim ad minim veniam
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-                        </p>
-                    </div>
-                </div>
-                <div class="address-service">
-                    <div class="info-address">
-                        <p class="add-real">
-                            <b>Lorem ipsum:</b>
-                            Ut enim ad minim veniam
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </address>
-
-
-        <div class="footer-cpy-right">
-            <div class="container">
-                <div class="cpy-right-info">
-                    <h5>header</h5>
-                    <p>Lorem ipsum dolor sir armet</p>
-                </div>
-                <a href="http://online.gov.vn/HomePage/WebsiteDisplay.aspx?DocId=21201" class="ico-bocongthuong">
-                    <img src="../image/ic-bo-cong-thuong.svg">
+    <!-- Logo, Shop-menu - start -->
+    <div class="header-middle">
+        <div class="container header-middle-cont">
+            <div class="toplogo">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="AllStore - MultiConcept eCommerce Template">
                 </a>
             </div>
+            <div class="shop-menu">
+                <ul>
+
+                    <li>
+                        <a href="wishlist.html">
+                            <i class="fa fa-heart"></i>
+                            <span class="shop-menu-ttl">Wishlist</span>
+                            (<span id="topbar-favorites">1</span>)
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="compare.html">
+                            <i class="fa fa-bar-chart"></i>
+                            <span class="shop-menu-ttl">Compare</span> (5)
+                        </a>
+                    </li>
+
+                    <li class="topauth">
+                        <a href="auth.html">
+                            <i class="fa fa-lock"></i>
+                            <span class="shop-menu-ttl">Registration</span>
+                        </a>
+                        <a href="auth.html">
+                            <span class="shop-menu-ttl">Login</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <div class="h-cart">
+                            <a href="cart.html">
+                                <i class="fa fa-shopping-cart"></i>
+                                <span class="shop-menu-ttl">Cart</span>
+                                (<b>0</b>)
+                            </a>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
         </div>
-    </footer>
-    <!-- footer END -->
-       
-    <style>
-        #spHeader {background-color:#52B7F1 !important;}
-        #spHeader p span{color:#000 !important;}
-        .spHeaderNav {color:#000 !important;}
-    </style>
-    <script src="resource/client/js/script.js"></script>    
-       
-    <!-- script run swiper slider -->
-    <script>
-        var mySwiperBanner = new Swiper ('.swiper-container.home-banner', {
-            // Optional parameters
-            direction: 'horizontal',
-            loop: true,
-        
-            // If we need pagination
-            pagination: {
-            el: '.swiper-pagination',
-            },
-        
-            // Navigation arrows
-            navigation: {
-            nextEl: '.home-banner .swiper-button-next',
-            prevEl: '.home-banner .swiper-button-prev',
-            },
-        
-            // And if we need scrollbar
-            scrollbar: {
-            el: '.swiper-scrollbar',
-            },
-        });
-        var mySwiper = new Swiper ('#home-bestseller-2 .swiper-container', {
-            // Optional parameters
-            slidesPerView: 4,
-            direction: 'horizontal',
-            loop: true,
-        
-            // If we need pagination
-            pagination: {
-            el: '.swiper-pagination',
-            },
-        
-            // Navigation arrows
-            navigation: {
-            nextEl: '#home-bestseller-2 .swiper-button-next',
-            prevEl: '#home-bestseller-2 .swiper-button-prev',
-            },
-        
-            // And if we need scrollbar
-            
-        });
-        var mySwiper = new Swiper ('#home-new-2 .swiper-container', {
-            // Optional parameters
-            slidesPerView: 4,
-            direction: 'horizontal',
-            loop: true,
-        
-            // If we need pagination
-            pagination: {
-            el: '.swiper-pagination',
-            },
-        
-            // Navigation arrows
-            navigation: {
-            nextEl: '#home-new-2 .swiper-button-next',
-            prevEl: '#home-new-2 .swiper-button-prev',
-            },
-        
-            // And if we need scrollbar
-            
-        })
-    </script>
+    </div>
+    <!-- Logo, Shop-menu - end -->
+
+    <!-- Topmenu - start -->
+    <div class="header-bottom">
+        <div class="container">
+            <nav class="topmenu">
+
+                <!-- Catalog menu - start -->
+                <div class="topcatalog">
+                    <a class="topcatalog-btn" href="catalog-list.html"><span>All</span> catalog</a>
+                    <ul class="topcatalog-list">
+                        <li>
+                            <a href="catalog-list.html">
+                                Women
+                            </a>
+                            <i class="fa fa-angle-right"></i>
+                            <ul>
+                                <li>
+                                    <a href="catalog-list.html">
+                                        Knitwear
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="catalog-list.html">
+                                        Dresses
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="catalog-list.html">
+                                        Bags
+                                    </a>
+                                    <i class="fa fa-angle-right"></i>
+                                    <ul>
+                                        <li>
+                                            <a href="catalog-list.html">
+                                                Shoulder Bags
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="catalog-list.html">
+                                                Falabella
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="catalog-list.html">
+                                                Becks
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="catalog-list.html">
+                                                Clutches
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="catalog-list.html">
+                                                Travel Bags
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="catalog-list.html">
+                                        Accessories
+                                    </a>
+                                    <i class="fa fa-angle-right"></i>
+                                    <ul>
+                                        <li>
+                                            <a href="catalog-list.html">
+                                                Sunglasses
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="catalog-list.html">
+                                                Tech Cases
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="catalog-list.html">
+                                                Jewelry
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="catalog-list.html">
+                                                Stella
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="catalog-list.html">
+                                        Coats & Jackets
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="catalog-list.html">
+                                Men
+                            </a>
+                            <i class="fa fa-angle-right"></i>
+                            <ul>
+                                <li>
+                                    <a href="catalog-list.html">
+                                        Jackets & Blazers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="catalog-list.html">
+                                        Pants & Shorts
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="catalog-list.html">
+                                        Accessories
+                                    </a>
+                                    <i class="fa fa-angle-right"></i>
+                                    <ul>
+                                        <li>
+                                            <a href="catalog-list.html">
+                                                Bags
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="catalog-list.html">
+                                                Sunglasses
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="catalog-list.html">
+                                                Other Accessories
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="catalog-list.html">
+                                        Suiting
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="catalog-list.html">
+                                        Shirts
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="catalog-list.html">
+                                Kids
+                            </a>
+                            <i class="fa fa-angle-right"></i>
+                            <ul>
+                                <li>
+                                    <a href="catalog-list.html">
+                                        Girls
+                                    </a>
+                                    <i class="fa fa-angle-right"></i>
+                                    <ul>
+                                        <li>
+                                            <a href="catalog-list.html">
+                                                Outerwear
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="catalog-list.html">
+                                                T-Shirts
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="catalog-list.html">
+                                                Blouses & Shirts
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="catalog-list.html">
+                                                Pants & Shorts
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="catalog-list.html">
+                                                Sleepwear & Underwear
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="catalog-list.html">
+                                                Skirts
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="catalog-list.html">
+                                        Boys
+                                    </a>
+                                    <i class="fa fa-angle-right"></i>
+                                    <ul>
+                                        <li>
+                                            <a href="catalog-list.html">
+                                                Shoes & Accessories
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="catalog-list.html">
+                                                Jumpers & Cardigans
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="catalog-list.html">
+                                                Shirts
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="catalog-list.html">
+                                                Outerwear
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="catalog-list.html">
+                                                Swimwear
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="catalog-list.html">
+                                        Baby
+                                    </a>
+                                    <i class="fa fa-angle-right"></i>
+                                    <ul>
+                                        <li>
+                                            <a href="catalog-list.html">
+                                                Baby Sets
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="catalog-list.html">
+                                                Dresses & All-In-One
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="catalog-list.html">
+                                                Pants & Shorts
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="catalog-list.html">
+                                                Shoes & Accessories
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="catalog-list.html">
+                                                T-shirts
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="catalog-list.html">
+                                                Outerwear
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="catalog-list.html">
+                                Shoes
+                            </a>
+                            <i class="fa fa-angle-right"></i>
+                            <ul>
+                                <li>
+                                    <a href="catalog-list.html">
+                                        Women
+                                    </a>
+                                    <i class="fa fa-angle-right"></i>
+                                    <ul>
+                                        <li>
+                                            <a href="catalog-list.html">
+                                                Elyse
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="catalog-list.html">
+                                                Odette
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="catalog-list.html">
+                                                Brody
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="catalog-list.html">
+                                                Flats
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="catalog-list.html">
+                                                Sandals
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="catalog-list.html">
+                                        Men
+                                    </a>
+                                    <i class="fa fa-angle-right"></i>
+                                    <ul>
+                                        <li>
+                                            <a href="catalog-list.html">
+                                                Casual Shoes
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="catalog-list.html">
+                                                Sneakers
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="catalog-list.html">
+                                                Sandals
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="catalog-list.html">
+                                                Boots
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="catalog-list.html">
+                                                Mules & Clogs
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="catalog-list.html">
+                                        Children's
+                                    </a>
+                                    <i class="fa fa-angle-right"></i>
+                                    <ul>
+                                        <li>
+                                            <a href="catalog-list.html">
+                                                Girls
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="catalog-list.html">
+                                                Boys
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="catalog-list.html">
+                                        Baby Shoe
+                                    </a>
+                                    <i class="fa fa-angle-right"></i>
+                                    <ul>
+                                        <li>
+                                            <a href="catalog-list.html">
+                                                First Walkers
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="catalog-list.html">
+                                                Sneakers
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="catalog-list.html">
+                                                Boots
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="catalog-list.html">
+                                                Sandals & Clogs
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Catalog menu - end -->
+
+                <!-- Main menu - start -->
+                <button type="button" class="mainmenu-btn">Menu</button>
+
+                <ul class="mainmenu">
+                    <li>
+                        <a href="index.html" class="active">
+                            Home
+                        </a>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="catalog-list.html">
+                            Catalog <i class="fa fa-angle-down"></i>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="catalog-list.html">
+                                    Catalog List - Style 1
+                                </a>
+                            </li>
+                            <li>
+                                <a href="catalog-list-2.html">
+                                    Catalog List - Style 2
+                                </a>
+                            </li>
+                            <li>
+                                <a href="catalog-gallery.html">
+                                    Catalog Gallery - Style 1
+                                </a>
+                            </li>
+                            <li>
+                                <a href="catalog-gallery-2.html">
+                                    Catalog Gallery - Style 2
+                                </a>
+                            </li>
+                            <li>
+                                <a href="catalog-table.html">
+                                    Catalog Table
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="product.html">
+                            Product <i class="fa fa-angle-down"></i>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="product.html">
+                                    Product - Style 1 (Slider)
+                                </a>
+                            </li>
+                            <li>
+                                <a href="product-2.html">
+                                    Product - Style 2 (Scroll)
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="elements.html">
+                            Elements
+                        </a>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="blog.html">
+                            Blog <i class="fa fa-angle-down"></i>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="blog.html">
+                                    Blog - Style 1
+                                </a>
+                            </li>
+                            <li>
+                                <a href="blog-2.html">
+                                    Blog - Style 2
+                                </a>
+                            </li>
+                            <li>
+                                <a href="post.html">
+                                    Single Post
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="#">
+                            Pages <i class="fa fa-angle-down"></i>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="contacts.html">
+                                    Contacts
+                                </a>
+                            </li>
+                            <li>
+                                <a href="cart.html">
+                                    Cart
+                                </a>
+                            </li>
+                            <li>
+                                <a href="auth.html">
+                                    Authorization
+                                </a>
+                            </li>
+                            <li>
+                                <a href="compare.html">
+                                    Compare
+                                </a>
+                            </li>
+                            <li>
+                                <a href="wishlist.html">
+                                    Wishlist
+                                </a>
+                            </li>
+                            <li>
+                                <a href="404.html">
+                                    Error 404
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mainmenu-more">
+                        <span>...</span>
+                        <ul class="mainmenu-sub"></ul>
+                    </li>
+                </ul>
+                <!-- Main menu - end -->
+
+                <!-- Search - start -->
+                <div class="topsearch">
+                    <a id="topsearch-btn" class="topsearch-btn" href="#"><i class="fa fa-search"></i></a>
+                    <form class="topsearch-form" action="#">
+                        <input type="text" placeholder="Search products">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+                <!-- Search - end -->
+
+            </nav>		</div>
+    </div>
+    <!-- Topmenu - end -->
+
+</header>
+<!-- Header - end -->
+
+
+<!-- Main Content - start -->
+<main>
+    <section class="container">
+
+
+        <!-- Slider -->
+        <div class="fr-slider-wrap">
+            <div class="fr-slider">
+                <ul class="slides">
+                    <li>
+                        <img src="img/slider/slide1.jpg" alt="">
+                        <div class="fr-slider-cont">
+                            <h3>MEGA SALE -30%</h3>
+                            <p>Winter collection for women's. <br>We all have choices for you. Check it out!</p>
+                            <p class="fr-slider-more-wrap">
+                                <a class="fr-slider-more" href="#">View collection</a>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/slider/slide1.jpg" alt="">
+                        <div class="fr-slider-cont">
+                            <h3>NEW COLLECTION</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br>Aliquam consequuntur dolorem doloribus fuga harum</p>
+                            <p class="fr-slider-more-wrap">
+                                <a class="fr-slider-more" href="#">Shopping now</a>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/slider/slide1.jpg" alt="">
+                        <div class="fr-slider-cont">
+                            <h3>SUMMER TRENDS</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br>Aliquam consequuntur dolorem doloribus fuga harum</p>
+                            <p class="fr-slider-more-wrap">
+                                <a class="fr-slider-more" href="#">Start shopping</a>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!-- Popular Products -->
+        <div class="fr-pop-wrap">
+
+            <h3 class="component-ttl"><span>Popular products</span></h3>
+
+            <ul class="fr-pop-tabs sections-show">
+                <li><a data-frpoptab-num="1" data-frpoptab="#frpoptab-tab-1" href="#" class="active">All Categories</a></li>
+                <li><a data-frpoptab-num="2" data-frpoptab="#frpoptab-tab-2" href="#">Women</a></li>
+                <li><a data-frpoptab-num="3" data-frpoptab="#frpoptab-tab-3" href="#">Men</a></li>
+                <li><a data-frpoptab-num="4" data-frpoptab="#frpoptab-tab-4" href="#">Kids</a></li>
+                <li><a data-frpoptab-num="5" data-frpoptab="#frpoptab-tab-5" href="#">Shoes</a></li>
+            </ul>
+
+            <div class="fr-pop-tab-cont">
+
+                <p data-frpoptab-num="1" class="fr-pop-tab-mob active" data-frpoptab="#frpoptab-tab-1">All Categories</p>
+                <div class="flexslider prod-items fr-pop-tab" id="frpoptab-tab-1">
+
+                    <ul class="slides">
+
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/250x350" alt="Aspernatur excepturi rem"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Go to detail</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Aspernatur excepturi rem</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$90</b>
+                            </p>
+                            <div class="prod-i-skuwrapcolor">
+                                <ul class="prod-i-skucolor">
+                                    <li class="bx_active"><img src="img/color/red.jpg" alt="Red"></li>
+                                    <li><img src="img/color/blue.jpg" alt="Blue"></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/277x250" alt="Aperiam tempore"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Aperiam tempore</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$75</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/250x324" alt="Blanditiis eaque"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Blanditiis eaque</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$115</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/250x500" alt="Excepturi ducimus"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Excepturi ducimus</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$105</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/329x250" alt="Sit recusandae voluptas"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+
+                                <div class="prod-sticker">
+                                    <p class="prod-sticker-1">NEW</p>
+                                </div>
+                            </div>
+                            <h3>
+                                <a href="product.html">Sit recusandae voluptas</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$200</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/250x317" alt="Consequuntur minus atque"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Consequuntur minus atque</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$160</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/250x329" alt="Nostrum nihil ipsa"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Nostrum nihil ipsa</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$140</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/250x361" alt="Non ex sapiente deserunt"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+
+                                <div class="prod-sticker">
+                                    <p class="prod-sticker-3">-30%</p><p class="prod-sticker-4 countdown" data-date="29 Jan 2017, 14:30:00"></p>
+                                </div>
+                            </div>
+                            <h3>
+                                <a href="product.html">Non ex sapiente deserunt</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$65</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/250x361" alt="Amet tempore unde"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Amet tempore unde</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$85</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/250x361" alt="Neque fugiat voluptates"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Neque fugiat voluptates</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$120</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/250x302" alt="Amet tempore unde"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Amet tempore unde</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$165</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/250x327" alt="Perspiciatis dolor"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Go to detail</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Perspiciatis dolor</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$205</b>
+                            </p>
+                            <div class="prod-i-skuwrapcolor">
+                                <ul class="prod-i-skucolor">
+                                    <li class="bx_active"><img src="img/color/red.jpg" alt="Red"></li>
+                                    <li><img src="img/color/blue.jpg" alt="Blue"></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/250x262" alt="Veritatis officiis quae"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Veritatis officiis quae</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$90</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/250x292" alt="Fuga numquam obcaecati"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Fuga numquam obcaecati</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$65</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/250x351" alt="Ratione magni"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Ratione magni</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$125</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/250x301" alt="Asperiores sit sequi"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Asperiores sit sequi</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$140</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/250x322" alt="Repudiandae accusamus"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Repudiandae accusamus</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$95</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/250x266" alt="Quod praesentium illum"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Quod praesentium illum</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$80</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/250x301" alt="Deleniti ut earum"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Deleniti ut earum</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$220</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/250x362" alt="Voluptatem quibusdam"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Voluptatem quibusdam</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$185</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/250x422" alt="Nisi provident atque"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Nisi provident atque</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$130</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/250x385" alt="Eveniet nobis minus possimus"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+
+                                <div class="prod-sticker">
+                                    <p class="prod-sticker-1">NEW</p>
+                                </div>
+                            </div>
+                            <h3>
+                                <a href="product.html">Eveniet nobis minus possimus</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$80</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/250x288" alt="Quis ex fugiat blanditiis"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Go to detail</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Quis ex fugiat blanditiis</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$150</b>
+                            </p>
+                            <div class="prod-i-skuwrapcolor">
+                                <ul class="prod-i-skucolor">
+                                    <li class="bx_active"><img src="img/color/red.jpg" alt="Red"></li>
+                                    <li><img src="img/color/blue.jpg" alt="Blue"></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/250x279" alt="Nisi autem error"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Nisi autem error</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$65</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/250x403" alt="Quod soluta corrupti"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Quod soluta corrupti</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$175</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/250x280" alt="Ipsa doloremque"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Ipsa doloremque</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$85</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/250x409" alt="Dignissimos fuga"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Dignissimos fuga</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$205</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/252x250" alt="Nisi autem error"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Go to detail</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Nisi autem error</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$95</b>
+                            </p>
+                            <div class="prod-i-skuwrapcolor">
+                                <ul class="prod-i-skucolor">
+                                    <li class="bx_active"><img src="img/color/red.jpg" alt="Red"></li>
+                                    <li><img src="img/color/blue.jpg" alt="Blue"></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/316x250" alt="Tempora ea ratione vel"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+
+                                <div class="prod-sticker">
+                                    <p class="prod-sticker-2">HIT</p>
+                                </div>
+                            </div>
+                            <h3>
+                                <a href="product.html">Tempora ea ratione vel</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$120</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/281x250" alt="Minus sequi iste"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Minus sequi iste</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$135</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/265x250" alt="Dignissimos fuga voluptates totam"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Dignissimos fuga voluptates totam</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$85</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/291x250" alt="Perferendis recusandae"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Perferendis recusandae</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$70</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/277x250" alt="Officiis nihil culpa"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Officiis nihil culpa</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$180</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/295x250" alt="Distinctio modi quos"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Distinctio modi quos</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$195</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/301x250" alt="Corrupti velit vero"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Corrupti velit vero</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$220</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/289x250" alt="Dicta doloremque hic"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Dicta doloremque hic</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$90</b>
+                            </p>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <p data-frpoptab-num="2" class="fr-pop-tab-mob" data-frpoptab="#frpoptab-tab-2">Kids</p>
+                <div class="flexslider prod-items fr-pop-tab" id="frpoptab-tab-2">
+
+                    <ul class="slides">
+
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/250x350" alt="Aspernatur excepturi rem"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Go to detail</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Aspernatur excepturi rem</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$90</b>
+                            </p>
+                            <div class="prod-i-skuwrapcolor">
+                                <ul class="prod-i-skucolor">
+                                    <li class="bx_active"><img src="img/color/red.jpg" alt="Red"></li>
+                                    <li><img src="img/color/blue.jpg" alt="Blue"></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/277x250" alt="Aperiam tempore"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Aperiam tempore</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$75</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/250x324" alt="Blanditiis eaque"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Blanditiis eaque</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$115</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/250x500" alt="Excepturi ducimus"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Excepturi ducimus</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$105</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/329x250" alt="Sit recusandae voluptas"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+
+                                <div class="prod-sticker">
+                                    <p class="prod-sticker-1">NEW</p>
+                                </div>
+                            </div>
+                            <h3>
+                                <a href="product.html">Sit recusandae voluptas</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$200</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/250x317" alt="Consequuntur minus atque"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Consequuntur minus atque</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$160</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/250x329" alt="Nostrum nihil ipsa"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Nostrum nihil ipsa</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$140</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/250x361" alt="Non ex sapiente deserunt"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+
+                                <div class="prod-sticker">
+                                    <p class="prod-sticker-3">-30%</p><p class="prod-sticker-4 countdown" data-date="29 Jan 2017, 14:30:00"></p>
+                                </div>
+                            </div>
+                            <h3>
+                                <a href="product.html">Non ex sapiente deserunt</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$65</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/250x361" alt="Amet tempore unde"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Amet tempore unde</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$85</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/250x361" alt="Neque fugiat voluptates"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Neque fugiat voluptates</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$120</b>
+                            </p>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <p data-frpoptab-num="3" class="fr-pop-tab-mob" data-frpoptab="#frpoptab-tab-3">Women</p>
+                <div class="flexslider prod-items fr-pop-tab" id="frpoptab-tab-3">
+
+                    <ul class="slides">
+
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/250x302" alt="Amet tempore unde"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Amet tempore unde</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$165</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/250x327" alt="Perspiciatis dolor"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Go to detail</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Perspiciatis dolor</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$205</b>
+                            </p>
+                            <div class="prod-i-skuwrapcolor">
+                                <ul class="prod-i-skucolor">
+                                    <li class="bx_active"><img src="img/color/red.jpg" alt="Red"></li>
+                                    <li><img src="img/color/blue.jpg" alt="Blue"></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/250x262" alt="Veritatis officiis quae"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Veritatis officiis quae</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$90</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/250x292" alt="Fuga numquam obcaecati"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Fuga numquam obcaecati</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$65</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/250x351" alt="Ratione magni"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Ratione magni</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$125</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/250x301" alt="Asperiores sit sequi"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Asperiores sit sequi</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$140</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/250x322" alt="Repudiandae accusamus"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Repudiandae accusamus</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$95</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/250x266" alt="Quod praesentium illum"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Quod praesentium illum</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$80</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/250x301" alt="Deleniti ut earum"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Deleniti ut earum</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$220</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/250x362" alt="Voluptatem quibusdam"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Voluptatem quibusdam</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$185</b>
+                            </p>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <p data-frpoptab-num="4" class="fr-pop-tab-mob" data-frpoptab="#frpoptab-tab-4">Men</p>
+                <div class="flexslider prod-items fr-pop-tab" id="frpoptab-tab-4">
+
+                    <ul class="slides">
+
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/250x422" alt="Nisi provident atque"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Nisi provident atque</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$130</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/250x385" alt="Eveniet nobis minus possimus"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+
+                                <div class="prod-sticker">
+                                    <p class="prod-sticker-1">NEW</p>
+                                </div>
+                            </div>
+                            <h3>
+                                <a href="product.html">Eveniet nobis minus possimus</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$80</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/250x288" alt="Quis ex fugiat blanditiis"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Go to detail</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Quis ex fugiat blanditiis</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$150</b>
+                            </p>
+                            <div class="prod-i-skuwrapcolor">
+                                <ul class="prod-i-skucolor">
+                                    <li class="bx_active"><img src="img/color/red.jpg" alt="Red"></li>
+                                    <li><img src="img/color/blue.jpg" alt="Blue"></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/250x279" alt="Nisi autem error"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Nisi autem error</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$65</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/250x403" alt="Quod soluta corrupti"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Quod soluta corrupti</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$175</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/250x280" alt="Ipsa doloremque"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Ipsa doloremque</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$85</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/250x409" alt="Dignissimos fuga"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Dignissimos fuga</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$205</b>
+                            </p>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <p data-frpoptab-num="5" class="fr-pop-tab-mob" data-frpoptab="#frpoptab-tab-5">Shoes</p>
+                <div class="flexslider prod-items fr-pop-tab" id="frpoptab-tab-5">
+
+                    <ul class="slides">
+
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/252x250" alt="Nisi autem error"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Go to detail</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Nisi autem error</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$95</b>
+                            </p>
+                            <div class="prod-i-skuwrapcolor">
+                                <ul class="prod-i-skucolor">
+                                    <li class="bx_active"><img src="img/color/red.jpg" alt="Red"></li>
+                                    <li><img src="img/color/blue.jpg" alt="Blue"></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/316x250" alt="Tempora ea ratione vel"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+
+                                <div class="prod-sticker">
+                                    <p class="prod-sticker-2">HIT</p>
+                                </div>
+                            </div>
+                            <h3>
+                                <a href="product.html">Tempora ea ratione vel</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$120</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/281x250" alt="Minus sequi iste"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Minus sequi iste</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$135</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/265x250" alt="Dignissimos fuga voluptates totam"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Dignissimos fuga voluptates totam</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$85</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/291x250" alt="Perferendis recusandae"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Perferendis recusandae</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$70</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/277x250" alt="Officiis nihil culpa"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Officiis nihil culpa</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$180</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/295x250" alt="Distinctio modi quos"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Distinctio modi quos</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$195</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/301x250" alt="Corrupti velit vero"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Corrupti velit vero</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$220</b>
+                            </p>
+                        </li>
+                        <li class="prod-i">
+                            <div class="prod-i-top">
+                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/289x250" alt="Dicta doloremque hic"><!-- NO SPACE --></a>
+                                <p class="prod-i-info">
+                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                </p>
+                                <p class="prod-i-addwrap">
+                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                </p>
+                            </div>
+                            <h3>
+                                <a href="product.html">Dicta doloremque hic</a>
+                            </h3>
+                            <p class="prod-i-price">
+                                <b>$90</b>
+                            </p>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+            </div><!-- .fr-pop-tab-cont -->
+
+
+        </div><!-- .fr-pop-wrap -->
+
+
+        <!-- Banners -->
+        <div class="banners-wrap">
+            <div class="banners-list">
+                <div class="banner-i style_11">
+                    <span class="banner-i-bg" style="background: url(http://placehold.it/560x360);"></span>
+                    <div class="banner-i-cont">
+                        <p class="banner-i-subttl">NEW COLLECTION</p>
+                        <h3 class="banner-i-ttl">MEN'S<br>CLOTHING</h3>
+                        <p class="banner-i-link"><a href="section.html">View More</a></p>
+                    </div>
+                </div>
+                <div class="banner-i style_22">
+                    <span class="banner-i-bg" style="background: url(http://placehold.it/270x360);"></span>
+                    <div class="banner-i-cont">
+                        <p class="banner-i-subttl">GREAT COLLECTION</p>
+                        <h3 class="banner-i-ttl">CLOTHING<br>ACCESSORIES</h3>
+                        <p class="banner-i-link"><a href="section.html">Show more</a></p>
+                    </div>
+                </div>
+                <div class="banner-i style_21">
+                    <span class="banner-i-bg" style="background: url(http://placehold.it/270x360);"></span>
+                    <div class="banner-i-cont">
+                        <h3 class="banner-i-ttl">SPORT<br>CLOTHES</h3>
+                        <p class="banner-i-link"><a href="section.html">Go to catalog</a></p>
+                    </div>
+                </div>
+                <div class="banner-i style_21">
+                    <span class="banner-i-bg" style="background: url(http://placehold.it/270x360);"></span>
+                    <div class="banner-i-cont">
+                        <h3 class="banner-i-ttl">MEN AND <br>WOMEN SHOES</h3>
+                        <p class="banner-i-link"><a href="section.html">View More</a></p>
+                    </div>
+                </div>
+                <div class="banner-i style_22">
+                    <span class="banner-i-bg" style="background: url(http://placehold.it/270x360);"></span>
+                    <div class="banner-i-cont">
+                        <p class="banner-i-subttl">DISCOUNT -20%</p>
+                        <h3 class="banner-i-ttl">HATS<br>COLLECTION</h3>
+                        <p class="banner-i-link"><a href="section.html">Shop now</a></p>
+                    </div>
+                </div>
+                <div class="banner-i style_12">
+                    <span class="banner-i-bg" style="background: url(http://placehold.it/560x360);"></span>
+                    <div class="banner-i-cont">
+                        <p class="banner-i-subttl">STYLISH CLOTHES</p>
+                        <h3 class="banner-i-ttl">WOMEN'S COLLECTION</h3>
+                        <p>A great selection of dresses, <br>blouses and women's suits</p>
+                        <p class="banner-i-link"><a href="section.html">View More</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Special offer -->
+        <div class="discounts-wrap">
+            <h3 class="component-ttl"><span>Special offer</span></h3>
+            <div class="flexslider discounts-list">
+                <ul class="slides">
+                    <li class="discounts-i">
+                        <a href="product.html" class="discounts-i-img">
+                            <img src="http://placehold.it/120x120" alt="Dicta doloremque">
+                        </a>
+                        <h3 class="discounts-i-ttl">
+                            <a href="product.html">Dicta doloremque</a>
+                        </h3>
+                        <p class="discounts-i-price">
+                            <b>$115</b> <del>$135</del>
+                        </p>
+                    </li>
+                    <li class="discounts-i">
+                        <a href="product.html" class="discounts-i-img">
+                            <img src="http://placehold.it/99x120" alt="Similique delectus">
+                        </a>
+                        <h3 class="discounts-i-ttl">
+                            <a href="product.html">Similique delectus</a>
+                        </h3>
+                        <p class="discounts-i-price">
+                            <b>$105</b> <del>$120</del>
+                        </p>
+                    </li>
+                    <li class="discounts-i">
+                        <a href="product.html" class="discounts-i-img">
+                            <img src="http://placehold.it/75x120" alt="Adipisci nemo">
+                        </a>
+                        <h3 class="discounts-i-ttl">
+                            <a href="product.html">Adipisci nemo</a>
+                        </h3>
+                        <p class="discounts-i-price">
+                            <b>$70</b> <del>$90</del>
+                        </p>
+                    </li>
+                    <li class="discounts-i">
+                        <a href="product.html" class="discounts-i-img">
+                            <img src="http://placehold.it/65x120" alt="Ullam harum">
+                        </a>
+                        <h3 class="discounts-i-ttl">
+                            <a href="product.html">Ullam harum</a>
+                        </h3>
+                        <p class="discounts-i-price">
+                            <b>$55</b> <del>$75</del>
+                        </p>
+                    </li>
+                    <li class="discounts-i">
+                        <a href="product.html" class="discounts-i-img">
+                            <img src="http://placehold.it/78x120" alt="Similique delectus">
+                        </a>
+                        <h3 class="discounts-i-ttl">
+                            <a href="product.html">Similique delectus</a>
+                        </h3>
+                        <p class="discounts-i-price">
+                            <b>$135</b> <del>$155</del>
+                        </p>
+                    </li>
+                    <li class="discounts-i">
+                        <a href="product.html" class="discounts-i-img">
+                            <img src="http://placehold.it/81x120" alt="Туфли Dr.Koffer">
+                        </a>
+                        <h3 class="discounts-i-ttl">
+                            <a href="product.html">Туфли Dr.Koffer</a>
+                        </h3>
+                        <p class="discounts-i-price">
+                            <b>$190</b> <del>$210</del>
+                        </p>
+                    </li>
+                    <li class="discounts-i">
+                        <a href="product.html" class="discounts-i-img">
+                            <img src="http://placehold.it/117x120" alt="Quod consequatur">
+                        </a>
+                        <h3 class="discounts-i-ttl">
+                            <a href="product.html">Quod consequatur</a>
+                        </h3>
+                        <p class="discounts-i-price">
+                            <b>$120</b> <del>$140</del>
+                        </p>
+                    </li>
+                    <li class="discounts-i">
+                        <a href="product.html" class="discounts-i-img">
+                            <img src="http://placehold.it/80x120" alt="Dolore fugit">
+                        </a>
+                        <h3 class="discounts-i-ttl">
+                            <a href="product.html">Dolore fugit</a>
+                        </h3>
+                        <p class="discounts-i-price">
+                            <b>$80</b> <del>$95</del>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="discounts-info">
+                <p>Special offer!<br>Limited time only</p>
+                <a href="catalog-list.html">Shop now</a>
+            </div>
+        </div>
+
+
+        <!-- Latest news -->
+        <div class="posts-wrap">
+            <div class="posts-list">
+                <div class="posts-i">
+                    <a class="posts-i-img" href="post.html">
+                        <span style="background: url(http://placehold.it/354x236)"></span>
+                    </a>
+                    <time class="posts-i-date" datetime="2016-11-09 00:00:00"><span>30</span> Jan</time>
+                    <div class="posts-i-info">
+                        <a href="blog.html" class="posts-i-ctg">Reviews</a>
+                        <h3 class="posts-i-ttl">
+                            <a href="post.html">Animi quaerat at</a>
+                        </h3>
+                    </div>
+                </div>
+                <div class="posts-i">
+                    <a class="posts-i-img" href="post.html">
+                        <span style="background: url(http://placehold.it/354x236)"></span>
+                    </a>
+                    <time class="posts-i-date" datetime="2016-11-09 00:00:00"><span>29</span> Jan</time>
+                    <div class="posts-i-info">
+                        <a href="blog.html" class="posts-i-ctg">Articles</a>
+                        <h3 class="posts-i-ttl">
+                            <a href="post.html">Ex atque commodi</a>
+                        </h3>
+                    </div>
+                </div>
+                <div class="posts-i">
+                    <a class="posts-i-img" href="post.html">
+                        <span style="background: url(http://placehold.it/354x236)"></span>
+                    </a>
+                    <time class="posts-i-date" datetime="2016-11-09 00:00:00"><span>25</span> Jan</time>
+                    <div class="posts-i-info">
+                        <a href="blog.html" class="posts-i-ctg">News</a>
+                        <h3 class="posts-i-ttl">
+                            <a href="post.html">Hic quod maxime deserunt</a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Testimonials -->
+        <div class="reviews-wrap">
+            <div class="reviewscar-wrap">
+                <div class="swiper-container reviewscar">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <p>Corrupti velit, vero esse, aperiam error magni illum quos, accusantium debitis et possimus recusandae tempora ad itaque dolorem veniam non voluptatem impedit iste? Dicta doloremque hic porro aspernatur. Dolores eligendi similique, cumque, eius veritatis</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <p>Distinctio modi, quos, vero quibusdam ab deserunt doloribus eligendi velit temporibus ratione at est officia repellat? Adipisci nemo expedita rerum distinctio laudantium nihil voluptatem ullam vel ex magnam velit aliquid voluptate voluptatum excepturi</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <p>Similique delectus totam ex cum magnam quasi, ipsam officiis amet temporibus enim modi rerum quo maxime reprehenderit, deserunt, libero quas distinctio quos! Ullam harum nesciunt omnis consectetur distinctio? Iste sunt, dolorem deserunt quibusdam</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <p>Tempora ea ratione vel nisi, qui perferendis nulla, fugit aut, beatae, tempore modi. Minus sequi iste, nam nobis, excepturi nihil consequuntur reprehenderit ipsam, quam consequatur in. Esse, doloremque consectetur veniam quo ut voluptas necessitatibus</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <p>Perferendis recusandae consequuntur quasi, non culpa. Minus porro officiis veniam facilis praesentium expedita doloribus, recusandae aut dolore autem, modi consequuntur rem perferendis dolores quisquam, sequi quas. Iusto et, eius laboriosam beatae</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <p>Aliquid soluta nisi incidunt, dolores sequi itaque sunt et nesciunt delectus ipsam est molestias illo obcaecati, totam ducimus cumque consequuntur modi, laudantium! Temporibus vero odit quis, quibusdam maiores voluptatum sunt dolor tempora architecto fugiat quam.</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <p>Ea reiciendis modi, molestiae dolores beatae facere quas	consequatur delectus ducimus, magni voluptates, eius, quia unde ut vitae doloribus illum! Optio saepe, modi aliquid perferendis veniam</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <p>Ea reiciendis modi, molestiae dolores beatae facere quas	consequatur delectus ducimus, magni voluptates, eius, quia unde ut vitae doloribus illum! Optio saepe, modi aliquid perferendis veniam</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <p>Quod soluta corrupti earum officia vel inventore vitae quidem, consequuntur odit impedit, eaque dolorem odio praesentium iusto amet voluptatum distinctio iste dicta maiores doloremque porro. Ipsa doloremque illum animi laborum quo in nemo delectus</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <p>Eveniet nobis minus possimus eius, doloribus ex similique debitis nihil at facere delectus unde, commodi, alias. Eius facilis, dolore officia veritatis, doloribus voluptatem aliquid rem corporis quam officiis at dignissimos dolorum, velit assumenda</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-container reviewscar-thumbs">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="http://placehold.it/120x120" alt="Aureole Jayde">
+                            <h3 class="reviewscar-ttl"><a href="reviews.html">Aureole Jayde</a></h3>
+                            <p class="reviewscar-post">Director</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="http://placehold.it/120x120" alt="Benjy Darrin">
+                            <h3 class="reviewscar-ttl"><a href="reviews.html">Benjy Darrin</a></h3>
+                            <p class="reviewscar-post">Designer</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="http://placehold.it/120x120" alt="Jeni Margie">
+                            <h3 class="reviewscar-ttl"><a href="reviews.html">Jeni Margie</a></h3>
+                            <p class="reviewscar-post">Developer</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="http://placehold.it/120x120" alt="Edweena Chelsea">
+                            <h3 class="reviewscar-ttl"><a href="reviews.html">Edweena Chelsea</a></h3>
+                            <p class="reviewscar-post">Manager</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="http://placehold.it/120x120" alt="Sean Rudolph">
+                            <h3 class="reviewscar-ttl"><a href="reviews.html">Sean Rudolph</a></h3>
+                            <p class="reviewscar-post">Designer</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="http://placehold.it/120x120" alt="Brigham Murphy">
+                            <h3 class="reviewscar-ttl"><a href="reviews.html">Brigham Murphy</a></h3>
+                            <p class="reviewscar-post">Director</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="http://placehold.it/120x120" alt="Barrie Roderick">
+                            <h3 class="reviewscar-ttl"><a href="reviews.html">Barrie Roderick</a></h3>
+                            <p class="reviewscar-post">Developer</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="http://placehold.it/120x120" alt="John Doe">
+                            <h3 class="reviewscar-ttl"><a href="reviews.html">John Doe</a></h3>
+                            <p class="reviewscar-post">Manager</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="http://placehold.it/120x120" alt="Shirlee Annabel">
+                            <h3 class="reviewscar-ttl"><a href="reviews.html">Shirlee Annabel</a></h3>
+                            <p class="reviewscar-post">Developer</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="http://placehold.it/120x120" alt="Lettice Alyce">
+                            <h3 class="reviewscar-ttl"><a href="reviews.html">Lettice Alyce</a></h3>
+                            <p class="reviewscar-post">Director</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="http://placehold.it/120x120" alt="Meriel Glory">
+                            <h3 class="reviewscar-ttl"><a href="reviews.html">Meriel Glory</a></h3>
+                            <p class="reviewscar-post">Manager</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="http://placehold.it/120x120" alt="Janene Alaina">
+                            <h3 class="reviewscar-ttl"><a href="reviews.html">Janene Alaina</a></h3>
+                            <p class="reviewscar-post">Manager</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Subscribe Form -->
+        <div class="newsletter">
+            <h3>Subscribe to us</h3>
+            <p>Enter your email if you want to receive our news</p>
+            <form action="#">
+                <input placeholder="Your e-mail" type="text">
+                <input name="OK" value="Subscribe" type="submit">
+            </form>
+        </div>
+
+        <!-- Quick View Product - start -->
+        <div class="qview-modal">
+            <div class="prod-wrap">
+                <a href="product.html">
+                    <h1 class="main-ttl">
+                        <span>Reprehenderit adipisci</span>
+                    </h1>
+                </a>
+                <div class="prod-slider-wrap">
+                    <div class="prod-slider">
+                        <ul class="prod-slider-car">
+                            <li>
+                                <a data-fancybox-group="popup-product" class="fancy-img" href="http://placehold.it/500x525">
+                                    <img src="http://placehold.it/500x525" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a data-fancybox-group="popup-product" class="fancy-img" href="http://placehold.it/500x591">
+                                    <img src="http://placehold.it/500x591" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a data-fancybox-group="popup-product" class="fancy-img" href="http://placehold.it/500x525">
+                                    <img src="http://placehold.it/500x525" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a data-fancybox-group="popup-product" class="fancy-img" href="http://placehold.it/500x722">
+                                    <img src="http://placehold.it/500x722" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a data-fancybox-group="popup-product" class="fancy-img" href="http://placehold.it/500x722">
+                                    <img src="http://placehold.it/500x722" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a data-fancybox-group="popup-product" class="fancy-img" href="http://placehold.it/500x722">
+                                    <img src="http://placehold.it/500x722" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a data-fancybox-group="popup-product" class="fancy-img" href="http://placehold.it/500x722">
+                                    <img src="http://placehold.it/500x722" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="prod-thumbs">
+                        <ul class="prod-thumbs-car">
+                            <li>
+                                <a data-slide-index="0" href="#">
+                                    <img src="http://placehold.it/500x525" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a data-slide-index="1" href="#">
+                                    <img src="http://placehold.it/500x591" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a data-slide-index="2" href="#">
+                                    <img src="http://placehold.it/500x525" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a data-slide-index="3" href="#">
+                                    <img src="http://placehold.it/500x722" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a data-slide-index="4" href="#">
+                                    <img src="http://placehold.it/500x722" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a data-slide-index="5" href="#">
+                                    <img src="http://placehold.it/500x722" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a data-slide-index="6" href="#">
+                                    <img src="http://placehold.it/500x722" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="prod-cont">
+                    <p class="prod-actions">
+                        <a href="#" class="prod-favorites"><i class="fa fa-heart"></i> Add to Wishlist</a>
+                        <a href="#" class="prod-compare"><i class="fa fa-bar-chart"></i> Compare</a>
+                    </p>
+                    <div class="prod-skuwrap">
+                        <p class="prod-skuttl">Color</p>
+                        <ul class="prod-skucolor">
+                            <li class="active">
+                                <img src="img/color/blue.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="img/color/red.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="img/color/green.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="img/color/yellow.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="img/color/purple.jpg" alt="">
+                            </li>
+                        </ul>
+                        <p class="prod-skuttl">Sizes</p>
+                        <div class="offer-props-select">
+                            <p>XL</p>
+                            <ul>
+                                <li><a href="#">XS</a></li>
+                                <li><a href="#">S</a></li>
+                                <li><a href="#">M</a></li>
+                                <li class="active"><a href="#">XL</a></li>
+                                <li><a href="#">L</a></li>
+                                <li><a href="#">4XL</a></li>
+                                <li><a href="#">XXL</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="prod-info">
+                        <p class="prod-price">
+                            <b class="item_current_price">$238</b>
+                        </p>
+                        <p class="prod-qnt">
+                            <input type="text" value="1">
+                            <a href="#" class="prod-plus"><i class="fa fa-angle-up"></i></a>
+                            <a href="#" class="prod-minus"><i class="fa fa-angle-down"></i></a>
+                        </p>
+                        <p class="prod-addwrap">
+                            <a href="#" class="prod-add">Add to cart</a>
+                        </p>
+                    </div>
+                    <ul class="prod-i-props">
+                        <li>
+                            <b>SKU</b> 05464207
+                        </li>
+                        <li>
+                            <b>Manufacturer</b> Mayoral
+                        </li>
+                        <li>
+                            <b>Material</b> Cotton
+                        </li>
+                        <li>
+                            <b>Pattern Type</b> Print
+                        </li>
+                        <li>
+                            <b>Wash</b> Colored
+                        </li>
+                        <li>
+                            <b>Style</b> Cute
+                        </li>
+                        <li>
+                            <b>Color</b> Blue, Red
+                        </li>
+                        <li><a href="#" class="prod-showprops">All Features</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Quick View Product - end -->
+    </section>
+</main>
+<!-- Main Content - end -->
+
+
+<!-- Footer - start -->
+<footer class="footer-wrap">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+                <div class="companyinfo">
+                    <a href="index.html">
+                        <img src="img/logo-b.png" alt="AllStore - MultiConcept eCommerce Responsive HTML5 Template">
+                        AllStore - MultiConcept eCommerce Responsive HTML5 Template
+                    </a>
+                </div>
+                <div class="f-block-list">
+                    <div class="f-block-wrap">
+                        <div class="f-block">
+                            <a href="#" class="f-block-btn" data-id="#f-block-modal-1">
+                                <div class="iframe-img">
+                                    <img src="http://placehold.it/300x127" alt="About us">
+                                </div>
+                                <div class="overlay-icon">
+                                    <i class="fa fa-info-circle"></i>
+                                </div>
+                            </a>
+                            <p class="f-info-ttl">About us</p>
+                            <p>Shipping and payment information.</p>
+                        </div>
+                    </div>
+                    <div class="f-block-wrap">
+                        <div class="f-block">
+                            <a href="#" class="f-block-btn" data-id="#f-block-modal-2">
+                                <div class="iframe-img">
+                                    <img src="http://placehold.it/300x127" alt="Ask questions">
+                                </div>
+                                <div class="overlay-icon">
+                                    <i class="fa fa-phone"></i>
+                                </div>
+                            </a>
+                            <p class="f-info-ttl">Ask questions</p>
+                            <p>We call back within 10 minutes</p>
+                        </div>
+                    </div>
+                    <div class="f-block-wrap">
+                        <div class="f-block">
+                            <a href="#" class="f-block-btn" data-id="#f-block-modal-3" data-content="<iframe width='853' height='480' src='https://www.youtube.com/embed/kaOVHSkDoPY?rel=0&amp;showinfo=0' allowfullscreen></iframe>">
+                                <div class="iframe-img">
+                                    <img src="http://placehold.it/300x127" alt="Video (2 min)">
+                                </div>
+                                <div class="overlay-icon">
+                                    <i class="fa fa-play-circle"></i>
+                                </div>
+                            </a>
+                            <p class="f-info-ttl">Video (2 min)</p>
+                            <p>Watch a video about our store</p>
+                        </div>
+                    </div>
+                    <div class="f-block-wrap">
+                        <div class="f-block">
+                            <a href="#" class="f-block-btn" data-id="#f-block-modal-4">
+                                <div class="iframe-img">
+                                    <img src="http://placehold.it/300x127" alt="Our address">
+                                </div>
+                                <div class="overlay-icon">
+                                    <i class="fa fa-map-marker"></i>
+                                </div>
+                            </a>
+                            <p class="f-info-ttl">Our address</p>
+                            <p>Spain, Madrid, 45</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stylization f-block-modal f-block-modal-content" id="f-block-modal-1">
+                    <img class="f-block-modal-img" src="http://placehold.it/500x334" alt="About us">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam natus iste ullam vero, tenetur ab ipsa consectetur deleniti officiis ex debitis incidunt alias voluptatum, maxime placeat dolores veniam sunt at atque velit, soluta. Neque ea alias quia provident molestias, ratione aut esse placeat beatae sequi sed laudantium. Unde animi nihil esse, repellendus exercitationem dicta harum ab labore, voluptates explicabo in, quidem dolorum voluptas!
+                </div>
+                <div class="stylization f-block-modal f-block-modal-callback" id="f-block-modal-2">
+                    <div class="modalform">
+                        <form action="#" method="POST" class="form-validate">
+                            <p class="modalform-ttl">Callback</p>
+                            <input type="text" placeholder="Your name" data-required="text" name="name">
+                            <input type="text" placeholder="Your phone" data-required="text" name="phone">
+                            <button type="submit"><i class="fa fa-paper-plane"></i> Send</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="stylization f-block-modal f-block-modal-video" id="f-block-modal-3">
+
+                </div>
+                <div class="stylization f-block-modal f-block-modal-map" id="f-block-modal-4">
+                    <div class="allstore-gmap">
+                        <div class="marker" data-zoom="15" data-lat="-37.81485261872975" data-lng="144.95655298233032" data-marker="img/marker.png">534-540 Little Bourke St, Melbourne VIC 3000, Australia</div>
+                    </div>
+                </div>
+                <div class="f-delivery">
+                    <img src="img/map.png" alt="">
+                    <h4>Free delivery in London</h4>
+                    <p>We will deliver within 1 hour</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container f-menu-list">
+        <div class="row">
+            <div class="f-menu">
+                <h3>
+                    About us
+                </h3>
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="catalog-list.html">Catalog</a></li>
+                    <li><a href="elements.html">Elements</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contacts.html">Contacts</a></li>
+                </ul>
+            </div>
+            <div class="f-menu">
+                <h3>
+                    Shop
+                </h3>
+                <ul class="nav nav-pills nav-stacked">
+                    <li><a href="catalog-list.html">Women</a></li>
+                    <li><a href="catalog-list.html">Men</a></li>
+                    <li><a href="catalog-list.html">Kids</a></li>
+                    <li><a href="catalog-list.html">Shoes</a></li>
+                    <li><a href="catalog-list.html">Accessories</a></li>
+                </ul>
+            </div>
+            <div class="f-menu">
+                <h3>
+                    Information
+                </h3>
+                <ul class="nav nav-pills nav-stacked">
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="blog.html">News</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="blog.html">Articles</a></li>
+                    <li><a href="contacts.html">Contacts</a></li>
+                </ul>
+            </div>
+            <div class="f-menu">
+                <h3>
+                    Pages
+                </h3>
+                <ul class="nav nav-pills nav-stacked">
+                    <li><a href="contacts.html">About us</a></li>
+                    <li><a href="contacts.html">Delivery</a></li>
+                    <li><a href="contacts.html">Guarantees</a></li>
+                    <li><a href="contacts.html">Contacts</a></li>
+                    <li><a href="404.html">Page 404</a></li>
+                </ul>
+            </div>
+            <div class="f-subscribe">
+                <h3>Subscribe to news</h3>
+                <form class="f-subscribe-form" action="#">
+                    <input placeholder="Your e-mail" type="text">
+                    <button type="submit"><i class="fa fa-paper-plane"></i></button>
+                </form>
+                <p>Enter your email address if you want to receive our newsletter. Subscribe now!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <ul class="social-icons nav navbar-nav">
+                    <li>
+                        <a href="http://facebook.com/" rel="nofollow" target="_blank">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://google.com/" rel="nofollow" target="_blank">
+                            <i class="fa fa-google-plus"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://twitter.com/" rel="nofollow" target="_blank">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://vk.com/" rel="nofollow" target="_blank">
+                            <i class="fa fa-vk"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://instagram.com/" rel="nofollow" target="_blank">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+                <div class="footer-copyright">
+                    <i><a href="https://themeforest.net/user/real-web?ref=real-web">Real-Web</a></i> © Copyright 2017
+                </div>
+            </div>
+        </div>
+    </div>
+
+</footer>
+<!-- Footer - end -->
+
+
+<!-- jQuery plugins/scripts - start -->
+<script src="${pageContext.request.contextPath}/resource/client/js/jquery-1.11.2.min.js"></script>
+<script src="${pageContext.request.contextPath}/resource/client/js/jquery.bxslider.min.js"></script>
+<script src="${pageContext.request.contextPath}/resource/client/js/fancybox/fancybox.js"></script>
+<script src="${pageContext.request.contextPath}/resource/client/js/fancybox/helpers/jquery.fancybox-thumbs.js"></script>
+<script src="${pageContext.request.contextPath}/resource/client/js/jquery.flexslider-min.js"></script>
+<script src="${pageContext.request.contextPath}/resource/client/js/swiper.jquery.min.js"></script>
+<script src="${pageContext.request.contextPath}/resource/client/js/jquery.waypoints.min.js"></script>
+<script src="${pageContext.request.contextPath}/resource/client/js/progressbar.min.js"></script>
+<script src="${pageContext.request.contextPath}/resource/client/js/ion.rangeSlider.min.js"></script>
+<script src="${pageContext.request.contextPath}/resource/client/js/chosen.jquery.min.js"></script>
+<script src="${pageContext.request.contextPath}/resource/client/js/jQuery.Brazzers-Carousel.js"></script>
+<script src="${pageContext.request.contextPath}/resource/client/js/plugins.js"></script>
+<script src="${pageContext.request.contextPath}/resource/client/js/main.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhAYvx0GmLyN5hlf6Uv_e9pPvUT3YpozE"></script>
+<script src="${pageContext.request.contextPath}/resource/client/js/gmap.js"></script>
+<!-- jQuery plugins/scripts - end -->
 
 </body>
 </html>

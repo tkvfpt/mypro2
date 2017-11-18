@@ -51,7 +51,7 @@ public class Product {
 	@Column(name = "description")
 	String description;
 
-	@Column(name = "Created")
+	@Column(name = "createdDate")
 	@Temporal(TemporalType.TIMESTAMP)
 	Date created;
 

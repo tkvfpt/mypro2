@@ -1,5 +1,7 @@
 package com.pro2.controller;
 
+import java.util.List;
+import java.util.Objects;
 import java.util.logging.Logger;
 
 import javax.servlet.http.HttpServletRequest;
@@ -20,7 +22,7 @@ import com.pro2.dao.utils.CommonUtils;
 public class CommonController {
 	
 	@Autowired
-	IGenericDAO shopinfoDAO;
+	IGenericDAO<ShopInfo> shopinfoDAO;
 	
 	@Autowired
 	MailSender mailSender;
@@ -38,14 +40,19 @@ public class CommonController {
 		return ECommerceGlobalConstant.SUCCESS_PAGE;
 	}
 	
-	@RequestMapping(value= {"/admin/loginform","/loginform"})
-	public String redirectLogin() {
-		return ECommerceGlobalConstant.LOGIN_PAGE;
+	@RequestMapping(value="/admin",method=RequestMethod.GET)
+	public String showDashboard(Model model){
+		List<ShopInfo> list = shopinfoDAO.getAll();
+		if(!list.isEmpty()){
+			model.addAttribute("shop",list.get(list.size()-1));
+		}
+		return ECommerceGlobalConstant.DASH_BOARD_PAGE;
 	}
 	
-	@RequestMapping(value="/admin/shop", method=RequestMethod.POST)
+	@RequestMapping(value="/admin/shop/update", method=RequestMethod.POST)
 	public String saveOrUpdateShop(HttpServletRequest request, Model model,ShopInfo shop) {
-		LOG.info("shop: "+shop);
-		return ECommerceGlobalConstant.INDEX_PAGE;
+		shopinfoDAO.saveOrUpdateObject(shop);
+		model.addAttribute("shop",shop.getName());
+		return ECommerceGlobalConstant.REDIRECT+"admin";
 	}
 }

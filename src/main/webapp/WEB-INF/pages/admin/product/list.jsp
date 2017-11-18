@@ -10,20 +10,20 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="resource/admin/assets/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="${pageContext.request.contextPath}/resource/admin/assets/images/favicon.png">
     <title>Product List</title>
     <!-- Bootstrap Core CSS -->
-    <link href="resource/admin/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/resource/admin/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- chartist CSS -->
-    <link href="resource/admin/assets/plugins/chartist-js/dist/chartist.min.css" rel="stylesheet">
-    <link href="resource/admin/assets/plugins/chartist-js/dist/chartist-init.css" rel="stylesheet">
-    <link href="resource/admin/assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/resource/admin/assets/plugins/chartist-js/dist/chartist.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/resource/admin/assets/plugins/chartist-js/dist/chartist-init.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/resource/admin/assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" rel="stylesheet">
     <!--This page css - Morris CSS -->
-    <link href="resource/admin/assets/plugins/c3-master/c3.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/resource/admin/assets/plugins/c3-master/c3.min.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="resource/admin/css/style.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/resource/admin/css/style.css" rel="stylesheet">
     <!-- You can change the theme colors from here -->
-    <link href="resource/admin/css/colors/blue.css" id="theme" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/resource/admin/css/colors/blue.css" id="theme" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -278,30 +278,30 @@
     <!-- ============================================================== -->
     <!-- All Jquery -->
     <!-- ============================================================== -->
-    <script src="resource/admin/assets/plugins/jquery/jquery.min.js"></script>
+    <script src="${pageContext.request.contextPath}/resource/admin/assets/plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap tether Core JavaScript -->
-    <script src="resource/admin/assets/plugins/bootstrap/js/tether.min.js"></script>
-    <script src="resource/admin/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="${pageContext.request.contextPath}/resource/admin/assets/plugins/bootstrap/js/tether.min.js"></script>
+    <script src="${pageContext.request.contextPath}/resource/admin/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
     <!-- slimscrollbar scrollbar JavaScript -->
-    <script src="resource/admin/js/jquery.slimscroll.js"></script>
+    <script src="${pageContext.request.contextPath}/resource/admin/js/jquery.slimscroll.js"></script>
     <!--Wave Effects -->
-    <script src="resource/admin/js/waves.js"></script>
+    <script src="${pageContext.request.contextPath}/resource/admin/js/waves.js"></script>
     <!--Menu sidebar -->
-    <script src="resource/admin/js/sidebarmenu.js"></script>
+    <script src="${pageContext.request.contextPath}/resource/admin/js/sidebarmenu.js"></script>
     <!--stickey kit -->
-    <script src="resource/admin/assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
+    <script src="${pageContext.request.contextPath}/resource/admin/assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
     <!--Custom JavaScript -->
-    <script src="resource/admin/js/custom.min.js"></script>
+    <script src="${pageContext.request.contextPath}/resource/admin/js/custom.min.js"></script>
     <!-- ============================================================== -->
     <!-- This page plugins -->
     <!-- ============================================================== -->
     <!-- chartist chart -->
-    <script src="resource/admin/assets/plugins/chartist-js/dist/chartist.min.js"></script>
-    <script src="resource/admin/assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js"></script>
+    <script src="${pageContext.request.contextPath}/resource/admin/assets/plugins/chartist-js/dist/chartist.min.js"></script>
+    <script src="${pageContext.request.contextPath}/resource/admin/assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js"></script>
     <!--c3 JavaScript -->
-    <script src="resource/admin/assets/plugins/d3/d3.min.js"></script>
-    <script src="resource/admin/assets/plugins/c3-master/c3.min.js"></script>
+    <script src="${pageContext.request.contextPath}/resource/admin/assets/plugins/d3/d3.min.js"></script>
+    <script src="${pageContext.request.contextPath}/resource/admin/assets/plugins/c3-master/c3.min.js"></script>
     <!-- Chart JS -->
-    <script src="resource/admin/js/dashboard1.js"></script>
+    <script src="${pageContext.request.contextPath}/resource/admin/js/dashboard1.js"></script>
 </body>
 </html>
