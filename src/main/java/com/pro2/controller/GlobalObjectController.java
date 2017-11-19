@@ -1,6 +1,7 @@
 package com.pro2.controller;
 
 import java.util.List;
+import java.util.Objects;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -20,7 +21,10 @@ public class GlobalObjectController {
 
 	@ModelAttribute("user")
 	public User getCurrentUser(Authentication authen){
-		return (User)authen.getPrincipal();
+		if(Objects.nonNull(authen)){
+			return (User)authen.getPrincipal();
+		}
+		return new User();
 	}
 	
 	@ModelAttribute

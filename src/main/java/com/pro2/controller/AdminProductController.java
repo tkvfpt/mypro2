@@ -3,6 +3,7 @@ package com.pro2.controller;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
@@ -14,6 +15,7 @@ import org.jboss.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -21,6 +23,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.pro2.common.QueryManager;
 import com.pro2.constants.ECommerceGlobalConstant;
+import com.pro2.dao.entity.Category;
 import com.pro2.dao.entity.Product;
 import com.pro2.dao.generic.IGenericDAO;
 import com.pro2.dao.utils.CommonUtils;
@@ -32,6 +35,9 @@ public class AdminProductController {
 	
 	@Autowired
 	IGenericDAO<Product> productDAO;
+	
+	@Autowired
+	IGenericDAO<Category> categoryDAO;
 	
 	@Autowired
 	ServletContext context;
@@ -76,20 +82,17 @@ public class AdminProductController {
 	 * @return {@link String}
 	 */
 	@RequestMapping(value = "/product/add", method=RequestMethod.POST)
-	public String addProduct(HttpServletRequest request,@RequestParam MultipartFile image,@RequestParam MultipartFile thumbnail, Model model, Product product){
-		logger.info("context:" +context.getRealPath(""));
+	public String addProduct(HttpServletRequest request,@RequestParam MultipartFile pic,@RequestParam MultipartFile spic, Model model, Product product){
+		logger.info(request.getParameter("mycategory"));
 		String imgName = CommonUtils.getValidImageName(request.getParameter(ECommerceGlobalConstant.OBJECT_NAME))+".jpg";
 		String thumb = imgName + "thumbnail";
 		try {
-			image.transferTo(new File(context.getRealPath(ECommerceGlobalConstant.RESOURCE_REAL_PATH)+imgName));
-			thumbnail.transferTo(new File(context.getRealPath(ECommerceGlobalConstant.RESOURCE_REAL_PATH)));
+			pic.transferTo(new File(context.getRealPath(ECommerceGlobalConstant.RESOURCE_REAL_PATH)+imgName));
+			spic.transferTo(new File(context.getRealPath(ECommerceGlobalConstant.RESOURCE_REAL_PATH)));
 		} catch (IllegalStateException | IOException e) {
 			Logger.getLogger(this.getClass()).info(e.getMessage());
 		}
-			product.setImagePath(imgName);
-			product.setThumbnail(thumb);
-			productDAO.saveObject(product);
-			return "redirect:/product/all";
+			return "redirect:/admin/product/all";
 	}
 	/**
 	 * Execute Edit Product Action
@@ -163,5 +166,14 @@ public class AdminProductController {
 		listProduct.add(product);
 		return listProduct;*/
 		return null;
+	}
+	
+	@ModelAttribute("categories")
+	public List<Category> getAllCategory(){
+		List<Category> categories = categoryDAO.getAll();
+		if(categories.isEmpty()){
+			return Collections.emptyList();
+		}
+		return categories;
 	}
 }

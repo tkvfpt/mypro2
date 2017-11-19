@@ -11,7 +11,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="${pageContext.request.contextPath}/resource/admin/assets/images/favicon.png">
-    <title>Dashboard</title>
+    <title>New User</title>
     <!-- Bootstrap Core CSS -->
     <link href="${pageContext.request.contextPath}/resource/admin/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- chartist CSS -->
@@ -43,6 +43,7 @@
     <!-- Main wrapper - style you can find in pages.scss -->
     <!-- ============================================================== -->
     <div id="main-wrapper">
+        <!-- ============================================================== -->
         <!-- ============================================================== -->
         <!-- Topbar header - style you can find in pages.scss -->
         <!-- ============================================================== -->
@@ -91,7 +92,7 @@
                         <!-- Profile -->
                         <!-- ============================================================== -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="/assets/images/users/1.jpg" alt="user" class="profile-pic m-r-10" />${user.username }</a>
+                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../assets/images/users/1.jpg" alt="user" class="profile-pic m-r-10" />${user.username }</a>
                         </li>
                     </ul>
                 </div>
@@ -154,13 +155,15 @@
                 <!-- ============================================================== -->
                 <div class="row page-titles">
                     <div class="col-md-5 col-8 align-self-center">
-                        <h3 class="text-themecolor">Dashboard</h3>
+                        <h3 class="text-themecolor m-b-0 m-t-0">Update User</h3>
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item active">Dashboard</li>
+                            <li class="breadcrumb-item"><a href="${pageContext.request.contextPath }/admin">Dashboard</a></li>
+                            <li class="breadcrumb-item"><a href="${pageContext.request.contextPath }/admin/user/all">User</a></li>
+                            <li class="breadcrumb-item active">Update</li>
                         </ol>
                     </div>
                     <div class="col-md-7 col-4 align-self-center">
-                       
+                        <a href="https://wrappixel.com/templates/materialpro/" class="btn waves-effect waves-light btn-danger pull-right hidden-sm-down"> Upgrade to Pro</a>
                     </div>
                 </div>
                 <!-- ============================================================== -->
@@ -169,112 +172,33 @@
                 <!-- ============================================================== -->
                 <!-- Start Page Content -->
                 <!-- ============================================================== -->
-                <!-- Row -->
                 <div class="row">
-                    <!-- Column -->
-                    <div class="col-lg-4 col-xlg-3 col-md-5">
-                        <div class="card">
-                            <div class="card-block">
-                                <center class="m-t-30"> <img src="${requestScope.shop.logo}" class="img-circle" width="150" id="logo">
-                                    <h4 class="card-title m-t-10"></h4>
-                                    <form class="form-horizontal form-material" action="${pageContext.request.contextPath }/admin/shop/update" method="POST" enctype="multipart/form-data">
-                                    <h6 class="card-subtitle"><span class="btn btn-success" onclick="activateUpload()">Load Image</span><input type="file" id="upload" onchange="readURL(this)" name="mylogo" style="display:none"/></h6>
-                                </center>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Column -->
-                    <!-- Column -->
-                    <div class="col-lg-8 col-xlg-9 col-md-7">
-                        <div class="card">
-                            <div class="card-block">
-                                <div class="form-group">
-                                <i class="mdi mdi-information-outline"></i>
-                                </div>
+                    <div class="col-12">
+                        <div class="card-block">
+                                <form class="form-horizontal form-material" action="${pageContext.request.contextPath }/admin/user/update" method="post">
                                     <div class="form-group">
-                                        <label class="col-md-12">Shop Name</label>
+                                        <label class="col-md-12">Username</label>
                                         <div class="col-md-12">
-                                            <input type="text" name="name" placeholder="Shop Name" class="form-control form-control-line" value="${requestScope.shop.name}">
+                                            <input type="text" placeholder="Username" name="username" class="form-control form-control-line" value="${requestScope.user.username }" readonly>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="example-email" class="col-md-12">Phone Number</label>
+                                        <label for="pwd" class="col-md-12">Password</label>
                                         <div class="col-md-12">
-                                            <input type="text" name="phone" placeholder="01215878387" onkeyup="checkNumb()" value="${requestScope.shop.phone }" class="form-control form-control-line" id="example-email">
-                                        </div>
-                                        <label for="error" class="col-md-12" id="error" style="color:red"></label>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-md-12">Messenger Link</label>
-                                        <div class="col-md-12">
-                                            <input type="text" name="messenger" placeholder="messenger" value="${requestScope.shop.messenger}" class="form-control form-control-line">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-md-12">Facebook Fanpage URL</label>
-                                        <div class="col-md-12">
-                                            <input type="text" name="fanpageUrl" class="form-control form-control-line" value="${requestScope.shop.fanpageUrl }">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-md-12">Mail</label>
-                                        <div class="col-md-12">
-                                            <input type="email" name="mail" placeholder="example@example.com" class="form-control form-control-line" value="${requestScope.shop.mail }"/>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-12">Twitter</label>
-                                        <div class="col-md-12">
-                                            <input type="text" name="twitter" placeholder="" class="form-control form-control-line" value="${requestScope.shop.twitter }"/>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-12">Address</label>
-                                        <div class="col-md-12">
-                                            <input type="text" name="address" placeholder="" class="form-control form-control-line" value="${requestScope.shop.address }"/>
+                                            <input type="password" placeholder="Password" class="form-control form-control-line" name="password" value="${requestScope.user.password }">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="col-sm-12">
-                                        	
-                                            <button class="btn btn-success" onclick="submit()">Update Profile</button>
+                                        	<input type="hidden" name="role" value="${requestScope.user.role }"/>
+                                            <button class="btn btn-success">Update Profile</button>
                                         </div>
-                                        <script>
-                                        	function submit(){
-                                        		document.getElementById('submitBtn').click();
-                                        	}
-                                        	function checkNumb(){
-                                        		var phoneno = /^\d{10,11}$/;
-                                        		if( document.getElementById("example-email").value.match(phoneno) ){
-                                        			document.getElementById("error").innerHTML = "";
-                                            		}else{
-                                            			document.getElementById("error").innerHTML = "<i class='mdi mdi-alert-octagram'></i>phone number must be a valid number";	
-                                                		}
-                                            	}
-                                        	function activateUpload(){
-                                            	document.getElementById("upload").click();
-                                            	}
-                                        	function readURL(input){
-                                        		if (input.files && input.files[0]) {
-                                                    var reader = new FileReader();
-
-                                                    reader.onload = function (e) {
-                                                        $('#logo')
-                                                            .attr('src', e.target.result);
-                                                    };
-                                                    reader.readAsDataURL(input.files[0]);
-                                                }
-                                            	}
-                                        </script>
                                     </div>
                                 </form>
                             </div>
-                        </div>
+
                     </div>
-                    <!-- Column -->
                 </div>
-                <!-- Row -->
-               
                 <!-- ============================================================== -->
                 <!-- End PAge Content -->
                 <!-- ============================================================== -->
@@ -285,7 +209,9 @@
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
-            <footer class="footer"> © 2017 Material Pro Admin by wrappixel.com </footer>
+            <footer class="footer">
+                © 2017 Material Pro Admin by wrappixel.com
+            </footer>
             <!-- ============================================================== -->
             <!-- End footer -->
             <!-- ============================================================== -->
@@ -300,30 +226,20 @@
     <!-- ============================================================== -->
     <!-- All Jquery -->
     <!-- ============================================================== -->
-    <script src="${pageContext.request.contextPath}/resource/admin/assets/plugins/jquery/jquery.min.js"></script>
+    <script src="${pageContext.request.contextPath }/resource/admin/assets/plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap tether Core JavaScript -->
-    <script src="${pageContext.request.contextPath}/resource/admin/assets/plugins/bootstrap/js/tether.min.js"></script>
-    <script src="${pageContext.request.contextPath}/resource/admin/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="${pageContext.request.contextPath }/resource/admin/assets/plugins/bootstrap/js/tether.min.js"></script>
+    <script src="${pageContext.request.contextPath }/resource/admin/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
     <!-- slimscrollbar scrollbar JavaScript -->
-    <script src="${pageContext.request.contextPath}/resource/admin/js/jquery.slimscroll.js"></script>
+    <script src="${pageContext.request.contextPath }/resource/admin/js/jquery.slimscroll.js"></script>
     <!--Wave Effects -->
-    <script src="${pageContext.request.contextPath}/resource/admin/js/waves.js"></script>
+    <script src="${pageContext.request.contextPath }/resource/admin/js/waves.js"></script>
     <!--Menu sidebar -->
-    <script src="${pageContext.request.contextPath}/resource/admin/js/sidebarmenu.js"></script>
+    <script src="${pageContext.request.contextPath }/resource/admin/js/sidebarmenu.js"></script>
     <!--stickey kit -->
-    <script src="${pageContext.request.contextPath}/resource/admin/assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
+    <script src="${pageContext.request.contextPath }/resource/admin/assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
     <!--Custom JavaScript -->
-    <script src="${pageContext.request.contextPath}/resource/admin/js/custom.min.js"></script>
-    <!-- ============================================================== -->
-    <!-- This page plugins -->
-    <!-- ============================================================== -->
-    <!-- chartist chart -->
-    <script src="${pageContext.request.contextPath}/resource/admin/assets/plugins/chartist-js/dist/chartist.min.js"></script>
-    <script src="${pageContext.request.contextPath}/resource/admin/assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js"></script>
-    <!--c3 JavaScript -->
-    <script src="${pageContext.request.contextPath}/resource/admin/assets/plugins/d3/d3.min.js"></script>
-    <script src="${pageContext.request.contextPath}/resource/admin/assets/plugins/c3-master/c3.min.js"></script>
-    <!-- Chart JS -->
-    <script src="${pageContext.request.contextPath}/resource/admin/js/dashboard1.js"></script>
+    <script src="${pageContext.request.contextPath }/resource/admin/js/custom.min.js"></script>
 </body>
+
 </html>

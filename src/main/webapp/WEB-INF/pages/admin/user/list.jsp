@@ -173,8 +173,9 @@
                 <!-- Start Page Content -->
                 <!-- ============================================================== -->
                 <div class="row">
-                    <div class="col-12">
-                        <div class="card-block">
+                <div class="col-lg-8 col-md-7">
+                        <div class="card">
+                            <div class="card-block">
                                 <h4 class="card-title">Users</h4>
                                 <div class="table-responsive">
                                     <table class="table">
@@ -199,8 +200,28 @@
                                     </table>
                                 </div>
                             </div>
-
+                            </div>
                     </div>
+                    <div class="col-lg-4 col-md-5">
+                        <div class="card">
+                            <div class="card-block bg-info">
+                                <h4 class="text-white card-title"></h4>
+                            </div>
+                            <div class="card-block">
+                                <div class="message-box contact-box">
+                                   
+                                    <div class="message-widget contact-widget">
+                                        <!-- Message -->
+                                        <a href="${pageContext.request.contextPath }/admin/user/new">
+                                        New
+                                        </a>
+                                        <!-- Message -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
                 <!-- ============================================================== -->
                 <!-- End PAge Content -->

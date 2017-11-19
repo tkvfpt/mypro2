@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -11,7 +12,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="${pageContext.request.contextPath}/resource/admin/assets/images/favicon.png">
-    <title>New User</title>
+    <title>New Product</title>
     <!-- Bootstrap Core CSS -->
     <link href="${pageContext.request.contextPath}/resource/admin/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- chartist CSS -->
@@ -155,10 +156,10 @@
                 <!-- ============================================================== -->
                 <div class="row page-titles">
                     <div class="col-md-5 col-8 align-self-center">
-                        <h3 class="text-themecolor m-b-0 m-t-0">New User</h3>
+                        <h3 class="text-themecolor m-b-0 m-t-0">New Product</h3>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="${pageContext.request.contextPath }/admin">Dashboard</a></li>
-                            <li class="breadcrumb-item"><a href="${pageContext.request.contextPath }/admin/user/all">User</a></li>
+                            <li class="breadcrumb-item"><a href="${pageContext.request.contextPath }/admin/product/all">Product</a></li>
                             <li class="breadcrumb-item active">New</li>
                         </ol>
                     </div>
@@ -175,7 +176,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="card-block">
-                                <form class="form-horizontal form-material" action="${pageContext.request.contextPath }/admin/user/add" method="post">
+                                <form class="form-horizontal form-material" action="${pageContext.request.contextPath }/admin/product/add" method="post" enctype="multipart/form-data">
                                     <div class="form-group">
                                         <label class="col-md-12">Name</label>
                                         <div class="col-md-12">
@@ -189,39 +190,75 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="pwd" class="col-md-12">Price</label>
+                                        <label for="pwd" class="col-md-12">Weight</label>
                                         <div class="col-md-12">
-                                            <input type="text" placeholder="price" class="form-control form-control-line" name="price">
+                                            <input type="text" placeholder="weight" class="form-control form-control-line" name="weight">
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="pwd" class="col-md-12">Price</label>
+                                        <label for="pwd" class="col-md-12">Description</label>
                                         <div class="col-md-12">
-                                            <input type="text" placeholder="price" class="form-control form-control-line" name="price">
+                                            <textarea rows="5" class="form-control form-control-line" name="description"></textarea>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="pwd" class="col-md-12">Price</label>
+                                        <label for="pwd" class="col-md-12">Image</label>
                                         <div class="col-md-12">
-                                            <input type="text" placeholder="price" class="form-control form-control-line" name="price">
+                                        	<div class="col-lg-3 col-md-6 m-b-20"><img src="../assets/images/big/img1.jpg" class="img-responsive radius" id="pic"/></div>
+                                            <span class="btn btn-success" onclick="activateUpload()">Load Image</span><input type="file" id="upload" onchange="readURL(this)" name="pic" style="display:none"/>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="pwd" class="col-md-12">Price</label>
+                                        <label for="pwd" class="col-md-12">Thumbnail</label>
                                         <div class="col-md-12">
-                                            <input type="text" placeholder="price" class="form-control form-control-line" name="price">
+                                            <div class="col-lg-3 col-md-6 m-b-20"><img src="../assets/images/big/img1.jpg" class="img-responsive radius" id="spic"/></div>
+                                            <span class="btn btn-success" onclick="activateSUpload()">Load Image</span><input type="file" id="supload" onchange="readSURL(this)" name="spic" style="display:none"/>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="pwd" class="col-md-12">Price</label>
+                                        <label for="pwd" class="col-md-12">Category</label>
                                         <div class="col-md-12">
-                                            <input type="text" placeholder="price" class="form-control form-control-line" name="price">
+                                            <select class="form-control form-control-line" name="mycategory">
+                                            	<c:forEach var="category" items="${categories}">
+                                                <option value="${category.id }">${category.name }</option>
+                                                </c:forEach>
+                                            </select>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="col-sm-12">
                                             <button class="btn btn-success">Update Profile</button>
                                         </div>
+                                        <script>
+                                        function activateUpload(){
+                                        	document.getElementById("upload").click();
+                                        	}
+                                    	function readURL(input){
+                                    		if (input.files && input.files[0]) {
+                                                var reader = new FileReader();
+
+                                                reader.onload = function (e) {
+                                                    $('#pic')
+                                                        .attr('src', e.target.result);
+                                                };
+                                                reader.readAsDataURL(input.files[0]);
+                                            }
+                                        	}
+                                        function activateSUpload(){
+                                        	document.getElementById("supload").click();
+                                        	}
+                                    	function readSURL(input){
+                                    		if (input.files && input.files[0]) {
+                                                var reader = new FileReader();
+
+                                                reader.onload = function (e) {
+                                                    $('#spic')
+                                                        .attr('src', e.target.result);
+                                                };
+                                                reader.readAsDataURL(input.files[0]);
+                                            }
+                                        	}
+                                        </script>
                                     </div>
                                 </form>
                             </div>

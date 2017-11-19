@@ -51,9 +51,9 @@ public class ECommerceGlobalConstant {
 	public static final String EDIT_NEWS_PAGE = "admin/news/update";
 	public static final String ADD_NEW_NEWS_PAGE = "admin/news/insert";
 	
-	public static final String SHOW_ALL_ORDER_PAGE = "admin/order/list";
-	public static final String EDIT_ORDER_PAGE = "admin/order/update";
-	public static final String ADD_NEW_ORDER_PAGE = "admin/order/insert";
+	public static final String SHOW_ALL_CATEGORY_PAGE = "admin/category/list";
+	public static final String EDIT_CATEGORY_PAGE = "admin/category/update";
+	public static final String ADD_NEW_CATEGORY_PAGE = "admin/category/insert";
 	
 	public static final String SHOW_ALL_USER_PAGE = "admin/user/list";
 	public static final String EDIT_USER_PAGE = "admin/user/update";
@@ -62,4 +62,7 @@ public class ECommerceGlobalConstant {
 	public static final String ADMIN_DASH_BOARD_URL = "/admin";
 	public static final String ALL_USER_URL = "/user/all";
 	public static final String EDIT_USER_URL = "/user/edit";
+	
+	public static final String ALL_CATEGORY_URL = "/category/all";
+	public static final String EDIT_CATEGORY_URL = "/category/edit";
 }

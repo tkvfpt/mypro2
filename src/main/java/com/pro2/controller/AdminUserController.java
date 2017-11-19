@@ -89,6 +89,6 @@ public class AdminUserController {
 	@RequestMapping(value = "/user/update", method = RequestMethod.POST)
 	public String suaProduct(Model model, HttpServletRequest request, User user) {		
 		userDAO.updateObject(user);
-		return ECommerceGlobalConstant.REDIRECT + ECommerceGlobalConstant.EDIT_USER_URL;
+		return ECommerceGlobalConstant.REDIRECT +"/admin"+ ECommerceGlobalConstant.ALL_USER_URL;
 	}
 }
