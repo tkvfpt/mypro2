@@ -197,9 +197,9 @@
                         </td>
                         <td class="cart-quantity">
                             <p class="cart-qnt">
-                                <input value="${obj.quantity }" type="text">
-                                <a href="#" class="cart-plus"><i class="fa fa-angle-up"></i></a>
-                                <a href="#" class="cart-minus"><i class="fa fa-angle-down"></i></a>
+                                <input value="${obj.quantity }" id="quantity" type="text">
+                                <a href="#" class="cart-plus"><i class="fa fa-angle-up" id="plus" onclick="changeQuantity(this)"></i></a>
+                                <a href="#" class="cart-minus"><i class="fa fa-angle-down" id="minus" onclick="changeQuantity(this)"></i></a>
                             </p>
                         </td>
                         <td class="cart-summ">
@@ -209,9 +209,20 @@
                             <a href="${pageContext.request.contextPath}/product/cart/remove?id=${obj.id}" class="cart-remove"></a>
                         </td>
                     </tr>
+
                     </c:forEach>
                     </tbody>
                 </table>
+                                    <script>
+					function changeQuantity(input){
+						if(input.id == "plus"){
+							document.getElementById("quantity").value=Number(document.getElementById("quantity").value)+Number(1);
+							}else{
+								if(document.getElementById("quantity").value >1){ document.getElementById("quantity").value=Number(document.getElementById("quantity").value)-Number(1);	}
+								}
+						}
+
+					</script>
             </div>
             <ul class="cart-total">
                 <li class="cart-summ">TOTAL: <b><!-- tong tien cart bang js --> $${s }</b></li>
