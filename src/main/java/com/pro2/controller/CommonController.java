@@ -50,12 +50,6 @@ public class CommonController {
 		return ECommerceGlobalConstant.INDEX_PAGE;
 	}
 	
-	@RequestMapping(value="/sendMail")
-	public String sendMail(){
-		CommonUtils.sendMail(mailSender);
-		return ECommerceGlobalConstant.SUCCESS_PAGE;
-	}
-	
 	@RequestMapping(value=ECommerceGlobalConstant.ADMIN_DASH_BOARD_URL,method=RequestMethod.GET)
 	public String showAdminPage(){
 		return ECommerceGlobalConstant.DASH_BOARD_PAGE;
