@@ -203,7 +203,7 @@
                             </p>
                         </td>
                         <td class="cart-summ">
-                            <b>${obj.quantity*obj.price }</b>
+                            <b>$${obj.quantity*obj.price }</b>
                         </td>
                         <td class="cart-del">
                             <a href="${pageContext.request.contextPath}/product/cart/remove?id=${obj.id}" class="cart-remove"></a>
