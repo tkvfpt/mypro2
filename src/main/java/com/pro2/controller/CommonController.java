@@ -18,6 +18,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.pro2.constants.ECommerceGlobalConstant;
 import com.pro2.dao.ProductDAO;
+import com.pro2.dao.entity.Category;
 import com.pro2.dao.entity.Product;
 import com.pro2.dao.entity.ShopInfo;
 import com.pro2.dao.generic.IGenericDAO;
@@ -43,7 +44,9 @@ public class CommonController {
 	@RequestMapping(value="/")
 	public String showIndex(Model model){
 		List<Product> list = productDAO.getAll();
+		List<Category> cates = productDAO.getAllCategory();
 		model.addAttribute("list", list);
+		model.addAttribute("cates", cates);
 		return ECommerceGlobalConstant.INDEX_PAGE;
 	}
 	
