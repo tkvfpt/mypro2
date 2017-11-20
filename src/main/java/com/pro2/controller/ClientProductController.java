@@ -16,6 +16,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.pro2.constants.ECommerceGlobalConstant;
+import com.pro2.dao.CustomerDAO;
 import com.pro2.dao.ProductDAO;
 import com.pro2.dao.entity.Customer;
 import com.pro2.dao.entity.Invoice;
@@ -148,11 +149,6 @@ public class ClientProductController {
 			productDAO.saveObject(invoice);
 		}
 		return "";
-	}
-	
-	@RequestMapping("/cart/precheckout")
-	public String precheckout(Model model, HttpSession session) {
-		return "client/checkout";
 	}
 	
 }
