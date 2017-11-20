@@ -10,13 +10,18 @@ import javax.servlet.http.HttpSession;
 
 import org.jboss.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.MailSender;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.pro2.constants.ECommerceGlobalConstant;
 import com.pro2.dao.ProductDAO;
+import com.pro2.dao.entity.Customer;
+import com.pro2.dao.entity.Invoice;
+import com.pro2.dao.entity.InvoiceDetail;
 import com.pro2.dao.entity.Product;
+import com.pro2.dao.utils.CommonUtils;
 
 @Controller
 @RequestMapping("/product")
@@ -24,6 +29,9 @@ public class ClientProductController {
 	
 	@Autowired
 	ProductDAO productDAO;
+	
+	@Autowired
+	MailSender mailSender;
 	
 	@Autowired
 	ServletContext context;
@@ -108,6 +116,43 @@ public class ClientProductController {
 		int pageNumber = Integer.parseInt(request.getParameter("page"));
 		model.addAttribute("list", productDAO.getProductOfPage(pageNumber, limit));
 		return "client/productlist";
+	}
+
+	@RequestMapping("/checkout")
+	public String checkout(Model model, HttpServletRequest request, HttpSession session) {
+		Customer cus = new Customer();
+		cus.setFullname(request.getParameter("fullname").equals("") ? "" : request.getParameter("fullname"));
+		cus.setPhone(request.getParameter("phone").equals("") ? "" : request.getParameter("phone"));
+		cus.setEmail(request.getParameter("email").equals("") ? "" : request.getParameter("email"));
+		cus.setOccupation(request.getParameter("occupation").equals("") ? "" : request.getParameter("occupation"));
+		if (!cus.getEmail().equals("")) {
+			CommonUtils.sendMail(mailSender, cus.getEmail());
+		}
+		List<Product> listP = (List<Product>) session.getAttribute("listCart");
+
+		for (Product p : listP) {
+			Invoice invoice = new Invoice();
+			invoice.setAddress(request.getParameter("address").equals("") ? "" : request.getParameter("address"));
+			invoice.setCity(request.getParameter("city").equals("") ? "" : request.getParameter("city"));
+			invoice.setPhone(request.getParameter("phone").equals("") ? "" : request.getParameter("phone"));
+
+			Product product = (Product) productDAO.getObject(p.getId());
+
+			InvoiceDetail invoiceDetail = new InvoiceDetail();
+			invoiceDetail.setInvoice(invoice);
+			invoiceDetail.setProduct(product);
+			invoiceDetail.setQuantity(p.getQuantity());
+			
+			invoice.getInvoiceDetail().add(invoiceDetail);
+
+			productDAO.saveObject(invoice);
+		}
+		return "";
+	}
+	
+	@RequestMapping("/cart/precheckout")
+	public String precheckout(Model model, HttpSession session) {
+		return "client/checkout";
 	}
 	
 }
