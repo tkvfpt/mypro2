@@ -67,9 +67,16 @@ public class ClientProductController {
 	}
 	
 	@RequestMapping("/cart/remove")
-	public String removeP(Model model, HttpSession session) {
+	public String removeP(Model model, HttpSession session, HttpServletRequest request) {
 		List<Product> list = (List<Product>)session.getAttribute("listCart");
-		//continue
+		Product p =(Product) productDAO.getObject(Integer.parseInt(request.getParameter("id")));
+		for(Product p1 : list){
+			if(p1.getId() == p.getId()){
+				list.remove(p1);
+				break;
+			}
+		}
+		session.setAttribute("listCart", list);
 		return "client/cart";
 	}
 	
@@ -88,9 +95,9 @@ public class ClientProductController {
 	}
 	@RequestMapping("/list")
 	public String pList(Model model, HttpServletRequest request) {
-		model.addAttribute("totalPage", productDAO.getPageNumber());
-		int pageNumber = Integer.parseInt(request.getParameter("page"));
 		int limit = Integer.parseInt(request.getParameter("limit"));
+		model.addAttribute("totalPage", productDAO.getPageNumber(limit));
+		int pageNumber = Integer.parseInt(request.getParameter("page"));
 		model.addAttribute("list", productDAO.getProductOfPage(pageNumber, limit));
 		return "client/productlist";
 	}

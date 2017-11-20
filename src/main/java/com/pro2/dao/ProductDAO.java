@@ -55,9 +55,9 @@ public class ProductDAO{
 		getSession().delete(o);
 	}
 	
-	public int getPageNumber(){
+	public int getPageNumber(int limit){
 		List<Product> all = getAll();
-		int totalPage = all.size()/12; 
+		int totalPage = all.size()/limit; 
 		if(all.size()%12 != 0 ) {
 			return totalPage + 1; 
 		}
