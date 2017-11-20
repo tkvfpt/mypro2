@@ -2,6 +2,7 @@ package com.pro2.dao;
 
 import java.util.List;
 
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,5 +53,26 @@ public class ProductDAO{
 	
 	public void deleteObject(Object o){
 		getSession().delete(o);
+	}
+	
+	public int getPageNumber(){
+		List<Product> all = getAll();
+		int totalPage = all.size()/12; 
+		if(all.size()%12 != 0 ) {
+			return totalPage + 1; 
+		}
+		return totalPage;
+	}
+	
+	public List<Product> getProductOfPage(int pageNumber, int limit){
+		Query q = getSession().createQuery("from Product");
+		if(pageNumber == 1 ){
+			q.setFirstResult(0);
+		}else{
+			//q.setFirstResult((pageNumber *(limit-1)) -limit + pageNumber);
+			q.setFirstResult(limit * (pageNumber-1));
+		}
+		q.setMaxResults(limit);
+		return q.list();
 	}
 }

@@ -14,6 +14,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 
 import com.pro2.constants.ECommerceGlobalConstant;
 
@@ -63,6 +64,9 @@ public class Product {
 	
 	@OneToMany(mappedBy="invoice_detail_pk.product")
 	List<InvoiceDetail> invoiceDetail;
+	
+	@Transient
+	int quantity;
 
 	public Product() {
 	}
@@ -153,6 +157,14 @@ public class Product {
 
 	public void setInvoiceDetail(List<InvoiceDetail> invoiceDetail) {
 		this.invoiceDetail = invoiceDetail;
+	}
+
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
 	}
 
 	
