@@ -12,7 +12,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="${pageContext.request.contextPath}/resource/admin/assets/images/favicon.png">
-    <title>New Product</title>
+    <title>Invoice</title>
     <!-- Bootstrap Core CSS -->
     <link href="${pageContext.request.contextPath}/resource/admin/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- chartist CSS -->
@@ -156,11 +156,11 @@
                 <!-- ============================================================== -->
                 <div class="row page-titles">
                     <div class="col-md-5 col-8 align-self-center">
-                        <h3 class="text-themecolor m-b-0 m-t-0">New Product</h3>
+                        <h3 class="text-themecolor m-b-0 m-t-0">Invoice</h3>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="${pageContext.request.contextPath }/admin">Dashboard</a></li>
-                            <li class="breadcrumb-item"><a href="${pageContext.request.contextPath }/admin/product/all">Product</a></li>
-                            <li class="breadcrumb-item active">New</li>
+                            <li class="breadcrumb-item"><a href="${pageContext.request.contextPath }/admin/user/all">User</a></li>
+                            <li class="breadcrumb-item active"></li>
                         </ol>
                     </div>
                     <div class="col-md-7 col-4 align-self-center">
@@ -174,96 +174,38 @@
                 <!-- Start Page Content -->
                 <!-- ============================================================== -->
                 <div class="row">
-                    <div class="col-12">
-                        <div class="card-block">
-                                <form class="form-horizontal form-material" action="${pageContext.request.contextPath }/admin/product/add" method="post" enctype="multipart/form-data">
-                                    <div class="form-group">
-                                        <label class="col-md-12">Name</label>
-                                        <div class="col-md-12">
-                                            <input type="text" placeholder="Product Name" name="name" class="form-control form-control-line">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="pwd" class="col-md-12">Price</label>
-                                        <div class="col-md-12">
-                                            <input type="text" placeholder="price" class="form-control form-control-line" name="price">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="pwd" class="col-md-12">Weight</label>
-                                        <div class="col-md-12">
-                                            <input type="text" placeholder="weight" class="form-control form-control-line" name="weight">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="pwd" class="col-md-12">Description</label>
-                                        <div class="col-md-12">
-                                            <textarea rows="5" class="form-control form-control-line" name="description"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="pwd" class="col-md-12">Image</label>
-                                        <div class="col-md-12">
-                                        	<div class="col-lg-3 col-md-6 m-b-20"><img src="../assets/images/big/img1.jpg" class="img-responsive radius" id="pic"/></div>
-                                            <span class="btn btn-success" onclick="activateUpload()">Load Image</span><input type="file" id="upload" onchange="readURL(this)" name="pic" style="display:none"/>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="pwd" class="col-md-12">Thumbnail</label>
-                                        <div class="col-md-12">
-                                            <div class="col-lg-3 col-md-6 m-b-20"><img src="../assets/images/big/img1.jpg" class="img-responsive radius" id="spic"/></div>
-                                            <span class="btn btn-success" onclick="activateSUpload()">Load Image</span><input type="file" id="supload" onchange="readSURL(this)" name="spic" style="display:none"/>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="pwd" class="col-md-12">Category</label>
-                                        <div class="col-md-12">
-                                            <select class="form-control form-control-line" name="mycategory">
-                                            	<c:forEach var="category" items="${categories}">
-                                                <option value="${category.id }">${category.name }</option>
-                                                </c:forEach>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="col-sm-12">
-                                            <button class="btn btn-success">Update Profile</button>
-                                        </div>
-                                        <script>
-                                        function activateUpload(){
-                                        	document.getElementById("upload").click();
-                                        	}
-                                    	function readURL(input){
-                                    		if (input.files && input.files[0]) {
-                                                var reader = new FileReader();
-
-                                                reader.onload = function (e) {
-                                                    $('#pic')
-                                                        .attr('src', e.target.result);
-                                                };
-                                                reader.readAsDataURL(input.files[0]);
-                                            }
-                                        	}
-                                        function activateSUpload(){
-                                        	document.getElementById("supload").click();
-                                        	}
-                                    	function readSURL(input){
-                                    		if (input.files && input.files[0]) {
-                                                var reader = new FileReader();
-
-                                                reader.onload = function (e) {
-                                                    $('#spic')
-                                                        .attr('src', e.target.result);
-                                                };
-                                                reader.readAsDataURL(input.files[0]);
-                                            }
-                                        	}
-                                        </script>
-                                    </div>
-                                </form>
+                	<div class="card">
+                            <div class="card-block">
+                                <h4 class="card-title">Invoices</h4>
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>ProductName</th>
+                                                <th>Quantity</th>
+                                                <th>Price</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        <c:forEach var="obj" items="${requestScope.list}">
+                                            <tr>
+                                                <td><a href="${pageContext.request.contextPath }/admin/customer/edit?id=${obj.id}">${requestScope.list.indexOf(obj)+1}</a></td>
+                                                <td><a href="${pageContext.request.contextPath }/admin/customer/edit?id=${obj.id}">${obj.username }</a></td>
+                                                <td><a href="${pageContext.request.contextPath }/admin/customer/edit?id=${obj.id}">${obj.password }</a></td>
+                                                <td><a href="${pageContext.request.contextPath }/admin/customer/edit?id=${obj.id}">${obj.email }</a></td>
+                                                <td><a href="${pageContext.request.contextPath }/admin/customer/edit?id=${obj.id}">${obj.phone }</a></td>
+                                                <td><a href="${pageContext.request.contextPath }/admin/customer/edit?id=${obj.id}">${obj.fullname}</a></td>
+                                                <td><a href="${pageContext.request.contextPath }/admin/customer/edit?id=${obj.id}">${obj.occupation}</a></td>
+                                                <td><a href="${pageContext.request.contextPath }/admin/customer/edit?id=${obj.id}">${obj.age}</a></td>
+                                                <td><a href="${pageContext.request.contextPath }/admin/customer/delete?id=${obj.id}"><i class="mdi mdi-delete"></i></a></td>
+                                            </tr>
+                                         </c:forEach>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
-
-                    </div>
+                            </div>
                 </div>
                 <!-- ============================================================== -->
                 <!-- End PAge Content -->

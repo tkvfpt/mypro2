@@ -8,13 +8,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.pro2.dao.entity.Category;
+import com.pro2.dao.entity.Invoice;
 import com.pro2.dao.entity.Product;
-import com.pro2.dao.generic.GenericDAO;
 
 @Transactional
 @Component("categoryDAO")
-public class CategoryDAO{
+public class InvoiceDAO{
 
 	@Autowired
 	SessionFactory sessionFactory;
@@ -23,8 +22,8 @@ public class CategoryDAO{
 		return sessionFactory.getCurrentSession();
 	}
 	
-	public List<Category> getAll(){
-		return getSession().createQuery("from Category").list();
+	public List<Invoice> getAll(){
+		return getSession().createQuery("from Invoice").list();
 	}
 	
 	public void saveObject(Object obj){
@@ -40,7 +39,7 @@ public class CategoryDAO{
 	}
 	
 	public Object getObject(int id){
-		return getSession().get(Product.class, id);
+		return getSession().get(Invoice.class, id);
 	}
 	
 	public void deleteObject(Object o){

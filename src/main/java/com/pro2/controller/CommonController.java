@@ -11,13 +11,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.MailSender;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.pro2.constants.ECommerceGlobalConstant;
+import com.pro2.dao.ProductDAO;
+import com.pro2.dao.entity.Product;
 import com.pro2.dao.entity.ShopInfo;
 import com.pro2.dao.generic.IGenericDAO;
 import com.pro2.dao.utils.CommonUtils;
@@ -29,6 +30,9 @@ public class CommonController {
 	IGenericDAO<ShopInfo> shopinfoDAO;
 	
 	@Autowired
+	ProductDAO productDAO;
+	
+	@Autowired
 	ServletContext context;
 	
 	@Autowired
@@ -37,7 +41,9 @@ public class CommonController {
 	private static final Logger LOG = Logger.getLogger("CommonController");
 
 	@RequestMapping(value="/")
-	public String showIndex(){
+	public String showIndex(Model model){
+		List<Product> list = productDAO.getAll();
+		model.addAttribute("list", list);
 		return ECommerceGlobalConstant.INDEX_PAGE;
 	}
 	

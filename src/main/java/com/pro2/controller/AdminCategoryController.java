@@ -84,4 +84,11 @@ public class AdminCategoryController {
 		categoryDAO.updateObject(category);
 		return ECommerceGlobalConstant.REDIRECT +"/admin"+ ECommerceGlobalConstant.ALL_CATEGORY_URL;
 	}
+	
+	@RequestMapping(value = "/category/delete", method = RequestMethod.POST)
+	public String deleteCa(Model model, HttpServletRequest request) {		
+		Category category = (Category)categoryDAO.getObject(Integer.parseInt(request.getParameter("id")));
+		categoryDAO.deleteObject(category);
+		return ECommerceGlobalConstant.REDIRECT +"/admin"+ ECommerceGlobalConstant.ALL_CATEGORY_URL;
+	}
 }

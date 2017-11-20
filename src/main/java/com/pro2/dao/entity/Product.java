@@ -1,8 +1,8 @@
 package com.pro2.dao.entity;
 
 import java.util.Date;
+import java.util.List;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,6 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -59,6 +60,9 @@ public class Product {
 	@ManyToOne
 	@JoinColumn(name = "username")
 	User user;
+	
+	@OneToMany(mappedBy="invoice_detail_pk.product")
+	List<InvoiceDetail> invoiceDetail;
 
 	public Product() {
 	}
@@ -141,6 +145,14 @@ public class Product {
 
 	public void setUser(User user) {
 		this.user = user;
+	}
+
+	public List<InvoiceDetail> getInvoiceDetail() {
+		return invoiceDetail;
+	}
+
+	public void setInvoiceDetail(List<InvoiceDetail> invoiceDetail) {
+		this.invoiceDetail = invoiceDetail;
 	}
 
 	
