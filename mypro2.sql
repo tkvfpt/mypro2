@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 19, 2017 at 07:13 PM
+-- Generation Time: Nov 20, 2017 at 05:41 AM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.20
 
@@ -48,11 +48,11 @@ CREATE TABLE `customer` (
   `id` int(11) NOT NULL,
   `username` varchar(50) NOT NULL,
   `pwd` varchar(50) NOT NULL,
-  `email` text NOT NULL,
+  `email` text,
   `phone` text NOT NULL,
   `fullname` text NOT NULL,
-  `occupation` text NOT NULL,
-  `age` int(11) NOT NULL
+  `occupation` text,
+  `age` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -108,8 +108,7 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`id`, `username`, `price`, `weight`, `description`, `image`, `thumbnail`, `name`, `categoryId`, `createdDate`) VALUES
-(5, 'k', 100, 10, 'this is wiki', '/PRO2/resource/wiki.jpg', '/PRO2/resource/wiki.jpgthumbnail', 'wiki', 1, '2017-11-19 15:01:37'),
-(6, 'k', 20, 200, 'ki', '/PRO2/resource/ik.jpg', '/PRO2/resource/ik.jpgthumbnail', 'ik', 1, '2017-11-19 18:04:21');
+(5, 'k', 100, 10, ' this is wiki', '/PRO2/resource/wiki.jpg', '/PRO2/resource/wiki.jpgthumbnail', 'wiki boga', 1, '2017-11-19 19:33:23');
 
 -- --------------------------------------------------------
 
@@ -170,6 +169,9 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`username`, `pwd`, `role`, `shop_name`) VALUES
+('admin', 'a', 'ROLE_ADMIN', NULL),
+('b', 'b', 'ROLE_ADMIN', NULL),
+('ed', 'a', 'ROLE_ADMIN', NULL),
 ('k', 'a', 'ROLE_ADMIN', NULL);
 
 --
@@ -252,7 +254,7 @@ ALTER TABLE `invoice`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `question`
 --
