@@ -32,7 +32,6 @@
 	<input type="text" placeholder="age" name="age">
 	<input data-required="text" type="text" placeholder="Phone" name="phone">
 	<input data-required="text" data-required-email="email" type="text" placeholder="Email" name="email">
-	<textarea placeholder="Your message" name="mess"></textarea>
 	<input type="submit" value="Send">
 </form>
 <!-- jQuery plugins/scripts - start -->

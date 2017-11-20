@@ -182,13 +182,10 @@
                                         <thead>
                                             <tr>
                                                 <th>#</th>
-                                                <th></th>
-                                                <th>Password</th>
+                                                <th>Title</th>
+                                                <th>Description</th>
                                                 <th>Email</th>
                                                 <th>Phone</th>
-                                                <th>Fullname</th>
-                                                <th>Occupation</th>
-                                                <th>Age</th>
                                             </tr>
                                         </thead>
                                         <tbody>

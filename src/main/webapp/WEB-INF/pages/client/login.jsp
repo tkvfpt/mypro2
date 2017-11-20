@@ -24,16 +24,10 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resource/client/css/media.css">
 </head>
 <body>
-<form action="${pageContext.request.contextPath }/customer/signup" class="form-validate">
+<form action="${pageContext.request.contextPath }/customer/login" class="form-validate">
 	<input data-required="text" type="text" placeholder="username" name="username">
 	<input data-required="text" type="password" placeholder="password" name="password">
-	<input data-required="text" type="text" placeholder="Fullname" name="fullname">
-	<input type="text" placeholder="Examples: Workers" name="occupation">
-	<input type="text" placeholder="age" name="age">
-	<input data-required="text" type="text" placeholder="Phone" name="phone">
-	<input data-required="text" data-required-email="email" type="text" placeholder="Email" name="email">
-	<textarea placeholder="Your message" name="mess"></textarea>
-	<input type="submit" value="Send">
+	<input type="submit" value="Login">
 </form>
 <!-- jQuery plugins/scripts - start -->
 <script src="${pageContext.request.contextPath}/resource/client/js/jquery-1.11.2.min.js"></script>
