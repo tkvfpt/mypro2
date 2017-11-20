@@ -57,7 +57,20 @@ public class ClientProductController {
 	@RequestMapping("/cart")
 	public String cart(Model model, HttpSession session) {
 		
-		return "client/productdetail";
+		return "client/cart";
+	}
+	
+	@RequestMapping("/cart/clear")
+	public String clearCart(Model model, HttpSession session) {
+		session.setAttribute("listCart", new ArrayList<Product>());
+		return "client/cart";
+	}
+	
+	@RequestMapping("/cart/remove")
+	public String removeP(Model model, HttpSession session) {
+		List<Product> list = (List<Product>)session.getAttribute("listCart");
+		//continue
+		return "client/cart";
 	}
 	
 	private List<Product> editSession(Product sp,List<Product> lstSp){
