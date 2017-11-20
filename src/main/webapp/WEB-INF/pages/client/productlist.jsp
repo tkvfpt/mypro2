@@ -218,7 +218,7 @@
 
 						<div class="prod-i-properties">
 							<dl>
-								<dt></dt>
+								<dt>${p.name }</dt>
 								<dd>Silt Pocket<br></dd>
 								<dt>Material</dt>
 								<dd>PU<br></dd>
@@ -240,17 +240,11 @@
 						</div>
 					</div>
 					<h3>
-						<a href="product.html">Adipisci aperiam commodi</a>
+						<a href="${pageContext.request.contextPath }/product/detail?id=${p.id}">${p.name }</a>
 					</h3>
 					<p class="prod-i-price">
-						<b>$59</b>
+						<b>$ ${p.price }</b>
 					</p>
-					<div class="prod-i-skuwrapcolor">
-						<ul class="prod-i-skucolor">
-							<li class="bx_active"><img src="img/color/red.jpg" alt="Red"></li>
-							<li><img src="img/color/blue.jpg" alt="Blue"></li>
-						</ul>
-					</div>
 				</div>
 				</c:forEach>
 
