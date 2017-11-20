@@ -182,6 +182,7 @@
                     </thead>
                     <tbody>
                     <c:forEach items="${sessionScope.listCart}" var="obj">
+                    <c:set var="s" value="${s+ obj.price*obj.quantity}"></c:set>
                     <tr>
                         <td class="cart-image">
                             <a href="${pageContext.request.contextPath }/product/detail?">
@@ -202,7 +203,7 @@
                             </p>
                         </td>
                         <td class="cart-summ">
-                            <b><!-- tong tien san pham bang js --></b>
+                            <b>${obj.quantity*obj.price }</b>
                         </td>
                         <td class="cart-del">
                             <a href="${pageContext.request.contextPath}/product/cart/remove?id=${obj.id}" class="cart-remove"></a>
@@ -213,7 +214,7 @@
                 </table>
             </div>
             <ul class="cart-total">
-                <li class="cart-summ">TOTAL: <b><!-- tong tien cart bang js --></b></li>
+                <li class="cart-summ">TOTAL: <b><!-- tong tien cart bang js --> $${s }</b></li>
             </ul>
             <div class="cart-submit">
                 <a href="#" class="cart-submit-btn">Checkout</a>

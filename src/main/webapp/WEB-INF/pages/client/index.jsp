@@ -185,27 +185,25 @@
                 <p data-frpoptab-num="1" class="fr-pop-tab-mob active" data-frpoptab="#frpoptab-tab-1">All Categories</p>
 				<div class="flexslider prod-items fr-pop-tab" id="frpoptab-tab-1">
                 <div class="flex-viewport" style="overflow: hidden; position: relative;"><ul class="slides" style="width: 7200%; transition-duration: 0s; transform: translate3d(0px, 0px, 0px);">
-
+				<c:forEach var="obj" items="${requestScope.list}">
                         <li class="prod-i" style="width: 276px; margin-right: 12px; float: left; display: block;">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/289x250" alt="Dicta doloremque hic" draggable="false"><!-- NO SPACE --></a>
+                                <a href="${pageContext.request.contextPath }/product/detail?id=${obj.id}" class="prod-i-img"><!-- NO SPACE --><img src="${obj.imagePath }" alt="${obj.name }" draggable="false"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
-                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
-                                    <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                    <a href="${pageContext.request.contextPath }/product/detail?id=${obj.id}" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
-                                    <a href="#" class="prod-i-add">Add to cart</a>
+                                    <a href="${pageContext.request.contextPath }/product/addcart?id=${obj.id}" class="prod-i-add">Add to cart</a>
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Dicta doloremque hic</a>
+                                <a href="${pageContext.request.contextPath }/product/detail?id=${obj.id}">${obj.name }</a>
                             </h3>
                             <p class="prod-i-price">
-                                <b>$90</b>
+                                <b>$${obj.price }</b>
                             </p>
                         </li>
-
+				</c:forEach>
                     </ul></div>
                     <ol class="flex-control-nav flex-control-paging">
                     <li>
@@ -337,70 +335,6 @@
                         </div>
                         <div class="swiper-slide">
                             <p>Eveniet nobis minus possimus eius, doloribus ex similique debitis nihil at facere delectus unde, commodi, alias. Eius facilis, dolore officia veritatis, doloribus voluptatem aliquid rem corporis quam officiis at dignissimos dolorum, velit assumenda</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-container reviewscar-thumbs">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="http://placehold.it/120x120" alt="Aureole Jayde">
-                            <h3 class="reviewscar-ttl"><a href="reviews.html">Aureole Jayde</a></h3>
-                            <p class="reviewscar-post">Director</p>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="http://placehold.it/120x120" alt="Benjy Darrin">
-                            <h3 class="reviewscar-ttl"><a href="reviews.html">Benjy Darrin</a></h3>
-                            <p class="reviewscar-post">Designer</p>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="http://placehold.it/120x120" alt="Jeni Margie">
-                            <h3 class="reviewscar-ttl"><a href="reviews.html">Jeni Margie</a></h3>
-                            <p class="reviewscar-post">Developer</p>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="http://placehold.it/120x120" alt="Edweena Chelsea">
-                            <h3 class="reviewscar-ttl"><a href="reviews.html">Edweena Chelsea</a></h3>
-                            <p class="reviewscar-post">Manager</p>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="http://placehold.it/120x120" alt="Sean Rudolph">
-                            <h3 class="reviewscar-ttl"><a href="reviews.html">Sean Rudolph</a></h3>
-                            <p class="reviewscar-post">Designer</p>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="http://placehold.it/120x120" alt="Brigham Murphy">
-                            <h3 class="reviewscar-ttl"><a href="reviews.html">Brigham Murphy</a></h3>
-                            <p class="reviewscar-post">Director</p>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="http://placehold.it/120x120" alt="Barrie Roderick">
-                            <h3 class="reviewscar-ttl"><a href="reviews.html">Barrie Roderick</a></h3>
-                            <p class="reviewscar-post">Developer</p>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="http://placehold.it/120x120" alt="John Doe">
-                            <h3 class="reviewscar-ttl"><a href="reviews.html">John Doe</a></h3>
-                            <p class="reviewscar-post">Manager</p>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="http://placehold.it/120x120" alt="Shirlee Annabel">
-                            <h3 class="reviewscar-ttl"><a href="reviews.html">Shirlee Annabel</a></h3>
-                            <p class="reviewscar-post">Developer</p>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="http://placehold.it/120x120" alt="Lettice Alyce">
-                            <h3 class="reviewscar-ttl"><a href="reviews.html">Lettice Alyce</a></h3>
-                            <p class="reviewscar-post">Director</p>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="http://placehold.it/120x120" alt="Meriel Glory">
-                            <h3 class="reviewscar-ttl"><a href="reviews.html">Meriel Glory</a></h3>
-                            <p class="reviewscar-post">Manager</p>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="http://placehold.it/120x120" alt="Janene Alaina">
-                            <h3 class="reviewscar-ttl"><a href="reviews.html">Janene Alaina</a></h3>
-                            <p class="reviewscar-post">Manager</p>
                         </div>
                     </div>
                 </div>

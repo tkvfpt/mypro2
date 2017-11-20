@@ -47,10 +47,6 @@ public class ECommerceGlobalConstant {
 	public static final String EDIT_PRODUCT_PAGE = "admin/product/update";
 	public static final String ADD_NEW_PRODUCT_PAGE = "admin/product/insert";
 	
-	public static final String SHOW_ALL_NEWS_PAGE = "admin/news/list";
-	public static final String EDIT_NEWS_PAGE = "admin/news/update";
-	public static final String ADD_NEW_NEWS_PAGE = "admin/news/insert";
-	
 	public static final String SHOW_ALL_CATEGORY_PAGE = "admin/category/list";
 	public static final String EDIT_CATEGORY_PAGE = "admin/category/update";
 	public static final String ADD_NEW_CATEGORY_PAGE = "admin/category/insert";

@@ -83,9 +83,7 @@ public class ClientProductController {
 	private List<Product> editSession(Product sp,List<Product> lstSp){
 		for(int i=0;i<lstSp.size();i++){
 			if(lstSp.get(i).getId()==sp.getId()){
-				float dongia = lstSp.get(i).getPrice()/lstSp.get(i).getQuantity();
 				lstSp.get(i).setQuantity(lstSp.get(i).getQuantity()+1);
-				lstSp.get(i).setPrice(lstSp.get(i).getQuantity()* dongia);
 				return lstSp;
 			}
 		}

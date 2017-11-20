@@ -12,7 +12,7 @@ import com.pro2.dao.entity.Invoice;
 import com.pro2.dao.entity.Product;
 
 @Transactional
-@Component("categoryDAO")
+@Component("invoiceDAO")
 public class InvoiceDAO{
 
 	@Autowired
