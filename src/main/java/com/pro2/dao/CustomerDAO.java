@@ -8,9 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.pro2.dao.entity.Category;
 import com.pro2.dao.entity.Customer;
-import com.pro2.dao.entity.Product;
 
 @Transactional
 @Component("customerDAO")
@@ -45,4 +43,9 @@ public class CustomerDAO{
 	public void deleteObject(Object o){
 		getSession().delete(o);
 	}
+	
+	public Object getObject(String username, String pwd) {
+		return getSession().createQuery("from Customer where username like '"+username+"' and password like '"+pwd+"'").uniqueResult();
+	}
+	
 }
