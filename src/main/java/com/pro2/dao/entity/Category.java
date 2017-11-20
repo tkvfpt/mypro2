@@ -1,10 +1,10 @@
 package com.pro2.dao.entity;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -33,7 +33,7 @@ public class Category {
 	@Column(name = ECommerceGlobalConstant.OBJECT_NAME)
 	String name;
 	
-	@OneToMany(mappedBy = "category",fetch=FetchType.LAZY)	
+	@OneToMany(mappedBy = "category")	
 	List<Product> productList;
 
 	public Category(){}

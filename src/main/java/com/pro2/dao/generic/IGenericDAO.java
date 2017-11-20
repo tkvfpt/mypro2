@@ -27,4 +27,5 @@ public interface IGenericDAO<T> {
 		 
 	List<T> executeQuery(String query);
 	
+	boolean isContainedObject(Object o);
 }

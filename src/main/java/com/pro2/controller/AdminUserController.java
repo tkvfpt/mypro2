@@ -5,14 +5,13 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.jboss.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.pro2.constants.ECommerceGlobalConstant;
+import com.pro2.dao.UserDAO;
 import com.pro2.dao.entity.ShopInfo;
 import com.pro2.dao.entity.User;
 import com.pro2.dao.generic.IGenericDAO;
@@ -50,7 +49,7 @@ public class AdminUserController {
 	@RequestMapping(value = ECommerceGlobalConstant.EDIT_USER_URL)
 	public String editSP(HttpServletRequest request, Model model) {
 		User user = userDAO.getObj(request.getParameter("id"));
-		request.setAttribute("user", user);
+		request.setAttribute("edituser", user);
 		return ECommerceGlobalConstant.EDIT_USER_PAGE;
 	}
 
@@ -77,7 +76,7 @@ public class AdminUserController {
 		user.setShop(shop);
 		user.setRole("ROLE_ADMIN");
 		userDAO.saveObject(user);
-		return ECommerceGlobalConstant.REDIRECT + ECommerceGlobalConstant.ALL_USER_URL;
+		return ECommerceGlobalConstant.REDIRECT +"/admin"+ ECommerceGlobalConstant.ALL_USER_URL;
 	}
 	/**
 	 * Execute Edit User Action

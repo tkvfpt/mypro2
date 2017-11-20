@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -44,6 +45,7 @@
     <!-- ============================================================== -->
     <div id="main-wrapper">
         <!-- ============================================================== -->
+        <!-- ============================================================== -->
         <!-- Topbar header - style you can find in pages.scss -->
         <!-- ============================================================== -->
         <header class="topbar">
@@ -57,13 +59,13 @@
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                             
                             <!-- Light Logo icon -->
-                            <img src="../assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />
+                            <img src="${requestScope.shop.logo }" alt="DashBoard" class="light-logo" height="34px" width="33px" />
                         </b>
-                        <!--End Logo icon -->
-                        <!-- Logo text --><span>
-                         
+                                 <!-- Logo text --><span>
+                         ${requestScope.shop.name}
                          <!-- Light Logo text -->    
-                         <img src="../assets/images/logo-light-text.png" class="light-logo" alt="homepage" /></span> </a>
+                         </span>
+                         </a>
                 </div>
                 <!-- ============================================================== -->
                 <!-- End Logo -->
@@ -91,7 +93,7 @@
                         <!-- Profile -->
                         <!-- ============================================================== -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../assets/images/users/1.jpg" alt="user" class="profile-pic m-r-10" />Markarn Doe</a>
+                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../assets/images/users/1.jpg" alt="user" class="profile-pic m-r-10" />${user.username }</a>
                         </li>
                     </ul>
                 </div>
@@ -111,17 +113,17 @@
                     <ul id="sidebarnav">
                         <li> <a class="waves-effect waves-dark" href="index.html" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Dashboard</span></a>
                         </li>
-                        <li> <a class="waves-effect waves-dark" href="pages-profile.html" aria-expanded="false"><i class="mdi mdi-account-check"></i><span class="hide-menu">Profile</span></a>
+                        <li> <a class="waves-effect waves-dark" href="${pageContext.request.contextPath }/admin/product/all" aria-expanded="false"><i class="mdi-checkbox-blank-outline"></i><span class="hide-menu">Product</span></a>
                         </li>
-                        <li> <a class="waves-effect waves-dark" href="table-basic.html" aria-expanded="false"><i class="mdi mdi-table"></i><span class="hide-menu">Basic Table</span></a>
+                        <li> <a class="waves-effect waves-dark" href="${pageContext.request.contextPath }/admin/category/all" aria-expanded="false"><i class="mdi mdi-tag-heart"></i><span class="hide-menu">Category</span></a>
                         </li>
-                        <li> <a class="waves-effect waves-dark" href="icon-material.html" aria-expanded="false"><i class="mdi mdi-emoticon"></i><span class="hide-menu">Icons</span></a>
+                        <li> <a class="waves-effect waves-dark" href="${pageContext.request.contextPath }/admin/customer/all" aria-expanded="false"><i class="mdi mdi-account-check"></i><span class="hide-menu">Customer</span></a>
                         </li>
-                        <li> <a class="waves-effect waves-dark" href="map-google.html" aria-expanded="false"><i class="mdi mdi-earth"></i><span class="hide-menu">Google Map</span></a>
+                        <li> <a class="waves-effect waves-dark" href="${pageContext.request.contextPath }/admin/user/all" aria-expanded="false"><i class="mdi mdi-account-key"></i><span class="hide-menu">User</span></a>
                         </li>
-                        <li> <a class="waves-effect waves-dark" href="pages-blank.html" aria-expanded="false"><i class="mdi mdi-book-open-variant"></i><span class="hide-menu">Blank Page</span></a>
+                        <li> <a class="waves-effect waves-dark" href="${pageContext.request.contextPath }/admin/question/all" aria-expanded="false"><i class="mdi mdi-comment-question-outline"></i><span class="hide-menu">Question</span></a>
                         </li>
-                        <li> <a class="waves-effect waves-dark" href="pages-error-404.html" aria-expanded="false"><i class="mdi mdi-help-circle"></i><span class="hide-menu">Error 404</span></a>
+                        <li> <a class="waves-effect waves-dark" href="${pageContext.request.contextPath }/admin/invoice/all" aria-expanded="false"><i class="mdi mdi-library"></i><span class="hide-menu">Invoice</span></a>
                         </li>
                     </ul>
                     <div class="text-center m-t-30">
@@ -154,10 +156,11 @@
                 <!-- ============================================================== -->
                 <div class="row page-titles">
                     <div class="col-md-5 col-8 align-self-center">
-                        <h3 class="text-themecolor m-b-0 m-t-0">Dashboard</h3>
+                        <h3 class="text-themecolor m-b-0 m-t-0">New Product</h3>
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                            <li class="breadcrumb-item active">Dashboard</li>
+                            <li class="breadcrumb-item"><a href="${pageContext.request.contextPath }/admin">Dashboard</a></li>
+                            <li class="breadcrumb-item"><a href="${pageContext.request.contextPath }/admin/product/all">Product</a></li>
+                            <li class="breadcrumb-item active">New</li>
                         </ol>
                     </div>
                     <div class="col-md-7 col-4 align-self-center">
@@ -173,48 +176,52 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="card-block">
-                                <form class="form-horizontal form-material">
+                                <form class="form-horizontal form-material" action="${pageContext.request.contextPath }/admin/product/add" method="post" enctype="multipart/form-data">
                                     <div class="form-group">
-                                        <label class="col-md-12">Full Name</label>
+                                        <label class="col-md-12">Name</label>
                                         <div class="col-md-12">
-                                            <input type="text" placeholder="Johnathan Doe" class="form-control form-control-line">
+                                            <input type="text" placeholder="Product Name" name="name" class="form-control form-control-line">
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="example-email" class="col-md-12">Email</label>
+                                        <label for="pwd" class="col-md-12">Price</label>
                                         <div class="col-md-12">
-                                            <input type="email" placeholder="johnathan@admin.com" class="form-control form-control-line" name="example-email" id="example-email">
+                                            <input type="text" placeholder="price" class="form-control form-control-line" name="price">
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-md-12">Password</label>
+                                        <label for="pwd" class="col-md-12">Weight</label>
                                         <div class="col-md-12">
-                                            <input type="password" value="password" class="form-control form-control-line">
+                                            <input type="text" placeholder="weight" class="form-control form-control-line" name="weight">
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-md-12">Phone No</label>
+                                        <label for="pwd" class="col-md-12">Description</label>
                                         <div class="col-md-12">
-                                            <input type="text" placeholder="123 456 7890" class="form-control form-control-line">
+                                            <textarea rows="5" class="form-control form-control-line" name="description"></textarea>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-md-12">Message</label>
+                                        <label for="pwd" class="col-md-12">Image</label>
                                         <div class="col-md-12">
-                                            <div class="col-lg-3 col-md-6 m-b-20"><img src="${pageContext.request.contextPath }/resource/admin/assets/images/big/img1.jpg" alt="user" class="img-responsive radius" id="pic"></div>
+                                        	<div class="col-lg-3 col-md-6 m-b-20"><img src="../assets/images/big/img1.jpg" class="img-responsive radius" id="pic"/></div>
                                             <span class="btn btn-success" onclick="activateUpload()">Load Image</span><input type="file" id="upload" onchange="readURL(this)" name="pic" style="display:none"/>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-sm-12">Select Country</label>
-                                        <div class="col-sm-12">
-                                            <select class="form-control form-control-line">
-                                            
-                                                <option>London</option>
-                                                <option>India</option>
-                                                <option>Usa</option>
-                                                <option>Canada</option>
-                                                <option>Thailand</option>
+                                        <label for="pwd" class="col-md-12">Thumbnail</label>
+                                        <div class="col-md-12">
+                                            <div class="col-lg-3 col-md-6 m-b-20"><img src="../assets/images/big/img1.jpg" class="img-responsive radius" id="spic"/></div>
+                                            <span class="btn btn-success" onclick="activateSUpload()">Load Image</span><input type="file" id="supload" onchange="readSURL(this)" name="spic" style="display:none"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pwd" class="col-md-12">Category</label>
+                                        <div class="col-md-12">
+                                            <select class="form-control form-control-line" name="mycategory">
+                                            	<c:forEach var="category" items="${categories}">
+                                                <option value="${category.id }">${category.name }</option>
+                                                </c:forEach>
                                             </select>
                                         </div>
                                     </div>
@@ -232,6 +239,20 @@
 
                                                 reader.onload = function (e) {
                                                     $('#pic')
+                                                        .attr('src', e.target.result);
+                                                };
+                                                reader.readAsDataURL(input.files[0]);
+                                            }
+                                        	}
+                                        function activateSUpload(){
+                                        	document.getElementById("supload").click();
+                                        	}
+                                    	function readSURL(input){
+                                    		if (input.files && input.files[0]) {
+                                                var reader = new FileReader();
+
+                                                reader.onload = function (e) {
+                                                    $('#spic')
                                                         .attr('src', e.target.result);
                                                 };
                                                 reader.readAsDataURL(input.files[0]);

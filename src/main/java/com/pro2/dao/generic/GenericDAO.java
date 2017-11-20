@@ -79,5 +79,8 @@ public class GenericDAO<T> implements IGenericDAO<T>{
 		return (T) getSession().get(classType, a);
 	}
 	
-	
+	@Override
+	public boolean isContainedObject(Object o){
+		return getSession().contains(o);
+	}
 }

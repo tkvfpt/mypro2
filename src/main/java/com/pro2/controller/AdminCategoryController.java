@@ -11,17 +11,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.pro2.constants.ECommerceGlobalConstant;
+import com.pro2.dao.CategoryDAO;
 import com.pro2.dao.entity.Category;
-import com.pro2.dao.entity.ShopInfo;
-import com.pro2.dao.entity.User;
-import com.pro2.dao.generic.IGenericDAO;
 
 @Controller
 @RequestMapping("/admin")
 public class AdminCategoryController {
 	
 	@Autowired
-	IGenericDAO<Category> categoryDAO;
+	CategoryDAO categoryDAO;
 	
 	@Autowired
 	ServletContext context;
@@ -48,7 +46,7 @@ public class AdminCategoryController {
 	 */
 	@RequestMapping(value = ECommerceGlobalConstant.EDIT_CATEGORY_URL)
 	public String editCategory(HttpServletRequest request, Model model) {
-		Category category = categoryDAO.getObj(Integer.parseInt(request.getParameter("id")));
+		Category category = (Category)categoryDAO.getObject(Integer.parseInt(request.getParameter("id")));
 		request.setAttribute("category", category);
 		return ECommerceGlobalConstant.EDIT_CATEGORY_PAGE;
 	}

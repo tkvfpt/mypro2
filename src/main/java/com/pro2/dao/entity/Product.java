@@ -1,8 +1,8 @@
 package com.pro2.dao.entity;
 
 import java.util.Date;
-import java.util.UUID;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -29,9 +29,6 @@ public class Product {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name = ECommerceGlobalConstant.OBJECT_ID)
 	int id;
-
-	@Column(name = "username")
-	String username;
 	
 	@Column(name = "price")
 	float price;
@@ -58,6 +55,10 @@ public class Product {
 	@ManyToOne
 	@JoinColumn(name = "categoryId")
 	Category category;
+	
+	@ManyToOne
+	@JoinColumn(name = "username")
+	User user;
 
 	public Product() {
 	}
@@ -118,14 +119,6 @@ public class Product {
 		this.created = created;
 	}
 
-	public String getUsername() {
-		return username;
-	}
-
-	public void setUsername(String username) {
-		this.username = username;
-	}
-
 	public float getWeight() {
 		return weight;
 	}
@@ -141,5 +134,14 @@ public class Product {
 	public void setCategory(Category category) {
 		this.category = category;
 	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
 	
 }

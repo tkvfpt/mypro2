@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 16, 2017 at 05:49 PM
+-- Generation Time: Nov 19, 2017 at 07:13 PM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.20
 
@@ -30,6 +30,13 @@ CREATE TABLE `category` (
   `id` int(11) NOT NULL,
   `name` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `category`
+--
+
+INSERT INTO `category` (`id`, `name`) VALUES
+(1, 'Pack');
 
 -- --------------------------------------------------------
 
@@ -89,12 +96,20 @@ CREATE TABLE `product` (
   `price` float NOT NULL,
   `weight` float DEFAULT NULL,
   `description` text,
-  `image` text NOT NULL,
+  `image` text,
   `thumbnail` text,
   `name` text NOT NULL,
   `categoryId` int(11) NOT NULL,
   `createdDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `product`
+--
+
+INSERT INTO `product` (`id`, `username`, `price`, `weight`, `description`, `image`, `thumbnail`, `name`, `categoryId`, `createdDate`) VALUES
+(5, 'k', 100, 10, 'this is wiki', '/PRO2/resource/wiki.jpg', '/PRO2/resource/wiki.jpgthumbnail', 'wiki', 1, '2017-11-19 15:01:37'),
+(6, 'k', 20, 200, 'ki', '/PRO2/resource/ik.jpg', '/PRO2/resource/ik.jpgthumbnail', 'ik', 1, '2017-11-19 18:04:21');
 
 -- --------------------------------------------------------
 
@@ -118,15 +133,24 @@ CREATE TABLE `question` (
 --
 
 CREATE TABLE `shop_info` (
-  `logo` text NOT NULL,
+  `logo` text,
   `name` varchar(100) NOT NULL,
-  `phone` text NOT NULL,
-  `messenger` varchar(50) NOT NULL,
+  `phone` text,
+  `messenger` varchar(50) DEFAULT NULL,
   `fanpage_url` text NOT NULL,
-  `mail` text NOT NULL,
+  `mail` text,
   `address` text NOT NULL,
-  `twitter` text NOT NULL
+  `twitter` text
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `shop_info`
+--
+
+INSERT INTO `shop_info` (`logo`, `name`, `phone`, `messenger`, `fanpage_url`, `mail`, `address`, `twitter`) VALUES
+('/PRO2/resource/logo.jpg', 'doggy', '01215878387', 'https://www.facebook.com/messages/t/NguyenDanh1995', 'https://www.facebook.com/messages', 'example@gmail.com', 'ho chi minh', ''),
+('/PRO2/resource/logo.jpg', 'myshopname', '01215878387', 'https://www.facebook.com/messages/t/NguyenDanh1995', 'https://www.facebook.com/messages', 'example@gmail.com', 'ho chi minh', ''),
+('/PRO2/resource/logo.jpg', 'shopname', '01215878387', 'https://www.facebook.com/messages/t/NguyenDanh1995', 'https://www.facebook.com/messages', 'example@gmail.com', 'ho chi minh', '');
 
 -- --------------------------------------------------------
 
@@ -137,8 +161,16 @@ CREATE TABLE `shop_info` (
 CREATE TABLE `user` (
   `username` varchar(50) NOT NULL,
   `pwd` varchar(50) NOT NULL,
-  `role` varchar(10) NOT NULL
+  `role` varchar(10) NOT NULL,
+  `shop_name` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`username`, `pwd`, `role`, `shop_name`) VALUES
+('k', 'a', 'ROLE_ADMIN', NULL);
 
 --
 -- Indexes for dumped tables
@@ -185,10 +217,17 @@ ALTER TABLE `question`
   ADD KEY `question_customer` (`customerId`);
 
 --
+-- Indexes for table `shop_info`
+--
+ALTER TABLE `shop_info`
+  ADD PRIMARY KEY (`name`);
+
+--
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
-  ADD PRIMARY KEY (`username`);
+  ADD PRIMARY KEY (`username`),
+  ADD KEY `user_shop_idx` (`shop_name`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -198,7 +237,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `customer`
 --
@@ -213,7 +252,7 @@ ALTER TABLE `invoice`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `question`
 --
@@ -234,14 +273,19 @@ ALTER TABLE `invoice_detail`
 -- Constraints for table `product`
 --
 ALTER TABLE `product`
-  ADD CONSTRAINT `product_category` FOREIGN KEY (`categoryId`) REFERENCES `category` (`id`),
-  ADD CONSTRAINT `product_user` FOREIGN KEY (`username`) REFERENCES `user` (`username`);
+  ADD CONSTRAINT `product_category` FOREIGN KEY (`categoryId`) REFERENCES `category` (`id`);
 
 --
 -- Constraints for table `question`
 --
 ALTER TABLE `question`
   ADD CONSTRAINT `question_customer` FOREIGN KEY (`customerId`) REFERENCES `customer` (`id`);
+
+--
+-- Constraints for table `user`
+--
+ALTER TABLE `user`
+  ADD CONSTRAINT `user_shop` FOREIGN KEY (`shop_name`) REFERENCES `shop_info` (`name`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

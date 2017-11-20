@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -11,7 +12,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="${pageContext.request.contextPath}/resource/admin/assets/images/favicon.png">
-    <title>New User</title>
+    <title>Update Product</title>
     <!-- Bootstrap Core CSS -->
     <link href="${pageContext.request.contextPath}/resource/admin/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- chartist CSS -->
@@ -92,7 +93,7 @@
                         <!-- Profile -->
                         <!-- ============================================================== -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../assets/images/users/1.jpg" alt="user" class="profile-pic m-r-10" />${user.username }</a>
+                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../assets/images/users/1.jpg" alt="user" class="profile-pic m-r-10" />${crntuser.username }</a>
                         </li>
                     </ul>
                 </div>
@@ -158,7 +159,7 @@
                         <h3 class="text-themecolor m-b-0 m-t-0">Update User</h3>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="${pageContext.request.contextPath }/admin">Dashboard</a></li>
-                            <li class="breadcrumb-item"><a href="${pageContext.request.contextPath }/admin/user/all">User</a></li>
+                            <li class="breadcrumb-item"><a href="${pageContext.request.contextPath }/admin/product/all">Product</a></li>
                             <li class="breadcrumb-item active">Update</li>
                         </ol>
                     </div>
@@ -175,24 +176,90 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="card-block">
-                                <form class="form-horizontal form-material" action="${pageContext.request.contextPath }/admin/user/update" method="post">
+                                <form class="form-horizontal form-material" action="${pageContext.request.contextPath }/admin/product/update" method="post" enctype="multipart/form-data">
                                     <div class="form-group">
-                                        <label class="col-md-12">Username</label>
+                                        <label class="col-md-12">Name</label>
                                         <div class="col-md-12">
-                                            <input type="text" placeholder="Username" name="username" class="form-control form-control-line" value="${requestScope.user.username }" readonly>
+                                            <input type="text" placeholder="Product Name" name="name" class="form-control form-control-line" value="${requestScope.product.name }">
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="pwd" class="col-md-12">Password</label>
+                                        <label for="pwd" class="col-md-12">Price</label>
                                         <div class="col-md-12">
-                                            <input type="password" placeholder="Password" class="form-control form-control-line" name="password" value="${requestScope.user.password }">
+                                            <input type="text" placeholder="price" class="form-control form-control-line" name="price" value="${requestScope.product.price }">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pwd" class="col-md-12">Weight</label>
+                                        <div class="col-md-12">
+                                            <input type="text" placeholder="weight" class="form-control form-control-line" name="weight" value="${requestScope.product.weight }">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pwd" class="col-md-12">Description</label>
+                                        <div class="col-md-12">
+                                            <textarea rows="5" class="form-control form-control-line" name="description" > ${requestScope.product.description }</textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pwd" class="col-md-12">Image</label>
+                                        <div class="col-md-12">
+                                        	<div class="col-lg-3 col-md-6 m-b-20"><img src="${requestScope.product.imagePath }" class="img-responsive radius" id="pic"/></div>
+                                            <span class="btn btn-success" onclick="activateUpload()">Load Image</span><input type="file" id="upload" onchange="readURL(this)" name="pic" style="display:none"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pwd" class="col-md-12">Thumbnail</label>
+                                        <div class="col-md-12">
+                                            <div class="col-lg-3 col-md-6 m-b-20"><img src="${requestScope.product.thumbnail }" class="img-responsive radius" id="spic"/></div>
+                                            <span class="btn btn-success" onclick="activateSUpload()">Load Image</span><input type="file" id="supload" onchange="readSURL(this)" name="spic" style="display:none"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pwd" class="col-md-12">Category</label>
+                                        <div class="col-md-12">
+                                            <select class="form-control form-control-line" name="mycategory">
+                                            	<c:forEach var="category" items="${categories}">
+                                                <option value="${category.id }">${category.name }</option>
+                                                </c:forEach>
+                                            </select>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="col-sm-12">
-                                        	<input type="hidden" name="role" value="${requestScope.user.role }"/>
+                                        	<input type="hidden" name="id" value="${requestScope.product.id }"/>
                                             <button class="btn btn-success">Update Profile</button>
                                         </div>
+                                        <script>
+                                        function activateUpload(){
+                                        	document.getElementById("upload").click();
+                                        	}
+                                    	function readURL(input){
+                                    		if (input.files && input.files[0]) {
+                                                var reader = new FileReader();
+
+                                                reader.onload = function (e) {
+                                                    $('#pic')
+                                                        .attr('src', e.target.result);
+                                                };
+                                                reader.readAsDataURL(input.files[0]);
+                                            }
+                                        	}
+                                        function activateSUpload(){
+                                        	document.getElementById("supload").click();
+                                        	}
+                                    	function readSURL(input){
+                                    		if (input.files && input.files[0]) {
+                                                var reader = new FileReader();
+
+                                                reader.onload = function (e) {
+                                                    $('#spic')
+                                                        .attr('src', e.target.result);
+                                                };
+                                                reader.readAsDataURL(input.files[0]);
+                                            }
+                                        	}
+                                        </script>
                                     </div>
                                 </form>
                             </div>

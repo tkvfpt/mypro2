@@ -12,7 +12,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="${pageContext.request.contextPath}/resource/admin/assets/images/favicon.png">
-    <title>Product All</title>
+    <title>Category All</title>
     <!-- Bootstrap Core CSS -->
     <link href="${pageContext.request.contextPath}/resource/admin/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- chartist CSS -->
@@ -93,7 +93,7 @@
                         <!-- Profile -->
                         <!-- ============================================================== -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../assets/images/users/1.jpg" alt="user" class="profile-pic m-r-10" />${user.username}</a>
+                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../assets/images/users/1.jpg" alt="user" class="profile-pic m-r-10" />${crntuser.username}</a>
                         </li>
                     </ul>
                 </div>
@@ -159,7 +159,7 @@
                         <h3 class="text-themecolor m-b-0 m-t-0">User</h3>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="${pageContext.request.contextPath }/admin">Dashboard</a></li>
-                            <li class="breadcrumb-item active"><a href="${pageContext.request.contextPath }/admin/product/all">Product</a></li>
+                            <li class="breadcrumb-item active"><a href="${pageContext.request.contextPath }/admin/category/all">Category</a></li>
                         </ol>
                     </div>
                     <div class="col-md-7 col-4 align-self-center">
@@ -176,24 +176,21 @@
                 <div class="col-lg-8 col-md-7">
                         <div class="card">
                         <div class="card-block">
-                                <h4 class="card-title">Users</h4>
+                                <h4 class="card-title">Category</h4>
                                 <div class="table-responsive">
                                     <table class="table">
                                         <thead>
                                             <tr>
                                                 <th>#</th>
-                                                <th>Username</th>
-                                                <th>Password</th>
-                                                <th>Role</th>
+                                                <th>Name</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                         <c:forEach var="obj" items="${requestScope.list}">
                                             <tr>
-                                                <td><a href="${pageContext.request.contextPath }/admin/user/edit?id=${obj.username}">${requestScope.list.indexOf(obj)+1}</a></td>
-                                                <td><a href="${pageContext.request.contextPath }/admin/user/edit?id=${obj.username}">${obj.username }</a></td>
-                                                <td><a href="${pageContext.request.contextPath }/admin/user/edit?id=${obj.username}">${obj.password }</a></td>
-                                                <td><a href="${pageContext.request.contextPath }/admin/user/edit?id=${obj.username}">${obj.role }</a></td>
+                                                <td><a href="${pageContext.request.contextPath }/admin/category/edit?id=${obj.id}">${requestScope.list.indexOf(obj)+1}</a></td>
+                                                <td><a href="${pageContext.request.contextPath }/admin/category/edit?id=${obj.id}">${obj.name }</a></td>
+                                                <td><a href="${pageContext.request.contextPath }/admin/category/delete?id=${obj.id}"><i class="mdi mdi-delete"></i></a></td>
                                             </tr>
                                          </c:forEach>
                                         </tbody>
@@ -212,7 +209,7 @@
                                    
                                     <div class="message-widget contact-widget">
                                         <!-- Message -->
-                                        <a href="${pageContext.request.contextPath }/admin/product/new">
+                                        <a href="${pageContext.request.contextPath }/admin/category/new">
                                         New
                                         </a>
                                         <!-- Message -->

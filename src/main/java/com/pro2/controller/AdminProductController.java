@@ -3,8 +3,8 @@ package com.pro2.controller;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 
 import javax.servlet.ServletContext;
@@ -13,6 +13,7 @@ import javax.servlet.http.HttpSession;
 
 import org.jboss.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -21,23 +22,19 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.pro2.common.QueryManager;
 import com.pro2.constants.ECommerceGlobalConstant;
+import com.pro2.dao.ProductDAO;
 import com.pro2.dao.entity.Category;
 import com.pro2.dao.entity.Product;
-import com.pro2.dao.generic.IGenericDAO;
+import com.pro2.dao.entity.User;
 import com.pro2.dao.utils.CommonUtils;
-import com.pro2.dao.utils.QueryUtils;
 
 @Controller
 @RequestMapping("/admin")
 public class AdminProductController {
 	
 	@Autowired
-	IGenericDAO<Product> productDAO;
-	
-	@Autowired
-	IGenericDAO<Category> categoryDAO;
+	ProductDAO productDAO;
 	
 	@Autowired
 	ServletContext context;
@@ -50,7 +47,7 @@ public class AdminProductController {
 	 * @param model
 	 * @return
 	 */
-	@RequestMapping(value = {"/product/all"}, method=RequestMethod.GET)
+	@RequestMapping(value = {"/product/all","/product"}, method=RequestMethod.GET)
 	public String productDetail(Model model){
 		model.addAttribute("list", productDAO.getAll());		
 		return ECommerceGlobalConstant.SHOW_ALL_PRODUCT_PAGE;
@@ -59,8 +56,8 @@ public class AdminProductController {
 	@RequestMapping(value = "/product/edit")
 	public String editSP(HttpServletRequest request, Model model) {
 		int ma = Integer.parseInt(request.getParameter(ECommerceGlobalConstant.OBJECT_ID));
-		Product product = productDAO.getObj(ma);
-		request.setAttribute("product", product);
+		Product product = (Product)productDAO.getObject(ma);
+		model.addAttribute("product", product);
 		return ECommerceGlobalConstant.EDIT_PRODUCT_PAGE;
 	}
 
@@ -82,13 +79,38 @@ public class AdminProductController {
 	 * @return {@link String}
 	 */
 	@RequestMapping(value = "/product/add", method=RequestMethod.POST)
-	public String addProduct(HttpServletRequest request,@RequestParam MultipartFile pic,@RequestParam MultipartFile spic, Model model, Product product){
-		logger.info(request.getParameter("mycategory"));
-		String imgName = CommonUtils.getValidImageName(request.getParameter(ECommerceGlobalConstant.OBJECT_NAME))+".jpg";
-		String thumb = imgName + "thumbnail";
+	public String addProduct(HttpServletRequest request,@RequestParam MultipartFile pic,@RequestParam MultipartFile spic, Model model, Product product, Authentication authen){
+		String imgName = "";
+		String thumb = "";
+		File imageFile = null;
+		File thumbFile = null;
+		if(!pic.isEmpty()){
+			 imgName = CommonUtils.getValidImageName(request.getParameter(ECommerceGlobalConstant.OBJECT_NAME))+".jpg";
+			 imageFile = new File(context.getRealPath(ECommerceGlobalConstant.RESOURCE_REAL_PATH)+"/"+imgName);
+		}
+		if(!spic.isEmpty()){
+			thumb = imgName + "thumbnail";
+			thumbFile = new File(context.getRealPath(ECommerceGlobalConstant.RESOURCE_REAL_PATH)+"/"+thumb);
+		}
 		try {
-			pic.transferTo(new File(context.getRealPath(ECommerceGlobalConstant.RESOURCE_REAL_PATH)+imgName));
-			spic.transferTo(new File(context.getRealPath(ECommerceGlobalConstant.RESOURCE_REAL_PATH)));
+			if(Objects.nonNull(imageFile)){
+				if(!imageFile.exists()){
+					pic.transferTo(imageFile);
+				}
+				product.setImagePath(request.getContextPath()+"/resource/"+imgName);
+			}
+			
+			logger.info(context.getRealPath(ECommerceGlobalConstant.RESOURCE_REAL_PATH)+"/"+imgName);
+			if(Objects.nonNull(thumbFile)){
+				if(!thumbFile.exists()){
+					spic.transferTo(thumbFile);
+				}
+				product.setThumbnail(request.getContextPath()+"/resource/"+thumb);
+			}
+			product.setCategory( (Category)productDAO.getCategory(Integer.parseInt(request.getParameter("mycategory"))));
+			product.setUser((User)authen.getPrincipal());
+			
+			productDAO.saveOrUpdateObject(product);
 		} catch (IllegalStateException | IOException e) {
 			Logger.getLogger(this.getClass()).info(e.getMessage());
 		}
@@ -101,26 +123,57 @@ public class AdminProductController {
 	 * @param request {@link HttpServletRequest}
 	 * @return {@link String}
 	 */
-	@RequestMapping(value = "/product/update", method = RequestMethod.GET)
-	public String suaProduct(Model model, HttpServletRequest request) {		
-		int ma = Integer.parseInt(request.getParameter(ECommerceGlobalConstant.OBJECT_ID));
-		Product sp = productDAO.getObj(ma);
-		sp = (Product) CommonUtils.settingAttributeForObject(sp, request);
-		productDAO.updateObject(sp);
-		return "redirect:/";
-	}
+	@RequestMapping(value = "/product/update", method = RequestMethod.POST)
+	public String suaProduct(HttpServletRequest request,@RequestParam MultipartFile pic,@RequestParam MultipartFile spic,Product product, Model model, Authentication authen) {		
+		String imgName = "";
+		String thumb = "";
+		File imageFile = null;
+		File thumbFile = null;
+		
+		if(!pic.isEmpty()){
+			 imgName = CommonUtils.getValidImageName(request.getParameter(ECommerceGlobalConstant.OBJECT_NAME))+".jpg";
+			 imageFile = new File(context.getRealPath(ECommerceGlobalConstant.RESOURCE_REAL_PATH)+"/"+imgName);
+		}
+		if(!spic.isEmpty()){
+			thumb = imgName + "thumbnail";
+			thumbFile = new File(context.getRealPath(ECommerceGlobalConstant.RESOURCE_REAL_PATH)+"/"+thumb);
+		}
+		Product tmpProduct = (Product)productDAO.getObject(product.getId());
+		try {
+			if(Objects.nonNull(imageFile)){
+				if(!imageFile.exists()){
+					pic.transferTo(imageFile);
+				}
+				product.setImagePath(request.getContextPath()+"/resource/"+imgName);
+			}else{
+				product.setImagePath(tmpProduct.getImagePath());
+			}
+			
+			logger.info(context.getRealPath(ECommerceGlobalConstant.RESOURCE_REAL_PATH)+"/"+imgName);
+			if(Objects.nonNull(thumbFile)){
+				if(!thumbFile.exists()){
+					spic.transferTo(thumbFile);
+				}
+				product.setThumbnail(request.getContextPath()+"/resource/"+thumb);
+			}
+			else{
+				product.setThumbnail(tmpProduct.getThumbnail());
+			}
+			
 
-	/**
-	 * Execute Search Action
-	 * @author khon.vt
-	 * @param request {@link HttpServletRequest}
-	 * @param model {@link Model}
-	 * @return {@link String}
-	 */
-	@RequestMapping("/search")
-	public String search(HttpServletRequest request, Model model) {
-		model.addAttribute("list", productDAO.executeQuery(QueryUtils.createQueryWithCrit(new Product(),new QueryManager(request.getParameterMap())) ) );
-		return ECommerceGlobalConstant.SHOW_ALL_PRODUCT_PAGE;
+			product.setUser((User)authen.getPrincipal());
+			product.setCategory( (Category)productDAO.getCategory(Integer.parseInt(request.getParameter("mycategory"))));
+			productDAO.saveOrUpdateObject(product);
+		} catch (IllegalStateException | IOException e) {
+			Logger.getLogger(this.getClass()).info(e.getMessage());
+		}
+			return "redirect:/admin/product/all";
+	}
+	
+	@RequestMapping(value="/product/delete")
+	public String delete(Model model, HttpServletRequest request){
+		productDAO.deleteObject(productDAO.getObject(Integer.parseInt(request.getParameter("id"))));
+		return "redirect:/admin/product/all";
 	}
 	
 	/**
@@ -133,16 +186,16 @@ public class AdminProductController {
 	 */
 	@RequestMapping(value = "/cart")
 	public String cart(HttpServletRequest request, Model model,HttpSession session) {
-		List<Product> list = null;
-		
-		int ma = Integer.parseInt(request.getParameter(ECommerceGlobalConstant.OBJECT_ID));
-		Product sp = productDAO.getObj(ma);
-		if(Objects.isNull(session.getAttribute(ECommerceGlobalConstant.CART))){
-			list=editSession(sp,new ArrayList<>());
-		}else{
-			list=editSession(sp, (List<Product>)session.getAttribute(ECommerceGlobalConstant.CART));
-		}
-		session.setAttribute(ECommerceGlobalConstant.CART, list);
+//		List<Product> list = null;
+//		
+//		int ma = Integer.parseInt(request.getParameter(ECommerceGlobalConstant.OBJECT_ID));
+//		Product sp = productDAO.getObj(ma);
+//		if(Objects.isNull(session.getAttribute(ECommerceGlobalConstant.CART))){
+//			list=editSession(sp,new ArrayList<>());
+//		}else{
+//			list=editSession(sp, (List<Product>)session.getAttribute(ECommerceGlobalConstant.CART));
+//		}
+//		session.setAttribute(ECommerceGlobalConstant.CART, list);
 		return ECommerceGlobalConstant.CART_PAGE;
 	}
 	
@@ -168,12 +221,9 @@ public class AdminProductController {
 		return null;
 	}
 	
-	@ModelAttribute("categories")
-	public List<Category> getAllCategory(){
-		List<Category> categories = categoryDAO.getAll();
-		if(categories.isEmpty()){
-			return Collections.emptyList();
-		}
-		return categories;
+	@ModelAttribute
+	public void getAllCategory(Model model){
+		List<Category> categories = productDAO.getAllCategory();
+		model.addAttribute("categories",categories);
 	}
 }

@@ -92,7 +92,7 @@
                         <!-- Profile -->
                         <!-- ============================================================== -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../assets/images/users/1.jpg" alt="user" class="profile-pic m-r-10" />${user.username }</a>
+                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../assets/images/users/1.jpg" alt="user" class="profile-pic m-r-10" />${crntuser.username }</a>
                         </li>
                     </ul>
                 </div>
@@ -179,18 +179,18 @@
                                     <div class="form-group">
                                         <label class="col-md-12">Username</label>
                                         <div class="col-md-12">
-                                            <input type="text" placeholder="Username" name="username" class="form-control form-control-line" value="${requestScope.user.username }" readonly>
+                                            <input type="text" placeholder="Username" name="username" class="form-control form-control-line" value="${requestScope.edituser.username }" readonly>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="pwd" class="col-md-12">Password</label>
                                         <div class="col-md-12">
-                                            <input type="password" placeholder="Password" class="form-control form-control-line" name="password" value="${requestScope.user.password }">
+                                            <input type="password" placeholder="Password" class="form-control form-control-line" name="password" value="${requestScope.edituser.password }">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="col-sm-12">
-                                        	<input type="hidden" name="role" value="${requestScope.user.role }"/>
+                                        	<input type="hidden" name="role" value="${requestScope.edituser.role }"/>
                                             <button class="btn btn-success">Update Profile</button>
                                         </div>
                                     </div>

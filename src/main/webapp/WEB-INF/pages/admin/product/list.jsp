@@ -93,7 +93,7 @@
                         <!-- Profile -->
                         <!-- ============================================================== -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../assets/images/users/1.jpg" alt="user" class="profile-pic m-r-10" />${user.username}</a>
+                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">${user.username}</a>
                         </li>
                     </ul>
                 </div>
@@ -182,18 +182,27 @@
                                         <thead>
                                             <tr>
                                                 <th>#</th>
-                                                <th>Username</th>
-                                                <th>Password</th>
-                                                <th>Role</th>
+                                                <th>Name</th>
+                                                <th>Price</th>
+                                                <th>Weight</th>
+                                                <th>Category</th>
+                                                <th>Description</th>
+                                                <th>Image</th>
+                                                <th>User</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                         <c:forEach var="obj" items="${requestScope.list}">
                                             <tr>
-                                                <td><a href="${pageContext.request.contextPath }/admin/user/edit?id=${obj.username}">${requestScope.list.indexOf(obj)+1}</a></td>
-                                                <td><a href="${pageContext.request.contextPath }/admin/user/edit?id=${obj.username}">${obj.username }</a></td>
-                                                <td><a href="${pageContext.request.contextPath }/admin/user/edit?id=${obj.username}">${obj.password }</a></td>
-                                                <td><a href="${pageContext.request.contextPath }/admin/user/edit?id=${obj.username}">${obj.role }</a></td>
+                                                <td><a href="${pageContext.request.contextPath }/admin/product/edit?id=${obj.id}">${requestScope.list.indexOf(obj)+1}</a></td>
+                                                <td><a href="${pageContext.request.contextPath }/admin/product/edit?id=${obj.id}">${obj.name }</a></td>
+                                                <td><a href="${pageContext.request.contextPath }/admin/product/edit?id=${obj.id}">${obj.price }</a></td>
+                                                <td><a href="${pageContext.request.contextPath }/admin/product/edit?id=${obj.id}">${obj.weight }</a></td>
+                                                <td><a href="${pageContext.request.contextPath }/admin/product/edit?id=${obj.id}">${obj.category.name }</a></td>
+                                                <td><a href="${pageContext.request.contextPath }/admin/product/edit?id=${obj.id}">${obj.description }</a></td>
+                                                <td><a href="${pageContext.request.contextPath }/admin/product/edit?id=${obj.id}"><img src="${obj.imagePath }" width="20px" height="20px"/></a></td>
+                                                <td><a href="${pageContext.request.contextPath }/admin/product/edit?id=${obj.id}">${obj.user.username }</a></td>
+                                                <td><a href="${pageContext.request.contextPath }/admin/product/delete?id=${obj.id}"><i class="mdi mdi-delete"></i></a></td>
                                             </tr>
                                          </c:forEach>
                                         </tbody>
