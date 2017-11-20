@@ -32,6 +32,7 @@ public class ClientCustomerController {
 	public String login(Model model, HttpSession session,HttpServletRequest request) {
 		Customer cus = (Customer)customerDAO.getObject(request.getParameter("username"),request.getParameter("password"));
 		if(Objects.isNull(cus)) {
+			request.setAttribute("message","Account not exists");
 			return "client/login";
 		}
 		session.setAttribute("client",cus );
@@ -40,13 +41,12 @@ public class ClientCustomerController {
 	
 	@RequestMapping("/loginpage")
 	public String loginpage(Model model, HttpSession session,HttpServletRequest request) {
-			return "client/login";
+			return "client/auth";
 	}
 	@RequestMapping("/signup")
 	public String signup(Model model, HttpSession session,HttpServletRequest request, Customer customer) {
 		customerDAO.saveObject(customer);
-		CommonUtils.sendMail(mailSender, customer.getEmail());
-		
+		//CommonUtils.sendMail(mailSender, customer.getEmail());
 		return "redirect:/";
 	}
 }
