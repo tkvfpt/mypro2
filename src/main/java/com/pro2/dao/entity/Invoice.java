@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -53,7 +54,7 @@ public class Invoice {
 	@Column(name="customer")
 	String customer;
 	
-	@OneToMany(mappedBy="invoice_detail_pk.invoice")
+	@OneToMany(mappedBy="invoice_detail_pk.invoice",cascade=CascadeType.PERSIST)
 	List<InvoiceDetail> invoiceDetail;
 
 	public int getId() {
