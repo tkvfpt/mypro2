@@ -43,11 +43,16 @@ public class ClientProductController {
 		
 		int id = Integer.parseInt(request.getParameter(ECommerceGlobalConstant.OBJECT_ID));
 		Product p = (Product)productDAO.getObject(id);
+		int quantity = 0;
+			if(Objects.nonNull(request.getParameter("quantity")) && !request.getParameter("quantity").equals("") && Integer.parseInt(request.getParameter("quantity")) != 0){
+				quantity =Integer.parseInt(request.getParameter("quantity")); 
+			}
+		
 		if(Objects.isNull(session.getAttribute("listCart"))){
-			list=editSession(p,new ArrayList<>());
+			list=editSession(p,new ArrayList<>(),quantity);
 			
 		}else{
-			list=editSession(p, (List<Product>)session.getAttribute("listCart"));
+			list=editSession(p, (List<Product>)session.getAttribute("listCart"),quantity);
 			
 		}
 		session.setAttribute("listCart", list);
@@ -80,14 +85,19 @@ public class ClientProductController {
 		return "client/cart";
 	}
 	
-	private List<Product> editSession(Product sp,List<Product> lstSp){
+	private List<Product> editSession(Product sp,List<Product> lstSp,int quantity){
 		for(int i=0;i<lstSp.size();i++){
 			if(lstSp.get(i).getId()==sp.getId()){
 				lstSp.get(i).setQuantity(lstSp.get(i).getQuantity()+1);
 				return lstSp;
 			}
 		}
-		sp.setQuantity(1);
+		if(quantity == 0){
+			sp.setQuantity(1);
+		}else{
+			sp.setQuantity(quantity);
+		}
+		
 		lstSp.add(sp);
 		return lstSp;
 	}

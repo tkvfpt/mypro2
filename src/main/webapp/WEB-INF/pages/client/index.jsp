@@ -81,10 +81,10 @@
 
                     <li>
                         <div class="h-cart">
-                            <a href="cart.html">
+                            <a href="${pageContext.request.contextPath }/product/cart">
                                 <i class="fa fa-shopping-cart"></i>
                                 <span class="shop-menu-ttl">Cart</span>
-                                (<b>0</b>)
+                                (<b>${sessionScope.listCart.size() }</b>)
                             </a>
                         </div>
                     </li>

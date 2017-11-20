@@ -79,10 +79,10 @@
 
                     <li>
                         <div class="h-cart">
-                            <a href="cart.html">
+                            <a href="${pageContext.request.contextPath }/product/cart">
                                 <i class="fa fa-shopping-cart"></i>
                                 <span class="shop-menu-ttl">Cart</span>
-                                (<b>0</b>)
+                                (<b>${sessionScope.listCart.size() }</b>)
                             </a>
                         </div>
                     </li>
@@ -172,23 +172,31 @@
 				<div class="prod-cont-txt">
 					${p.description }
 				</div>
-				<div class="prod-skuwrap">
-					<p class="prod-skuttl">CLOTHING SIZES</p>
-				</div>
 				<div class="prod-info">
 					<p class="prod-price">
 						<b class="item_current_price">$ ${p.price }</b>
 					</p>
 					<form action="${pageContext.request.contextPath }/product/addcart">
 					<p class="prod-qnt">
-						<input value="1" type="text">
-						<a href="#" class="prod-plus"><i class="fa fa-angle-up"></i></a>
-						<a href="#" class="prod-minus"><i class="fa fa-angle-down"></i></a>
+						<input value="1" id="quantity" name="quantity" type="text">
+						<a href="#" class="prod-plus"><i class="fa fa-angle-up" id="plus" onclick="changeQuantity(this)"></i></a>
+						<a href="#" class="prod-minus"><i class="fa fa-angle-down" id="minus" onclick="changeQuantity(this)"></i></a>
 					</p>
 					<p class="prod-addwrap">
+						<input type="hidden" name="id" value="${p.id }" />
 						<input type="submit" class="prod-add" rel="nofollow" value="Add to cart"/>
 					</p>
 					</form>
+					<script>
+					function changeQuantity(input){
+						if(input.id == "plus"){
+							document.getElementById("quantity").value=Number(document.getElementById("quantity").value)+Number(1);
+							}else{
+								if(document.getElementById("quantity").value >1){ document.getElementById("quantity").value=Number(document.getElementById("quantity").value)-Number(1);	}
+								}
+						}
+
+					</script>
 				</div>
 				<ul class="prod-i-props">
 					<li>
