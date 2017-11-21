@@ -65,7 +65,7 @@
     <div class="header-middle">
         <div class="container header-middle-cont">
             <div class="toplogo">
-                <a href="index.html">
+                <a href="${pageContext.request.contextPath }">
                     <img src="${shop.logo }" alt="${shop.name }">
                 </a>
             </div>
@@ -74,7 +74,7 @@
 
                     
                     <li class="topauth">
-                        <a href="auth.html">
+                        <a href="${pageContext.request.contextPath }/customer/login">
                             <span class="shop-menu-ttl">Login</span>
                         </a>
                     </li>
@@ -105,7 +105,7 @@
                     <a class="topcatalog-btn" href="catalog-list.html"><span>All</span> catalog</a>
                     <ul class="topcatalog-list">
                         <c:forEach items="${requestScope.cates }" var="cate">
-                        	<li><a href="${pageContext.request.contextPath}/product/list">${cate.name }</a></li>
+                        	<li><a href="${pageContext.request.contextPath}/product/list?page=1&limit=12">${cate.name }</a></li>
                         </c:forEach>
                     </ul>
                 </div>
@@ -116,14 +116,14 @@
 
                 <ul class="mainmenu">
                     <li>
-                        <a href="index.html" class="active">
+                        <a href="${pageContext.request.contextPath }" class="active">
                             Home
                         </a>
                     </li>
                     <li class="menu-item-has-children">
                         
                     <li class="menu-item-has-children">
-                        <a href="${pageContext.request.contextPath}/product/list">
+                        <a href="${pageContext.request.contextPath}/product/list?page=1&limit=12">
                             Product <i class="fa fa-angle-down"></i>
                         </a>
                     </li>
@@ -165,7 +165,7 @@
                             <h3>${obj.name }</h3>
                             <p>${obj.description }</p>
                             <p class="fr-slider-more-wrap">
-                                <a class="fr-slider-more" href="${pageContext.request.contextPath}/product/list">View collection</a>
+                                <a class="fr-slider-more" href="${pageContext.request.contextPath}/product/list?page=1&limit=12">View collection</a>
                             </p>
                         </div>
                     </li>
