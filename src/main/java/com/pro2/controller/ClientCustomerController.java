@@ -11,6 +11,7 @@ import org.springframework.mail.MailSender;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.pro2.dao.CustomerDAO;
 import com.pro2.dao.entity.Customer;
@@ -35,7 +36,7 @@ public class ClientCustomerController {
 		Customer cus = (Customer)customerDAO.getObject(request.getParameter("username"),request.getParameter("password"));
 		if(Objects.isNull(cus)) {
 			request.setAttribute("emessage","Account not exists");
-			return "client/auth";
+			return "redirect:/auth";
 		}
 		session.setAttribute("client",cus);
 		session.setMaxInactiveInterval(60*60*30*12);
@@ -48,15 +49,33 @@ public class ClientCustomerController {
 	}
 	@RequestMapping("/signup")
 	public String signup(Model model, HttpSession session,HttpServletRequest request, Customer customer) {
-		customerDAO.saveObject(customer);
-		request.setAttribute("message", "sign up");
-		return "client/success";
+		Customer cus = (Customer)customerDAO.getObject(customer.getUsername());
+		if(Objects.isNull(cus)){
+			customerDAO.saveObject(customer);
+			request.setAttribute("message", "sign up");
+			return "client/success";
+		}
+		request.setAttribute("emessage","Account exist");
+		return "client/auth";
 	}
-	
 	@RequestMapping("/question")
+	public String quest(Model model, HttpSession session,HttpServletRequest request) {
+			return "client/questionaire";
+	}
+	@RequestMapping(value = "/sendquestion",method=RequestMethod.POST)
 	public String question(Model model, HttpSession session,HttpServletRequest request) {
 			String msg = request.getParameter("message");
 			Customer cus = (Customer)session.getAttribute("client");
+			if(Objects.isNull(cus)){
+				cus = new Customer();
+				cus.setEmail(request.getParameter("email").equals("")? "" : request.getParameter("email"));
+				cus.setFullname(request.getParameter("fullname").equals("")? "" : request.getParameter("fullname"));
+				cus.setOccupation(request.getParameter("occupation").equals("")? "" : request.getParameter("occupation"));
+				cus.setPhone(request.getParameter("phone").equals("")? "" : request.getParameter("phone"));
+				cus.setAge(request.getParameter("age").equals("")? 0 : Integer.parseInt(request.getParameter("age")));
+				cus.setUsername("unonymous");
+				cus.setPassword("unonymous");
+			}
 			ShopInfo shop = (ShopInfo)model.asMap().get("shop");
 			CommonUtils.sendMail(mailSender,shop.getMail() , msg, "Question from "+cus.getEmail());
 			Question question = new Question();
@@ -65,6 +84,8 @@ public class ClientCustomerController {
 			question.setEmail(cus.getEmail());
 			question.setTitle("Question");
 			question.setPhone(cus.getPhone());
+			question.setDesc(request.getParameter("description").equals("")?"":request.getParameter("description"));
+			cus.getQuestion().add(question);
 			customerDAO.saveObject(question);
 			request.setAttribute("message", "sent question");
 			return "client/success";

@@ -159,7 +159,7 @@
                         <h3 class="text-themecolor m-b-0 m-t-0">User</h3>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="${pageContext.request.contextPath }/admin">Dashboard</a></li>
-                            <li class="breadcrumb-item active"><a href="${pageContext.request.contextPath }/admin/invoice/all">Customer</a></li>
+                            <li class="breadcrumb-item active"><a href="${pageContext.request.contextPath }/admin/invoice/all">Invoice</a></li>
                         </ol>
                     </div>
                     <div class="col-md-7 col-4 align-self-center">
@@ -189,9 +189,9 @@
                                         <tbody>
                                         <c:forEach var="obj" items="${requestScope.list}">
                                             <tr>
-                                                <td><a href="${pageContext.request.contextPath }/admin/invoice/edit?id=${obj.id}">${requestScope.list.indexOf(obj)+1}</a></td>
-                                                <td><a href="${pageContext.request.contextPath }/admin/invoice/edit?id=${obj.id}">${obj.invoiceDetail.size() }</a></td>
-                                                <td><a href="${pageContext.request.contextPath }/admin/invoice/delete?id=${obj.id}"><i class="mdi mdi-delete"></i></a></td>
+                                                <td><a href="${pageContext.request.contextPath }/admin/invoice/detail?id=${obj.id}">${requestScope.list.indexOf(obj)+1}</a></td>
+                                                <td><a href="${pageContext.request.contextPath }/admin/invoice/detail?id=${obj.id}">${obj.customer }</a></td>
+                                                <td><a href="${pageContext.request.contextPath }/admin/invoice/detail?id=${obj.id}">${obj.invoiceDetail.size() }</a></td>
                                             </tr>
                                          </c:forEach>
                                         </tbody>

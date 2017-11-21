@@ -101,7 +101,7 @@
                             <a href="cart.html">
                                 <i class="fa fa-shopping-cart"></i>
                                 <span class="shop-menu-ttl">Cart</span>
-                                (<b>0</b>)
+                                (<b>${sessionScope.listCart.size() }</b>)
                             </a>
                         </div>
                     </li>
@@ -172,16 +172,31 @@
 <!-- Main Content - start -->
 <main>
     <div class="contactform-wrap">
-            <form action="${pageContext.request.contextPath}/customer/question" method="post">
+            <form action="${pageContext.request.contextPath}/customer/sendquestion" method="post">
                 <h3 class="component-ttl component-ttl-ct component-ttl-hasdesc"><span>Question</span></h3>
-                <p class="component-desc component-desc-ct">Send your question to our system</p>
+                <p class="component-desc component-desc-ct">Send your question to our system </p>
+                <p class="contactform-field">
+                    	<label class="contactform-label">Title<span class="required">*</span></label><!-- NO SPACE --><span class="contactform-input"><input placeholder="Title" name="title" data-required="text"/></span>
+                </p>
                 <c:if test="${sessionScope.client == null}">
-                	<p class="contactform-field contactform-textarea">
-                    	<label class="contactform-label">Email</label><!-- NO SPACE --><span class="contactform-input"><textarea placeholder="Your message" name="message" data-required="text"></textarea></span>
-                	</p>
+				<p class="contactform-field">
+                    <label class="contactform-label">Email<span class="required">*</span></label><!-- NO SPACE --><span class="contactform-input"><input placeholder="Email" name="email" type="email" data-required="text"/></span>
+                </p>                	
+                <p class="contactform-field">
+                    <label class="contactform-label">Phone<span class="required">*</span></label><!-- NO SPACE --><span class="contactform-input"><input placeholder="Phone" name="phone" type="text" data-required="text"/></span>
+                </p>
+                <p class="contactform-field">
+                        <label class="contactform-label" for="reg_fullname">Fullname <span class="required">*</span></label><input type="text" id="reg_fullname" name="fullname">
+                </p>
+                <p class="contactform-field">
+                        <label for="reg_occupation" class="contactform-label">Job </label><input type="text" id="reg_occupation" name="occupation">
+                </p>
+                <p class="contactform-field">
+                    <label for="reg_age" class="contactform-label">Age </label><input type="text" id="reg_age" name="age">
+                </p>
                 </c:if>
                 <p class="contactform-field contactform-textarea">
-                    <label class="contactform-label">Message</label><!-- NO SPACE --><span class="contactform-input"><textarea placeholder="Your message" name="message" data-required="text"></textarea></span>
+                    <label class="contactform-label">Message</label><!-- NO SPACE --><span class="contactform-input"><textarea placeholder="Your message" name="description" data-required="text"></textarea></span>
                 </p>
                 <p class="contactform-submit">
                     <input value="Send" type="submit">

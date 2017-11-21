@@ -48,4 +48,8 @@ public class CustomerDAO{
 		return getSession().createQuery("from Customer where username like '"+username+"' and password like '"+pwd+"'").uniqueResult();
 	}
 	
+	public Object getObject(String username) {
+		return getSession().createQuery("from Customer where username like '"+username+"'").uniqueResult();
+	}
+	
 }

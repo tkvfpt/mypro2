@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -11,7 +12,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="${pageContext.request.contextPath}/resource/admin/assets/images/favicon.png">
-    <title>New Invoice</title>
+    <title>Invoice</title>
     <!-- Bootstrap Core CSS -->
     <link href="${pageContext.request.contextPath}/resource/admin/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- chartist CSS -->
@@ -155,11 +156,11 @@
                 <!-- ============================================================== -->
                 <div class="row page-titles">
                     <div class="col-md-5 col-8 align-self-center">
-                        <h3 class="text-themecolor m-b-0 m-t-0">New Customer</h3>
+                        <h3 class="text-themecolor m-b-0 m-t-0">Invoice</h3>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="${pageContext.request.contextPath }/admin">Dashboard</a></li>
-                            <li class="breadcrumb-item"><a href="${pageContext.request.contextPath }/admin/invoice/all">Invoice</a></li>
-                            <li class="breadcrumb-item active">New</li>
+                            <li class="breadcrumb-item"><a href="${pageContext.request.contextPath }/admin/user/all">User</a></li>
+                            <li class="breadcrumb-item active"></li>
                         </ol>
                     </div>
                     <div class="col-md-7 col-4 align-self-center">
@@ -173,30 +174,33 @@
                 <!-- Start Page Content -->
                 <!-- ============================================================== -->
                 <div class="row">
-                    <div class="col-12">
-                        <div class="card-block">
-                                <form class="form-horizontal form-material" action="${pageContext.request.contextPath }/admin/invoice/add" method="post">
-                                    <div class="form-group">
-                                        <label class="col-md-12">Username</label>
-                                        <div class="col-md-12">
-                                            <input type="text" placeholder="Username" name="username" class="form-control form-control-line">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="pwd" class="col-md-12">Password</label>
-                                        <div class="col-md-12">
-                                            <input type="password" placeholder="Password" class="form-control form-control-line" name="password">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="col-sm-12">
-                                            <button class="btn btn-success">Update Profile</button>
-                                        </div>
-                                    </div>
-                                </form>
+                	<div class="card">
+                            <div class="card-block">
+                                <h4 class="card-title">Invoices</h4>
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>ProductName</th>
+                                                <th>Quantity</th>
+                                                <th>Price</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        <c:forEach var="obj" items="${requestScope.invoice.invoiceDetail}">
+                                            <tr>
+                                                <td>${requestScope.invoice.invoiceDetail.indexOf(obj)+1}</a></td>
+                                                <td>${obj.product.name }</td>
+                                                <td>${obj.quantity}</td>
+                                                <td>${obj.product.price }</td>
+                                            </tr>
+                                         </c:forEach>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
-
-                    </div>
+                            </div>
                 </div>
                 <!-- ============================================================== -->
                 <!-- End PAge Content -->

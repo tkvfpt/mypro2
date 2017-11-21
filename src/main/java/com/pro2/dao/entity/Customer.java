@@ -1,7 +1,9 @@
 package com.pro2.dao.entity;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -43,8 +45,8 @@ public class Customer {
 	@Column(name="age")
 	int age;
 	
-	@OneToMany(fetch=FetchType.LAZY,mappedBy="customer")
-	List<Question> question;
+	@OneToMany(fetch=FetchType.EAGER,mappedBy="customer",cascade=CascadeType.ALL)
+	List<Question> question = new ArrayList<>();
 
 	public int getId() {
 		return id;
@@ -109,4 +111,13 @@ public class Customer {
 	public void setAge(int age) {
 		this.age = age;
 	}
+
+	public List<Question> getQuestion() {
+		return question;
+	}
+
+	public void setQuestion(List<Question> question) {
+		this.question = question;
+	}
+	
 }

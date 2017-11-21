@@ -54,7 +54,7 @@ public class Invoice {
 	@Column(name="customer")
 	String customer;
 	
-	@OneToMany(mappedBy="invoice_detail_pk.invoice",cascade=CascadeType.ALL,fetch=FetchType.EAGER)
+	@OneToMany(mappedBy="invoice_detail_pk.invoice",cascade=CascadeType.ALL,fetch=FetchType.LAZY)
 	List<InvoiceDetail> invoiceDetail = new ArrayList<>();
 
 	public int getId() {

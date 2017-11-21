@@ -134,7 +134,7 @@
 
                 <ul class="mainmenu">
                     <li>
-                        <a href="index.html" class="active">
+                        <a href="${pageContext.request.contextPath }/" class="active">
                             Home
                         </a>
                     </li>
