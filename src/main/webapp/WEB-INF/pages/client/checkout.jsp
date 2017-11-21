@@ -81,10 +81,10 @@
 
                     <li>
                         <div class="h-cart">
-                            <a href="cart.html">
+                           <a href="${pageContext.request.contextPath }/product/cart">
                                 <i class="fa fa-shopping-cart"></i>
                                 <span class="shop-menu-ttl">Cart</span>
-                                (<b>0</b>)
+                                (<b>${sessionScope.listCart.size() }</b>)
                             </a>
                         </div>
                     </li>
@@ -152,7 +152,7 @@
 <!-- Main Content - start -->
 <main>
 <section class="container stylization maincont">
-<form action="${pageContext.request.contextPath }/product/checkout" class="form-validate">
+<form action="${pageContext.request.contextPath }/product/checkout">
 	<input type="text" data-required="text" placeholder="Name" name="fullname">
 	<input type="text" placeholder="Phone" name="phone" onkeypress="checkNumb(this)">
 	<span style="color:red" id="error"></span>
@@ -165,7 +165,7 @@
 </form>
 <script>
 	function checkNumb(input){
-		var phoneno = /^\d{10,11}$/;
+		var phoneno = /^\d{8,12}$/;
 		if( input.value.match(phoneno) ){
 			document.getElementById("error").innerHTML = "";
     		}else{

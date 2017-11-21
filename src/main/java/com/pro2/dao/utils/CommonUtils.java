@@ -91,13 +91,12 @@ Map<String, String[]> requestParams = request.getParameterMap();
 	public static void sendMail(MailSender mailSender, String to) {
 		try {
 			SimpleMailMessage message = new SimpleMailMessage();
-			message.setFrom("testmail2250@gmail.com");
 			message.setTo(to);
 			message.setSubject("Successfully Order");
 			message.setText("We've received your order. Thank you for shopping with us");
 			mailSender.send(message);
 		}catch(Exception e) {
-			LOG.info(e.getMessage());
+			LOG.info("commonUtils.sendMail() "+e.getMessage());
 		}
 	}
 	

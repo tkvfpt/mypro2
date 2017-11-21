@@ -228,7 +228,7 @@
                 <li class="cart-summ">TOTAL: <b><!-- tong tien cart bang js --> $${s }</b></li>
             </ul>
             <div class="cart-submit">
-                <a href="#" class="cart-submit-btn">Checkout</a>
+                <input type="submit" class="cart-submit-btn" value="Checkout" />
                 <a href="${pageContext.request.contextPath }/product/cart/clear" class="cart-clear">Clear cart</a>
             </div>
         </form>

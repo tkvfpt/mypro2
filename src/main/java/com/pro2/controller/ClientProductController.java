@@ -148,7 +148,11 @@ public class ClientProductController {
 
 			productDAO.saveObject(invoice);
 		}
-		return "";
+		return "client/index";
 	}
 	
+	@RequestMapping("/precheckout")
+	public String showPreCheckout(){
+		return "client/checkout";
+	}
 }
