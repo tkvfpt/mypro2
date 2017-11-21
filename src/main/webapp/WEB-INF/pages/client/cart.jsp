@@ -170,8 +170,9 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <c:forEach items="${sessionScope.listCart}" var="obj">
+                    <c:forEach items="${sessionScope.listCart}" varStatus="p" begin="0" end="${sessionScope.listCart.size() }" var="obj">
                     <c:set var="s" value="${s+ obj.price*obj.quantity}"></c:set>
+                    
                     <tr>
                         <td class="cart-image">
                             <a href="${pageContext.request.contextPath }/product/detail?">
@@ -182,17 +183,18 @@
                            ${obj.name }
                         </td>
                         <td class="cart-price">
-                            <b>$ ${obj.price }</b>
+                            $<b id="price_${p.index}">${obj.price }</b>
                         </td>
                         <td class="cart-quantity">
                             <p class="cart-qnt">
-                                <input value="${obj.quantity }" id="quantity" type="text">
-                                <a href="#" class="cart-plus"><i class="fa fa-angle-up" id="plus" onclick="changeQuantity(this)"></i></a>
-                                <a href="#" class="cart-minus"><i class="fa fa-angle-down" id="minus" onclick="changeQuantity(this)"></i></a>
+                                <input value="${obj.quantity }" id="quantity_${p.index}" type="text">
+                                <a href="#" class="cart-plus"><i class="fa fa-angle-up" id="plus_${p.index}" onclick="changeQuantity(this)"></i></a>
+                                <a href="#" class="cart-minus"><i class="fa fa-angle-down" id="minus_${p.index}" onclick="changeQuantity(this)"></i></a>
+                                
                             </p>
                         </td>
                         <td class="cart-summ">
-                            <b>$${obj.quantity*obj.price }</b>
+                            $<b id="sum_${p.index}">${obj.quantity*obj.price }</b>
                         </td>
                         <td class="cart-del">
                             <a href="${pageContext.request.contextPath}/product/cart/remove?id=${obj.id}" class="cart-remove"></a>
@@ -203,18 +205,32 @@
                     </tbody>
                 </table>
                                     <script>
+                                    
 					function changeQuantity(input){
-						if(input.id == "plus"){
-							document.getElementById("quantity").value=Number(document.getElementById("quantity").value)+Number(1);
-							}else{
-								if(document.getElementById("quantity").value >1){ document.getElementById("quantity").value=Number(document.getElementById("quantity").value)-Number(1);	}
+						if(input.id.indexOf("plus") != -1 ){
+							var index = input.id.substring(input.id.indexOf("_"),input.id.length);
+							var value = document.getElementById("quantity"+index).value;
+							var valuePrice= document.getElementById("price"+index).innerHTML;
+							var total= document.getElementById("total").innerHTML;
+							document.getElementById("quantity"+index).value=Number(value)+ Number(1);
+							document.getElementById("sum"+index).innerHTML=Number(document.getElementById("quantity"+index).value)* Number(valuePrice);
+							document.getElementById("total").innerHTML=Number(total)+Number(valuePrice);
+						}else{
+							var index = input.id.substring(input.id.indexOf("_"),input.id.length);
+							if(document.getElementById("quantity"+index).value >1){
+								var value = document.getElementById("quantity"+index).value;
+								var valuePrice= document.getElementById("price"+index).innerHTML;
+								var total= document.getElementById("total").innerHTML;
+								document.getElementById("quantity"+index).value=Number(value)- Number(1);
+								document.getElementById("sum"+index).innerHTML=Number(document.getElementById("quantity"+index).value)* Number(valuePrice);
+								document.getElementById("total").innerHTML=Number(total)-Number(valuePrice);
 								}
-						}
-
+							}
+					}
 					</script>
             </div>
             <ul class="cart-total">
-                <li class="cart-summ">TOTAL: <b><!-- tong tien cart bang js --> $${s }</b></li>
+                <li class="cart-summ">TOTAL: $<b id="total">${s}</b></li>
             </ul>
             <div class="cart-submit">
                 <input type="submit" class="cart-submit-btn" value="Checkout" />
