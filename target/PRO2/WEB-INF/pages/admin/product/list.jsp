@@ -93,7 +93,7 @@
                         <!-- Profile -->
                         <!-- ============================================================== -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">${user.username}</a>
+                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">${crntuser.username}</a>
                         </li>
                     </ul>
                 </div>
@@ -202,6 +202,7 @@
                                                 <td><a href="${pageContext.request.contextPath }/admin/product/edit?id=${obj.id}">${obj.description }</a></td>
                                                 <td><a href="${pageContext.request.contextPath }/admin/product/edit?id=${obj.id}"><img src="${obj.imagePath }" width="20px" height="20px"/></a></td>
                                                 <td><a href="${pageContext.request.contextPath }/admin/product/edit?id=${obj.id}">${obj.user.username }</a></td>
+                                                <td><a href="${pageContext.request.contextPath }/admin/product/delete?id=${obj.id}"><i class="mdi mdi-delete"></i></a></td>
                                             </tr>
                                          </c:forEach>
                                         </tbody>

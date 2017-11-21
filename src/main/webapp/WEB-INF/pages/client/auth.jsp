@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -23,9 +22,8 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resource/client/css/swiper.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resource/client/css/style.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resource/client/css/media.css">
-    </head>
-    <body>
-<!-- Header - start -->
+</head>
+<body>
 <header class="header">
 
     <!-- Topbar - start -->
@@ -33,16 +31,16 @@
         <div class="container">
             <ul class="contactinfo nav nav-pills">
                 <li>
-                    <i class='fa fa-phone'></i> +${shop.phone }
+                    <i class='fa fa-phone'></i> +7 777 123 1575
                 </li>
                 <li>
-                    <i class="fa fa-envelope"></i> ${shop.mail }
+                    <i class="fa fa-envelope"></i> admin@real-web.pro
                 </li>
             </ul>
             <!-- Social links -->
             <ul class="social-icons nav navbar-nav">
                 <li>
-                    <a href="${shop.fanpageUrl }" rel="nofollow" target="_blank">
+                    <a href="http://facebook.com" rel="nofollow" target="_blank">
                         <i class="fa fa-facebook"></i>
                     </a>
                 </li>
@@ -52,11 +50,20 @@
                     </a>
                 </li>
                 <li>
-                    <a href="${shop.twitter }" rel="nofollow" target="_blank">
+                    <a href="http://twitter.com" rel="nofollow" target="_blank">
                         <i class="fa fa-twitter"></i>
                     </a>
                 </li>
-                
+                <li>
+                    <a href="http://vk.com" rel="nofollow" target="_blank">
+                        <i class="fa fa-vk"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://instagram.com" rel="nofollow" target="_blank">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                </li>
             </ul>		</div>
     </div>
     <!-- Topbar - end -->
@@ -66,14 +73,32 @@
         <div class="container header-middle-cont">
             <div class="toplogo">
                 <a href="index.html">
-                    <img src="${shop.logo }" alt="${shop.name }">
+                    <img src="img/logo.png" alt="AllStore - MultiConcept eCommerce Template">
                 </a>
             </div>
             <div class="shop-menu">
                 <ul>
 
-                    
+                    <li>
+                        <a href="wishlist.html">
+                            <i class="fa fa-heart"></i>
+                            <span class="shop-menu-ttl">Wishlist</span>
+                            (<span id="topbar-favorites">1</span>)
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="compare.html">
+                            <i class="fa fa-bar-chart"></i>
+                            <span class="shop-menu-ttl">Compare</span> (5)
+                        </a>
+                    </li>
+
                     <li class="topauth">
+                        <a href="auth.html">
+                            <i class="fa fa-lock"></i>
+                            <span class="shop-menu-ttl">Registration</span>
+                        </a>
                         <a href="auth.html">
                             <span class="shop-menu-ttl">Login</span>
                         </a>
@@ -81,10 +106,10 @@
 
                     <li>
                         <div class="h-cart">
-                          <a href="${pageContext.request.contextPath }/product/cart">
+                            <a href="cart.html">
                                 <i class="fa fa-shopping-cart"></i>
                                 <span class="shop-menu-ttl">Cart</span>
-                                (<b>${sessionScope.listCart.size() }</b>)
+                                (<b>0</b>)
                             </a>
                         </div>
                     </li>
@@ -97,6 +122,8 @@
 
     <!-- Topmenu - start -->
     <div class="header-bottom">
+        <div class="container">
+            <div class="header-bottom">
         <div class="container">
             <nav class="topmenu">
 
@@ -142,6 +169,7 @@
                 <!-- Search - end -->
 
             </nav>		</div>
+    </div>		</div>
     </div>
     <!-- Topmenu - end -->
 
@@ -151,80 +179,61 @@
 
 <!-- Main Content - start -->
 <main>
-<section class="container stylization maincont">
+    <section class="container stylization maincont">
 
-        <h1 class="main-ttl"><span>Cart</span></h1>
-        <!-- Cart Items - start -->
-        <form action="${pageContext.request.contextPath }/product/precheckout">
 
-            <div class="cart-items-wrap">
-                <table class="cart-items">
-                    <thead>
-                    <tr>
-                        <td class="cart-image">Photo</td>
-                        <td class="cart-ttl">Products</td>
-                        <td class="cart-price">Price</td>
-                        <td class="cart-quantity">Quantity</td>
-                        <td class="cart-summ">Summ</td>
-                        <td class="cart-del">&nbsp;</td>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <c:forEach items="${sessionScope.listCart}" var="obj">
-                    <c:set var="s" value="${s+ obj.price*obj.quantity}"></c:set>
-                    <tr>
-                        <td class="cart-image">
-                            <a href="${pageContext.request.contextPath }/product/detail?">
-                                <img src="${obj.imagePath }" alt="${obj.name }">
-                            </a>
-                        </td>
-                        <td class="cart-ttl">
-                           ${obj.name }
-                        </td>
-                        <td class="cart-price">
-                            <b>$ ${obj.price }</b>
-                        </td>
-                        <td class="cart-quantity">
-                            <p class="cart-qnt">
-                                <input value="${obj.quantity }" id="quantity" type="text">
-                                <a href="#" class="cart-plus"><i class="fa fa-angle-up" id="plus" onclick="changeQuantity(this)"></i></a>
-                                <a href="#" class="cart-minus"><i class="fa fa-angle-down" id="minus" onclick="changeQuantity(this)"></i></a>
-                            </p>
-                        </td>
-                        <td class="cart-summ">
-                            <b>$${obj.quantity*obj.price }</b>
-                        </td>
-                        <td class="cart-del">
-                            <a href="${pageContext.request.contextPath}/product/cart/remove?id=${obj.id}" class="cart-remove"></a>
-                        </td>
-                    </tr>
-
-                    </c:forEach>
-                    </tbody>
-                </table>
-                                    <script>
-					function changeQuantity(input){
-						if(input.id == "plus"){
-							document.getElementById("quantity").value=Number(document.getElementById("quantity").value)+Number(1);
-							}else{
-								if(document.getElementById("quantity").value >1){ document.getElementById("quantity").value=Number(document.getElementById("quantity").value)-Number(1);	}
-								}
-						}
-
-					</script>
+        <h1 class="main-ttl"><span>Registration / Login</span></h1>
+        <div class="auth-wrap">
+            <div class="auth-col">
+                <h2>Login</h2>
+                <form method="post" class="login" action="${pageContext.request.contextPath }/customer/login">
+                    <p>
+                        <label for="username">Username <span class="required">*</span></label><input type="text" name="username" id="username">
+                    </p>
+                    <p>
+                        <label for="password">Password <span class="required">*</span></label><input type="password" name="password" id="password">
+                    </p>
+                    <p class="auth-submit">
+                        <input type="submit" value="Login">
+                        <!-- <input type="checkbox" id="rememberme" value="forever">
+                        <label for="rememberme">Remember me</label> -->
+                    </p>
+                    <p class="auth-lost_password">
+                        <a href="#">Lost your password?</a>
+                    </p>
+                </form>
             </div>
-            <ul class="cart-total">
-                <li class="cart-summ">TOTAL: <b><!-- tong tien cart bang js --> $${s }</b></li>
-            </ul>
-            <div class="cart-submit">
-                <input type="submit" class="cart-submit-btn" value="Checkout" />
-                <a href="${pageContext.request.contextPath }/product/cart/clear" class="cart-clear">Clear cart</a>
+            <div class="auth-col">
+                <h2>Register</h2>
+                <form method="post" class="register" action="${pageContext.request.contextPath }/customer/signup">
+                    <p>
+                        <label for="reg_username">Username <span class="required">*</span></label><input type="text" id="reg_username" name="username">
+                    </p>
+                    <p>
+                        <label for="reg_password">Password <span class="required">*</span></label><input type="password" id="reg_password">
+                    </p>
+                    <p>
+                        <label for="reg_email">Email <span class="required">*</span></label><input type="email" id="reg_email">
+                    </p>
+                    <p>
+                        <label for="reg_fullname">Fullname <span class="required">*</span></label><input type="text" id="reg_fullname" name="fullname">
+                    </p>
+                    <p>
+                        <label for="reg_occupation">Job </label><input type="text" id="reg_occupation" name="occupation">
+                    </p>
+                    <p>
+                        <label for="reg_age">Age </label><input type="text" id="reg_age" name="age">
+                    </p>
+                    <p class="auth-submit">
+                        <input type="submit" value="Register">
+                    </p>
+                </form>
             </div>
-        </form>
-        <!-- Cart Items - end -->
+        </div>
+
+
 
     </section>
-
 </main>
 <!-- Main Content - end -->
 
@@ -429,9 +438,6 @@
     </div>
 
 </footer>
-<!-- Footer - end -->
-
-
 <!-- jQuery plugins/scripts - start -->
 <script src="${pageContext.request.contextPath}/resource/client/js/jquery-1.11.2.min.js"></script>
 <script src="${pageContext.request.contextPath}/resource/client/js/jquery.bxslider.min.js"></script>
