@@ -39,7 +39,7 @@ public class ClientCustomerController {
 		return "redirect:/";
 	}
 	
-	@RequestMapping("/loginpage")
+	@RequestMapping("/auth")
 	public String loginpage(Model model, HttpSession session,HttpServletRequest request) {
 			return "client/auth";
 	}
