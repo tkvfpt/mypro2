@@ -88,12 +88,12 @@ Map<String, String[]> requestParams = request.getParameterMap();
 	 * Send Mail
 	 * @param mailSender
 	 */
-	public static void sendMail(MailSender mailSender, String to) {
+	public static void sendMail(MailSender mailSender, String to, String msg, String title) {
 		try {
 			SimpleMailMessage message = new SimpleMailMessage();
 			message.setTo(to);
-			message.setSubject("Successfully Order");
-			message.setText("We've received your order. Thank you for shopping with us");
+			message.setSubject(title);
+			message.setText(msg);
 			mailSender.send(message);
 		}catch(Exception e) {
 			LOG.info("commonUtils.sendMail() "+e.getMessage());

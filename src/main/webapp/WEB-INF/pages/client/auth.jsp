@@ -31,16 +31,16 @@
         <div class="container">
             <ul class="contactinfo nav nav-pills">
                 <li>
-                    <i class='fa fa-phone'></i> +7 777 123 1575
+                    <i class='fa fa-phone'></i> +${shop.phone }
                 </li>
                 <li>
-                    <i class="fa fa-envelope"></i> admin@real-web.pro
+                    <i class="fa fa-envelope"></i> ${shop.mail }
                 </li>
             </ul>
             <!-- Social links -->
             <ul class="social-icons nav navbar-nav">
                 <li>
-                    <a href="http://facebook.com" rel="nofollow" target="_blank">
+                    <a href="${shop.fanpageUrl }" rel="nofollow" target="_blank">
                         <i class="fa fa-facebook"></i>
                     </a>
                 </li>
@@ -50,20 +50,11 @@
                     </a>
                 </li>
                 <li>
-                    <a href="http://twitter.com" rel="nofollow" target="_blank">
+                    <a href="${shop.twitter }" rel="nofollow" target="_blank">
                         <i class="fa fa-twitter"></i>
                     </a>
                 </li>
-                <li>
-                    <a href="http://vk.com" rel="nofollow" target="_blank">
-                        <i class="fa fa-vk"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="http://instagram.com" rel="nofollow" target="_blank">
-                        <i class="fa fa-instagram"></i>
-                    </a>
-                </li>
+                
             </ul>		</div>
     </div>
     <!-- Topbar - end -->
@@ -205,18 +196,22 @@
             </div>
             <div class="auth-col">
                 <h2>Register</h2>
+                <h5>${requestScope.emessage }</h5>
                 <form method="post" class="register" action="${pageContext.request.contextPath }/customer/signup">
                     <p>
                         <label for="reg_username">Username <span class="required">*</span></label><input type="text" id="reg_username" name="username">
                     </p>
                     <p>
-                        <label for="reg_password">Password <span class="required">*</span></label><input type="password" id="reg_password">
+                        <label for="reg_password">Password <span class="required">*</span></label><input type="password" id="reg_password" name="password">
                     </p>
                     <p>
-                        <label for="reg_email">Email <span class="required">*</span></label><input type="email" id="reg_email">
+                        <label for="reg_email">Email <span class="required">*</span></label><input type="email" name="email" id="reg_email">
                     </p>
                     <p>
                         <label for="reg_fullname">Fullname <span class="required">*</span></label><input type="text" id="reg_fullname" name="fullname">
+                    </p>
+                    <p>
+                        <label for="reg_phone">Phone <span class="required">*</span></label><input type="text" id="reg_phone" name="phone">
                     </p>
                     <p>
                         <label for="reg_occupation">Job </label><input type="text" id="reg_occupation" name="occupation">

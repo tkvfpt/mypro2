@@ -127,7 +127,8 @@ public class ClientProductController {
 		cus.setEmail(request.getParameter("email").equals("") ? "" : request.getParameter("email"));
 		cus.setOccupation(request.getParameter("occupation").equals("") ? "" : request.getParameter("occupation"));
 		if (!cus.getEmail().equals("")) {
-			CommonUtils.sendMail(mailSender, cus.getEmail());
+			String message = "You what the hell";
+			CommonUtils.sendMail(mailSender, cus.getEmail(), message, "AHIHI");
 		}
 		List<Product> listP = (List<Product>) session.getAttribute("listCart");
 
