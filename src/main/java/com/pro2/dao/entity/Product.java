@@ -3,6 +3,7 @@ package com.pro2.dao.entity;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -62,7 +63,7 @@ public class Product {
 	@JoinColumn(name = "username")
 	User user;
 	
-	@OneToMany(mappedBy="invoice_detail_pk.product")
+	@OneToMany(mappedBy="invoice_detail_pk.product",cascade=CascadeType.ALL)
 	List<InvoiceDetail> invoiceDetail;
 	
 	@Transient
