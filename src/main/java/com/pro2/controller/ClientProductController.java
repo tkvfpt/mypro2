@@ -148,8 +148,9 @@ public class ClientProductController {
 			invoice.getInvoiceDetail().add(invoiceDetail);
 
 			productDAO.saveObject(invoice);
+			request.setAttribute("message", "placed order");
 		}
-		return "client/index";
+		return "client/success";
 	}
 	
 	@RequestMapping("/precheckout")

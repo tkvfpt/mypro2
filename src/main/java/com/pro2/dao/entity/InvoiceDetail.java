@@ -25,15 +25,13 @@ import javax.persistence.Table;
 public class InvoiceDetail {
 
 	@EmbeddedId
-	InvoiceDetailPK invoice_detail_pk;
+	InvoiceDetailPK invoice_detail_pk = new InvoiceDetailPK();
 	
 	@Column(name="quantity")
 	int quantity;
 
 	public InvoiceDetailPK getInvoice_detail_pk() {
-		if(Objects.isNull(invoice_detail_pk)) {
-			return new InvoiceDetailPK();
-		}
+		
 		return invoice_detail_pk;
 	}
 	

@@ -1,13 +1,13 @@
 package com.pro2.dao.entity;
 
-import java.util.Collections;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.Objects;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -54,8 +54,8 @@ public class Invoice {
 	@Column(name="customer")
 	String customer;
 	
-	@OneToMany(mappedBy="invoice_detail_pk.invoice",cascade=CascadeType.PERSIST)
-	List<InvoiceDetail> invoiceDetail;
+	@OneToMany(mappedBy="invoice_detail_pk.invoice",cascade=CascadeType.PERSIST,fetch=FetchType.EAGER)
+	List<InvoiceDetail> invoiceDetail = new ArrayList<>();
 
 	public int getId() {
 		return id;
@@ -98,9 +98,6 @@ public class Invoice {
 	}
 
 	public List<InvoiceDetail> getInvoiceDetail() {
-		if(Objects.isNull(invoiceDetail)) {
-			return Collections.emptyList();
-		}
 		return invoiceDetail;
 	}
 

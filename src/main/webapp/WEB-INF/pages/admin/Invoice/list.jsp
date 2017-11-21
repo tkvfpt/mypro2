@@ -189,15 +189,9 @@
                                         <tbody>
                                         <c:forEach var="obj" items="${requestScope.list}">
                                             <tr>
-                                                <td><a href="${pageContext.request.contextPath }/admin/customer/edit?id=${obj.id}">${requestScope.list.indexOf(obj)+1}</a></td>
-                                                <td><a href="${pageContext.request.contextPath }/admin/customer/edit?id=${obj.id}">${obj.username }</a></td>
-                                                <td><a href="${pageContext.request.contextPath }/admin/customer/edit?id=${obj.id}">${obj.password }</a></td>
-                                                <td><a href="${pageContext.request.contextPath }/admin/customer/edit?id=${obj.id}">${obj.email }</a></td>
-                                                <td><a href="${pageContext.request.contextPath }/admin/customer/edit?id=${obj.id}">${obj.phone }</a></td>
-                                                <td><a href="${pageContext.request.contextPath }/admin/customer/edit?id=${obj.id}">${obj.fullname}</a></td>
-                                                <td><a href="${pageContext.request.contextPath }/admin/customer/edit?id=${obj.id}">${obj.occupation}</a></td>
-                                                <td><a href="${pageContext.request.contextPath }/admin/customer/edit?id=${obj.id}">${obj.age}</a></td>
-                                                <td><a href="${pageContext.request.contextPath }/admin/customer/delete?id=${obj.id}"><i class="mdi mdi-delete"></i></a></td>
+                                                <td><a href="${pageContext.request.contextPath }/admin/invoice/edit?id=${obj.id}">${requestScope.list.indexOf(obj)+1}</a></td>
+                                                <td><a href="${pageContext.request.contextPath }/admin/invoice/edit?id=${obj.id}">${obj.invoiceDetail.size() }</a></td>
+                                                <td><a href="${pageContext.request.contextPath }/admin/invoice/delete?id=${obj.id}"><i class="mdi mdi-delete"></i></a></td>
                                             </tr>
                                          </c:forEach>
                                         </tbody>
