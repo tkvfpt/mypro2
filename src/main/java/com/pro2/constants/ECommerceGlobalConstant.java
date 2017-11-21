@@ -22,6 +22,8 @@ public class ECommerceGlobalConstant {
 	/* Common Object Constants */
 	public static final String OBJECT_ID = "id";
 	public static final String OBJECT_NAME = "name";
+	public static final String PENDING ="pending";
+	public static final String DELIVERED ="delivered";
 	
 	/* HQL query */
 	public static final String FROM = "from ";

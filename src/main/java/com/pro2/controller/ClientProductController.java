@@ -1,6 +1,7 @@
 package com.pro2.controller;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 import java.util.Objects;
 
@@ -137,6 +138,10 @@ public class ClientProductController {
 			invoice.setAddress(request.getParameter("address").equals("") ? "" : request.getParameter("address"));
 			invoice.setCity(request.getParameter("city").equals("") ? "" : request.getParameter("city"));
 			invoice.setPhone(request.getParameter("phone").equals("") ? "" : request.getParameter("phone"));
+			invoice.setCustomer(request.getParameter("fullname").equals("") ? "" : request.getParameter("fullname"));
+			invoice.setDate(Calendar.getInstance().getTime());
+			invoice.setDistrict(request.getParameter("district").equals("") ? "" : request.getParameter("district"));
+			invoice.setStatus(ECommerceGlobalConstant.PENDING);
 
 			Product product = (Product) productDAO.getObject(p.getId());
 
