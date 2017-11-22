@@ -32,6 +32,9 @@ public class Question {
 	@Column(name="phone")
 	String phone;
 	
+	@Column(name="reply")
+	String reply;
+	
 	@ManyToOne(cascade=CascadeType.ALL,fetch=FetchType.EAGER)
 	@JoinColumn(name="customerId")
 	Customer customer;
@@ -82,6 +85,14 @@ public class Question {
 
 	public void setCustomer(Customer customer) {
 		this.customer = customer;
+	}
+
+	public String getReply() {
+		return reply;
+	}
+
+	public void setReply(String reply) {
+		this.reply = reply;
 	}
 	
 	

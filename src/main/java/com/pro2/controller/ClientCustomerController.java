@@ -77,7 +77,7 @@ public class ClientCustomerController {
 				cus.setPassword("unonymous");
 			}
 			ShopInfo shop = (ShopInfo)model.asMap().get("shop");
-			CommonUtils.sendMail(mailSender,shop.getMail() , msg, "Question from "+cus.getEmail());
+			//CommonUtils.sendMail(mailSender,shop.getMail() , msg, "Question from "+cus.getEmail());
 			Question question = new Question();
 			question.setCustomer(cus);
 			question.setDesc(msg);

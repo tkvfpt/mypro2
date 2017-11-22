@@ -189,12 +189,12 @@
                                         <tbody>
                                         <c:forEach var="obj" items="${requestScope.list}">
                                             <tr>
-                                                <td>${requestScope.list.indexOf(obj)+1}</td>
-                                                <td>${obj.title }</td>
-                                                <td>${obj.customer.fullname }</td>
-                                                <td>${obj.customer.email }</td>
-                                                <td>${obj.customer.phone }</td>
-                                                <td>${obj.reply == "" ? "NOT REPLY" : "REPLIED"}</td>
+                                                <td><a href="${pageContext.request.contextPath }/admin/question/detail?id=${obj.id}">${requestScope.list.indexOf(obj)+1}</a></td>
+                                                <td><a href="${pageContext.request.contextPath }/admin/question/detail?id=${obj.id}">${obj.title }</a></td>
+                                                <td><a href="${pageContext.request.contextPath }/admin/question/detail?id=${obj.id}">${obj.customer.fullname }</a></td>
+                                                <td><a href="${pageContext.request.contextPath }/admin/question/detail?id=${obj.id}">${obj.customer.email }</a></td>
+                                                <td><a href="${pageContext.request.contextPath }/admin/question/detail?id=${obj.id}">${obj.customer.phone }</a></td>
+                                                <td><a href="${pageContext.request.contextPath }/admin/question/detail?id=${obj.id}">${obj.reply == null ? "NOT REPLY" : "REPLIED"}</td>
                                             </tr>
                                          </c:forEach>
                                         </tbody>
