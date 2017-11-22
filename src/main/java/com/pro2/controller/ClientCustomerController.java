@@ -64,7 +64,7 @@ public class ClientCustomerController {
 	}
 	@RequestMapping(value = "/sendquestion",method=RequestMethod.POST)
 	public String question(Model model, HttpSession session,HttpServletRequest request) {
-			String msg = request.getParameter("message");
+			String msg = request.getParameter("description").equals("")?"":request.getParameter("description");
 			Customer cus = (Customer)session.getAttribute("client");
 			if(Objects.isNull(cus)){
 				cus = new Customer();
@@ -81,10 +81,7 @@ public class ClientCustomerController {
 			Question question = new Question();
 			question.setCustomer(cus);
 			question.setDesc(msg);
-			question.setEmail(cus.getEmail());
-			question.setTitle("Question");
-			question.setPhone(cus.getPhone());
-			question.setDesc(request.getParameter("description").equals("")?"":request.getParameter("description"));
+			question.setTitle(request.getParameter("title").equals("")?"":request.getParameter("title"));
 			cus.getQuestion().add(question);
 			customerDAO.saveObject(question);
 			request.setAttribute("message", "sent question");

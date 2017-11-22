@@ -162,9 +162,6 @@
                             <li class="breadcrumb-item active"><a href="${pageContext.request.contextPath }/admin/question/all">Question</a></li>
                         </ol>
                     </div>
-                    <div class="col-md-7 col-4 align-self-center">
-                        <a href="https://wrappixel.com/templates/materialpro/" class="btn waves-effect waves-light btn-danger pull-right hidden-sm-down"> Upgrade to Pro</a>
-                    </div>
                 </div>
                 <!-- ============================================================== -->
                 <!-- End Bread crumb and right sidebar toggle -->
@@ -183,22 +180,21 @@
                                             <tr>
                                                 <th>#</th>
                                                 <th>Title</th>
-                                                <th>Description</th>
+                                                <th>Full Name</th>
                                                 <th>Email</th>
                                                 <th>Phone</th>
+                                                <th>Reply</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                         <c:forEach var="obj" items="${requestScope.list}">
                                             <tr>
                                                 <td>${requestScope.list.indexOf(obj)+1}</td>
-                                                <td>${obj.username }</td>
-                                                <td>${obj.password }</td>
-                                                <td>${obj.email }</td>
-                                                <td>${obj.phone }</td>
-                                                <td>${obj.fullname}</td>
-                                                <td>${obj.occupation}</td>
-                                                <td>${obj.age}</td>
+                                                <td>${obj.title }</td>
+                                                <td>${obj.customer.fullname }</td>
+                                                <td>${obj.customer.email }</td>
+                                                <td>${obj.customer.phone }</td>
+                                                <td>${obj.reply == "" ? "NOT REPLY" : "REPLIED"}</td>
                                             </tr>
                                          </c:forEach>
                                         </tbody>

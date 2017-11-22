@@ -158,7 +158,7 @@
                         <h3 class="text-themecolor m-b-0 m-t-0">Update User</h3>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="${pageContext.request.contextPath }/admin">Dashboard</a></li>
-                            <li class="breadcrumb-item"><a href="${pageContext.request.contextPath }/admin/user/all">User</a></li>
+                            <li class="breadcrumb-item"><a href="${pageContext.request.contextPath }/admin/question/all">Question</a></li>
                             <li class="breadcrumb-item active">Update</li>
                         </ol>
                     </div>
@@ -175,24 +175,55 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="card-block">
-                                <form class="form-horizontal form-material" action="${pageContext.request.contextPath }/admin/user/update" method="post">
+                                <form class="form-horizontal form-material" action="${pageContext.request.contextPath }/admin/question/reply" method="post">
                                     <div class="form-group">
-                                        <label class="col-md-12">Username</label>
-                                        <div class="col-md-12">
-                                            <input type="text" placeholder="Username" name="username" class="form-control form-control-line" value="${requestScope.edituser.username }" readonly>
-                                        </div>
+                                        <label class="col-md-12">Title</label>
+                                        <h5>${question.title }</h5>
                                     </div>
                                     <div class="form-group">
-                                        <label for="pwd" class="col-md-12">Password</label>
-                                        <div class="col-md-12">
-                                            <input type="password" placeholder="Password" class="form-control form-control-line" name="password" value="${requestScope.edituser.password }">
-                                        </div>
+                                        <label for="pwd" class="col-md-12">Question</label>
+                                        <p>${question.description }</p>
                                     </div>
+                                    <div class="form-group">
+                                        <label for="pwd" class="col-md-12">Customer's Phone</label>
+                                        <p>${question.customer.phone }</p>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pwd" class="col-md-12">Customer's Email</label>
+                                        <p>${question.customer.email }</p>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="reply" class="col-md-12">Reply</label>
+                                        <textarea rows="5" cols="5" name="reply">${question.reply }</textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pwd" class="col-md-12">Customer's Email</label>
+                                        <img src="${requestScope.shop.logo}" class="img-circle" width="150" id="attachment">
+                                        <span class="btn btn-success" onclick="activateUpload()">Load Image</span><input type="file" id="upload" onchange="readURL(this)" name="attachment" style="display:none"/>
+                                    </div>
+                                    
                                     <div class="form-group">
                                         <div class="col-sm-12">
-                                        	<input type="hidden" name="role" value="${requestScope.edituser.role }"/>
+                                        	<input type="hidden" name="mail" value="${question.customer.email }"/>
+                                        	<input type="hidden" name="title" value="${question.title }"/>
                                             <button class="btn btn-success">Update Profile</button>
                                         </div>
+                                        <script>
+                                        function activateUpload(){
+                                        	document.getElementById("upload").click();
+                                        	}
+                                    	function readURL(input){
+                                    		if (input.files && input.files[0]) {
+                                                var reader = new FileReader();
+
+                                                reader.onload = function (e) {
+                                                    $('#attachment')
+                                                        .attr('src', e.target.result);
+                                                };
+                                                reader.readAsDataURL(input.files[0]);
+                                            }
+                                        	}
+                                        </script>
                                     </div>
                                 </form>
                             </div>
