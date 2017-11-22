@@ -122,14 +122,21 @@ public class ClientProductController {
 
 	@RequestMapping("/checkout")
 	public String checkout(Model model, HttpServletRequest request, HttpSession session) {
-		Customer cus = new Customer();
-		cus.setFullname(request.getParameter("fullname").equals("") ? "" : request.getParameter("fullname"));
-		cus.setPhone(request.getParameter("phone").equals("") ? "" : request.getParameter("phone"));
-		cus.setEmail(request.getParameter("email").equals("") ? "" : request.getParameter("email"));
-		cus.setOccupation(request.getParameter("occupation").equals("") ? "" : request.getParameter("occupation"));
+		Customer cus =(Customer) session.getAttribute("client");
+		if(Objects.isNull(cus)) {
+			cus = new Customer();
+			cus.setFullname(request.getParameter("fullname").equals("") ? "" : request.getParameter("fullname"));
+			cus.setPhone(request.getParameter("phone").equals("") ? "" : request.getParameter("phone"));
+			cus.setEmail(request.getParameter("email").equals("") ? "" : request.getParameter("email"));
+			cus.setOccupation(request.getParameter("occupation").equals("") ? "" : request.getParameter("occupation"));	
+			cus.setAge(request.getParameter("age").equals("")? 0 : Integer.parseInt(request.getParameter("age")));
+			cus.setUsername("unonymous");
+			cus.setPassword("unonymous");
+		}
+		 
 		if (!cus.getEmail().equals("")) {
 			String message = "You what the hell";
-			CommonUtils.sendMail(mailSender, cus.getEmail(), message, "AHIHI");
+			//CommonUtils.sendMail(mailSender, cus.getEmail(), message, "AHIHI");
 		}
 		List<Product> listP = (List<Product>) session.getAttribute("listCart");
 
@@ -138,7 +145,7 @@ public class ClientProductController {
 			invoice.setAddress(request.getParameter("address").equals("") ? "" : request.getParameter("address"));
 			invoice.setCity(request.getParameter("city").equals("") ? "" : request.getParameter("city"));
 			invoice.setPhone(request.getParameter("phone").equals("") ? "" : request.getParameter("phone"));
-			invoice.setCustomer(request.getParameter("fullname").equals("") ? "" : request.getParameter("fullname"));
+			invoice.setCustomer(cus);
 			invoice.setDate(Calendar.getInstance().getTime());
 			invoice.setDistrict(request.getParameter("district").equals("") ? "" : request.getParameter("district"));
 			invoice.setStatus(ECommerceGlobalConstant.PENDING);

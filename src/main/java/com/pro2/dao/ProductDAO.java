@@ -1,6 +1,7 @@
 package com.pro2.dao;
 
 import java.util.List;
+import java.util.Objects;
 
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -69,10 +70,20 @@ public class ProductDAO{
 		if(pageNumber == 1 ){
 			q.setFirstResult(0);
 		}else{
-			//q.setFirstResult((pageNumber *(limit-1)) -limit + pageNumber);
 			q.setFirstResult(limit * (pageNumber-1));
 		}
 		q.setMaxResults(limit);
 		return q.list();
+	}
+	
+	public List<Product> search(String name){
+		List<Product> list = null;
+		if(!name.equals("")) {
+			list = getSession().createQuery("from Product where name like '%"+name+"%'").list();
+		}
+		if(Objects.isNull(list)) {
+			list = ((Category)getSession().createQuery("from Category where name like '%"+name+"%'").uniqueResult()).getProductList();
+		}
+		return list;
 	}
 }

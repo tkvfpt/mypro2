@@ -2,17 +2,19 @@ package com.pro2.dao;
 
 import java.util.List;
 
+import org.hibernate.Hibernate;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.pro2.dao.entity.Invoice;
 import com.pro2.dao.entity.InvoiceDetail;
 
 
-@Component("invoiceDAO")
+@Repository("invoiceDAO")
+@Transactional	
 public class InvoiceDAO{
 
 	@Autowired
@@ -23,17 +25,15 @@ public class InvoiceDAO{
 	}
 	
 	public List<Invoice> getAll(){
-		Session session = sessionFactory.openSession();
-		session.beginTransaction();
+		Session session = getSession();
 		List<Invoice> list = session.createQuery("from Invoice").list();
 		for(Invoice invoice : list){
+			Hibernate.initialize(invoice.getInvoiceDetail());
 			invoice.getInvoiceDetail();
 		}
-		session.getTransaction().commit();
-		session.close();
 		return list;
 	}
-	@Transactional	
+	
 	public void saveObject(Object obj){
 		getSession().save(obj);
 	}
@@ -49,6 +49,7 @@ public class InvoiceDAO{
 	public Object getObject(int id){
 		Session session = getSession();
 		Invoice invoice = (Invoice)session.get(Invoice.class, id);
+		Hibernate.initialize(invoice);
 		invoice.getInvoiceDetail();
 		return invoice;
 	}

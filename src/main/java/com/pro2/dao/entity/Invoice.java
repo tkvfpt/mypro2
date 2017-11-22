@@ -11,6 +11,8 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
@@ -51,8 +53,9 @@ public class Invoice {
 	@Column(name="status")
 	String status;
 	
-	@Column(name="customer")
-	String customer;
+	@ManyToOne(cascade=CascadeType.ALL,fetch=FetchType.EAGER)
+	@JoinColumn(name="customer")
+	Customer customer;
 	
 	@OneToMany(mappedBy="invoice_detail_pk.invoice",cascade=CascadeType.ALL,fetch=FetchType.LAZY)
 	List<InvoiceDetail> invoiceDetail = new ArrayList<>();
@@ -121,11 +124,11 @@ public class Invoice {
 		this.status = status;
 	}
 
-	public String getCustomer() {
+	public Customer getCustomer() {
 		return customer;
 	}
 
-	public void setCustomer(String customer) {
+	public void setCustomer(Customer customer) {
 		this.customer = customer;
 	}
 	

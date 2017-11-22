@@ -159,7 +159,7 @@
                         <h3 class="text-themecolor m-b-0 m-t-0">Invoice</h3>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="${pageContext.request.contextPath }/admin">Dashboard</a></li>
-                            <li class="breadcrumb-item"><a href="${pageContext.request.contextPath }/admin/user/all">User</a></li>
+                            <li class="breadcrumb-item"><a href="${pageContext.request.contextPath }/admin/invoice/all">Invoice</a></li>
                             <li class="breadcrumb-item active"></li>
                         </ol>
                     </div>

@@ -29,11 +29,7 @@ public class AdminInvoiceController {
 	
 	@RequestMapping(value="/invoice/all", method=RequestMethod.GET)
 	public String showAll(Model model){
-		LOG.info("in now");
 		List<Invoice> list = invoiceDAO.getAll();
-		for(Invoice invoice : list){
-			invoice.setInvoiceDetail(invoiceDAO.getAllDetails(invoice.getId()));
-		}
 		model.addAttribute("list",list);
 		LOG.info("showAll running");
 		return "admin/invoice/list";

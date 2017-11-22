@@ -153,14 +153,18 @@
 <main>
 <section class="container stylization maincont">
 <form action="${pageContext.request.contextPath }/product/checkout">
-	<input type="text" data-required="text" placeholder="Name" name="fullname">
-	<input type="text" placeholder="Phone" name="phone" onkeypress="checkNumb(this)">
-	<span style="color:red" id="error"></span>
-	<input data-required="text" data-required-email="email" type="text" placeholder="Email" name="email">
+	<c:if test="${sessionScope.client == null}">
+		<input type="text" data-required="text" placeholder="Name" name="fullname">
+		<input type="text" placeholder="Phone" name="phone" onkeypress="checkNumb(this)">
+		<span style="color:red" id="error"></span>
+		<input data-required="text" data-required-email="email" type="text" placeholder="Email" name="email">
+		<input type="text" placeholder="Woker" name="occupation">
+		<input type="text" placeholder="Age" name="age">
+	</c:if>
 	<input data-required="text" type="text" placeholder="Address" name="address">
 	<input type="text" placeholder="District" name="district">
 	<input type="text" placeholder="Ho Chi Minh" name="city">
-	<input type="text" placeholder="Woker" name="occupation">
+	
 	<input type="submit" value="Send">
 </form>
 <script>

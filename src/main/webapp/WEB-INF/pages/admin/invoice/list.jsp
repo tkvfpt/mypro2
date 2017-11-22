@@ -190,7 +190,7 @@
                                         <c:forEach var="obj" items="${requestScope.list}">
                                             <tr>
                                                 <td><a href="${pageContext.request.contextPath }/admin/invoice/detail?id=${obj.id}">${requestScope.list.indexOf(obj)+1}</a></td>
-                                                <td><a href="${pageContext.request.contextPath }/admin/invoice/detail?id=${obj.id}">${obj.customer }</a></td>
+                                                <td><a href="${pageContext.request.contextPath }/admin/invoice/detail?id=${obj.id}">${obj.customer.fullname }</a></td>
                                                 <td><a href="${pageContext.request.contextPath }/admin/invoice/detail?id=${obj.id}">${obj.invoiceDetail.size() }</a></td>
                                             </tr>
                                          </c:forEach>

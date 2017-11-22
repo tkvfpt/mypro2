@@ -5,13 +5,13 @@ import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.pro2.dao.entity.Customer;
 
 @Transactional
-@Component("customerDAO")
+@Repository("customerDAO")
 public class CustomerDAO{
 	@Autowired
 	SessionFactory sessionFactory;
